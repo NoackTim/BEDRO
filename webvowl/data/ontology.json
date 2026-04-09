@@ -1,0 +1,2926 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "de", "en", "undefined" ],
+    "baseIris" : [ "https://w3id.org/bot", "https://w3id.org/bmat", "https://w3id.org/BEDRO", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/brcomp", "https://w3id.org/BCore", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/reloc", "https://w3id.org/brot", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Ontology for structuring design rules for bridge components"
+    },
+    "iri" : "https://w3id.org/BEDRO",
+    "version" : "0.0.1",
+    "author" : [ "Tim Noack" ],
+    "labels" : {
+      "undefined" : "Bridge Element Design Rule Ontology"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Tim Noack",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-01",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "BEDRO",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This ontology is structuring bridge desing rules for the dimensioning of bridge components in the early phases of bridge design.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Ontology for structuring design rules for bridge components",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "225",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Literal"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/BEDRO#PTFE",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PTFE",
+      "undefined" : "Polytetrafluorethylen(e)"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/brcomp#Pavement",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "de" : "Fahrbahnbelag",
+      "IRI-based" : "Pavement"
+    },
+    "subClasses" : [ "62", "63", "64" ],
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/BCore#RailwayRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RailwayRoute"
+    },
+    "attributes" : [ "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/BCore#RoadRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoadRoute"
+    },
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/brcomp#Girder",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Girder"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Meadow",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Wiese",
+      "IRI-based" : "Meadow"
+    },
+    "id" : "9",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#StoneMasticAsphalt",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Steinmastixasphalt",
+      "IRI-based" : "StoneMasticAsphalt"
+    },
+    "id" : "49",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "https://w3id.org/bot#Building",
+    "baseIri" : "https://w3id.org/bot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Building"
+    },
+    "attributes" : [ "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PavementCover",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Deckschicht",
+      "IRI-based" : "PavementCover"
+    },
+    "id" : "62",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#LandscapeConservationMeasureArea",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Flächenschutzmaßnahme",
+      "IRI-based" : "LandscapeConservationMeasureArea"
+    },
+    "id" : "68",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Estate",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Grundstück",
+      "IRI-based" : "Estate"
+    },
+    "id" : "77",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/bmat#BuildingMaterial",
+    "baseIri" : "https://w3id.org/bmat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildingMaterial"
+    },
+    "subClasses" : [ "2", "134", "45" ],
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Elastomer",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Elastomer"
+    },
+    "id" : "38",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/BCore#InfrastructureRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfrastructureRoute"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/bot#Zone",
+    "baseIri" : "https://w3id.org/bot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone"
+    },
+    "subClasses" : [ "68", "75", "77", "40", "5" ],
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PavementProtectionLayer",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Schutzschicht",
+      "IRI-based" : "PavementProtectionLayer"
+    },
+    "id" : "64",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/BEDRO#WaterBody",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterBody"
+    },
+    "id" : "40",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/brcomp#NoiseBarrier",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "de" : "Lärmschutzwand",
+      "IRI-based" : "NoiseBarrier"
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/brot#Component",
+    "baseIri" : "https://w3id.org/brot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Asphalt",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Asphalt"
+    },
+    "subClasses" : [ "44", "47", "49" ],
+    "id" : "45",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/BEDRO#AsphaltConcrete",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Betonasphalt",
+      "IRI-based" : "AsphaltConcrete"
+    },
+    "id" : "44",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "https://w3id.org/BCore#EquipmentComponent",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EquipmentComponent"
+    },
+    "subClasses" : [ "51", "53", "55", "58", "35" ],
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "138",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "166",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "169",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "172",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Plastic",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Kunststoff",
+      "IRI-based" : "Plastic"
+    },
+    "subClasses" : [ "38", "1" ],
+    "id" : "2",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#SoilMaterial",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Bodenmaterial",
+      "IRI-based" : "SoilMaterial"
+    },
+    "id" : "134",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PavementImperviousBlanket",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Dichtungsschicht",
+      "IRI-based" : "PavementImperviousBlanket"
+    },
+    "id" : "63",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "162",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "168",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/brcomp#Railing",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "de" : "Geländer",
+      "IRI-based" : "Railing"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Field",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Feld",
+      "IRI-based" : "Field"
+    },
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "112",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "110",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "116",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Forest",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Wald",
+      "IRI-based" : "Forest"
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#VegetationArea",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Bewachsenes Gebiet",
+      "IRI-based" : "VegetationArea"
+    },
+    "subClasses" : [ "4", "7", "9" ],
+    "id" : "5",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/BEDRO#BuiltUpArea",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Bebautes Gebiet",
+      "IRI-based" : "BuiltUpArea"
+    },
+    "id" : "75",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/brcomp#TrafficBarrier",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "de" : "Schutzeinrichtung",
+      "IRI-based" : "TrafficBarrier"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/BCore#RoutePoint",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoutePoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "197",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "28",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/BCore#RoutePoint",
+    "baseIri" : "https://w3id.org/BCore",
+    "id" : "198"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "155",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/BCore#FootCycleRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FootCycleRoute"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "202",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "196",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "133",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "200",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "208",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MasticAsphalt",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "instances" : 0,
+    "label" : {
+      "de" : "Gussasphalt",
+      "IRI-based" : "MasticAsphalt"
+    },
+    "id" : "47",
+    "superClasses" : [ "45" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "194",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "209",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "190",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "157",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/brcomp#GirderDeck",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GirderDeck"
+    },
+    "attributes" : [ "external" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://w3id.org/brot#Bridge",
+    "baseIri" : "https://w3id.org/brot",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bridge"
+    },
+    "attributes" : [ "external" ],
+    "id" : "220"
+  }, {
+    "iri" : "https://w3id.org/brcomp#Cap",
+    "baseIri" : "https://w3id.org/brcomp",
+    "instances" : 0,
+    "label" : {
+      "de" : "Kappe",
+      "IRI-based" : "Cap"
+    },
+    "intersection" : [ "35" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "35",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "225",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "149",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "147",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "205",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "187",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "185",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "177",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "180",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "184",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "186",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "191",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "192",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "195",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "199",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "201",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "215",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "216",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "217",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "218",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "219",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "221",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "222",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "223",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "224",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "227",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "228",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "229",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "230",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "231",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "232",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "233",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "234",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "235",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "range" : "5",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "MAG00SLb00",
+      "en" : "Global width of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Gesamtbreite der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "MAG00SLb01",
+      "en" : "Width 1 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 1 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb04",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "MAG00SLb04",
+      "en" : "Width 4 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 4 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb05",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "MAG00SLb05",
+      "en" : "Width 5 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 5 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "MAG00SLb02",
+      "en" : "Width 2 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 2 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "MAG00SLb03",
+      "en" : "Width 3 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 3 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb08",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "MAG00SLb08",
+      "en" : "Width 8 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 8 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb06",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "MAG00SLb06",
+      "en" : "Width 6 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 6 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "28",
+    "subproperty" : [ "29", "30", "31" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLb07",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "MAG00SLb07",
+      "en" : "Width 7 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Breite 7 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "32"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "2",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "41",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "41",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "45",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "45",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "36",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "36",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "36",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/BCore#crossesRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "crossesRoute"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "56"
+  }, {
+    "range" : "36",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#InfrastructureRouteClearanceHeight",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "InfrastructureRouteClearanceHeight"
+    },
+    "domain" : "60",
+    "comment" : {
+      "de" : "Höhe des Lichtraumprofils der Trasse",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "59"
+  }, {
+    "range" : "41",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "70",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#XXXxxXXs00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "XXXxxXXs00"
+    },
+    "domain" : "72",
+    "comment" : {
+      "de" : "Kilometrierung des Bauteilbeginns (Stationierung)",
+      "en" : "Station of the component beginning (kilometer of route)",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "71"
+  }, {
+    "range" : "41",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "41",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXh03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "CAPxxXXh03"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Höhe 3 der Kappe",
+      "en" : "Height 3 of the cap",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXh02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "CAPxxXXh02"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Höhe 2 der Kappe",
+      "en" : "Height 2 of the cap",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "MAG00TBb02"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "MAG00TBb01"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb06",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "MAG00TBb06"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb05",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "MAG00TBb05"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb04",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "MAG00TBb04"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/brot#containsComponent",
+    "baseIri" : "https://w3id.org/brot",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "containsComponent"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBb03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "MAG00TBb03"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXh01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "CAPxxXXh01"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Höhe 1 der Kappe",
+      "en" : "Height 1 of the cap",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#runsToTheRightOf",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "runsToTheRightOf"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "97",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#TRBxxXXb00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "TRBxxXXb00"
+    },
+    "domain" : "51",
+    "comment" : {
+      "de" : "Breite der Schutzeinrichtung",
+      "en" : "Width of the traffic barrier",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PAVxxXXb00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "PAVxxXXb00"
+    },
+    "domain" : "55",
+    "comment" : {
+      "de" : "Breite des Fahrbahnbelags",
+      "en" : "Width of the pavement",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "MAG00SLh02",
+      "en" : "Height 2 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 2 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "MAG00SLh03",
+      "en" : "Height 3 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 3 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "110",
+    "label" : {
+      "IRI-based" : "MAG00SLh01",
+      "en" : "Height 1 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 1 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh06",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "MAG00SLh06",
+      "en" : "Height 6 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 6 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh07",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "MAG00SLh07",
+      "en" : "Height 7 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 7 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh04",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "116",
+    "label" : {
+      "IRI-based" : "MAG00SLh04",
+      "en" : "Height 4 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 4 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXg00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "CAPxxXXg00"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Typologie (Art) der Kappe",
+      "en" : "Typology of the cap"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh05",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "MAG00SLh05",
+      "en" : "Height 5 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 5 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/BCore#InfrastructureRouteWidth",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "122",
+    "label" : {
+      "IRI-based" : "InfrastructureRouteWidth"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLh08",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "MAG00SLh08",
+      "en" : "Height 8 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Höhe 8 der Platte",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/BCore#InfrastructureRouteName",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "InfrastructureRouteName"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/BCore#carriesRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "carriesRoute"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/BCore#locatedInZone",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "locatedInZone"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#runsToTheLeftOf",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "runsToTheLeftOf"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "97",
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#XXXxxXXq00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "130",
+    "label" : {
+      "IRI-based" : "XXXxxXXq00"
+    },
+    "domain" : "72",
+    "comment" : {
+      "de" : "Normaldistanz des Bauteils zur Trasse (positiv nach rechts)",
+      "en" : "Normal distance of the component perpendicular to alignment (positive to the right)",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#Station",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "133",
+    "label" : {
+      "IRI-based" : "Station"
+    },
+    "domain" : "132",
+    "comment" : {
+      "de" : "Kilometrierung des Trassenpunktes",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#ZoneWidthUnderBridge",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "136",
+    "label" : {
+      "IRI-based" : "ZoneWidthUnderBridge"
+    },
+    "domain" : "41",
+    "comment" : {
+      "de" : "Breite der Zone unter der Brücke",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXn01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "138",
+    "label" : {
+      "IRI-based" : "CAPxxXXn01"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Neigung 1 der Kappe",
+      "en" : "Inclination 1 of the cap",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXn02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "140",
+    "label" : {
+      "IRI-based" : "CAPxxXXn02"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Neigung 2 der Kappe",
+      "en" : "Inclination 2 of the cap",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXn03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "CAPxxXXn03"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Neigung 3 der Kappe",
+      "en" : "Inclination 3 of the cap",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/reloc#meetTop",
+    "baseIri" : "https://w3id.org/reloc",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "meetTop"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBh04",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "MAG00TBh04"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBh03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "147",
+    "label" : {
+      "IRI-based" : "MAG00TBh03"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBh02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "149",
+    "label" : {
+      "IRI-based" : "MAG00TBh02"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBh01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "151",
+    "label" : {
+      "IRI-based" : "MAG00TBh01"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBh05",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "153",
+    "label" : {
+      "IRI-based" : "MAG00TBh05"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#XXXxxXXz00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "155",
+    "label" : {
+      "IRI-based" : "XXXxxXXz00"
+    },
+    "domain" : "72",
+    "comment" : {
+      "de" : "Höhe des Bauteils über NN",
+      "en" : "Altitude of the component",
+      "undefined" : "[m AMSL]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PAVxxXXh00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "157",
+    "label" : {
+      "IRI-based" : "PAVxxXXh00"
+    },
+    "domain" : "55",
+    "comment" : {
+      "de" : "Höhe des Fahrbahnbelags",
+      "en" : "Height of the pavement",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/reloc#meetLeft",
+    "baseIri" : "https://w3id.org/reloc",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "meetLeft"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#RailwayNumberOfRails",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "160",
+    "label" : {
+      "IRI-based" : "RailwayNumberOfRails"
+    },
+    "domain" : "65",
+    "comment" : {
+      "de" : "Anzahl der Gleise des Schienenweges"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLn01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "162",
+    "label" : {
+      "IRI-based" : "MAG00SLn01",
+      "en" : "Inclination 1 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Neigung 1 der Platte",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "161"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLn04",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "164",
+    "label" : {
+      "IRI-based" : "MAG00SLn04",
+      "en" : "Inclination 4 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Neigung 4 der Platte",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLn02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "168",
+    "label" : {
+      "IRI-based" : "MAG00SLn02",
+      "en" : "Inclination 2 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Neigung 2 der Platte",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "167"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00SLn03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "MAG00SLn03",
+      "en" : "Inclination 3 of the slab"
+    },
+    "domain" : "11",
+    "comment" : {
+      "de" : "Neigung 3 der Platte",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "170"
+  }, {
+    "range" : "51",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  }, {
+    "range" : "58",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "51",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "175"
+  }, {
+    "range" : "55",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "51",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "51",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "range" : "58",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "53",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "58",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "range" : "55",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "iri" : "https://w3id.org/BCore#partOfRoute",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "partOfRoute"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "183"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBn03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "185",
+    "label" : {
+      "IRI-based" : "MAG00TBn03"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "184"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBn02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "187",
+    "label" : {
+      "IRI-based" : "MAG00TBn02"
+    },
+    "domain" : "28",
+    "attributes" : [ "datatype" ],
+    "id" : "186"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#MAG00TBn01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "190",
+    "label" : {
+      "IRI-based" : "MAG00TBn01",
+      "en" : "Inclination 1 of the deck"
+    },
+    "domain" : "189",
+    "comment" : {
+      "de" : "Neigung 1 der Fahrbahnplatte",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/BCore#partOfZone",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "partOfZone"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "191"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxCUe00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "166",
+    "label" : {
+      "IRI-based" : "CAPxxCUe00",
+      "en" : "Existence of the curb at the cap"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Existenz des Schrammbords der Kappe"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "192"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#RailwayMaximumVelocity",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "194",
+    "label" : {
+      "IRI-based" : "RailwayMaximumVelocity"
+    },
+    "domain" : "65",
+    "comment" : {
+      "de" : "Maximale Geschwindigkeit des Schienenweges",
+      "undefined" : "[km/h]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#XXXxxXXp00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "196",
+    "label" : {
+      "IRI-based" : "XXXxxXXp00"
+    },
+    "domain" : "72",
+    "comment" : {
+      "de" : "Position des Bauteils senkrecht zur Trasse (Index)",
+      "en" : "Position of the component perpendicular to the alignment (index)"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#SupportNotRecommended",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "200",
+    "label" : {
+      "IRI-based" : "SupportNotRecommended"
+    },
+    "domain" : "132",
+    "comment" : {
+      "de" : "Ist hier die Errichtung einer Stütze nicht empfohlen?"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#FootAndCycleWay",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "197",
+    "label" : {
+      "IRI-based" : "FootAndCycleWay"
+    },
+    "domain" : "97",
+    "comment" : {
+      "de" : "Ist es ein gemeinsamer Geh- und Radweg?"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "201"
+  }, {
+    "iri" : "https://w3id.org/BCore#LocalY",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "205",
+    "label" : {
+      "IRI-based" : "LocalY"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "204"
+  }, {
+    "iri" : "https://w3id.org/BCore#LocalX",
+    "baseIri" : "https://w3id.org/BCore",
+    "range" : "207",
+    "label" : {
+      "IRI-based" : "LocalX"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "206"
+  }, {
+    "range" : "55",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "55",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "70",
+    "domain" : "134",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "70",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "55",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "range" : "49",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "215"
+  }, {
+    "range" : "1",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "216"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "218"
+  }, {
+    "range" : "9",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "range" : "63",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "221"
+  }, {
+    "range" : "64",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "222"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#RoadClass",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "RoadClass"
+    },
+    "domain" : "66",
+    "comment" : {
+      "de" : "Straßenklassifizierung"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "223"
+  }, {
+    "range" : "64",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#equalsRoutePoint",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "225",
+    "label" : {
+      "IRI-based" : "equalsRoutePoint"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "132",
+    "attributes" : [ "object", "symmetric" ],
+    "id" : "31"
+  }, {
+    "range" : "47",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "49",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXb03",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "169",
+    "label" : {
+      "IRI-based" : "CAPxxXXb03"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Breite 3 der Kappe",
+      "en" : "Width 3 of the cap",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "228"
+  }, {
+    "iri" : "https://w3id.org/reloc#meetRight",
+    "baseIri" : "https://w3id.org/reloc",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "meetRight"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "229"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXb02",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "172",
+    "label" : {
+      "IRI-based" : "CAPxxXXb02"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Breite 2 der Kappe",
+      "en" : "Width 2 of the cap",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "230"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#CAPxxXXb01",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "165",
+    "label" : {
+      "IRI-based" : "CAPxxXXb01",
+      "en" : "Width 1 of the cap"
+    },
+    "domain" : "35",
+    "comment" : {
+      "de" : "Breite 1 der Kappe",
+      "undefined" : "[m]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "231"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#SupportNotPossible",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "208",
+    "label" : {
+      "IRI-based" : "SupportNotPossible"
+    },
+    "domain" : "132",
+    "comment" : {
+      "de" : "Lässt sich hier keine Stütze errichten?"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "232"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#XXXxxXXf00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "202",
+    "label" : {
+      "IRI-based" : "XXXxxXXf00"
+    },
+    "domain" : "72",
+    "comment" : {
+      "de" : "Farbe des Bauteils",
+      "en" : "Declaration in words (e.g. \"blue\" or \"dark green\") or Hex-Code (\"#0000ff\" or \"#008800\")"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "233"
+  }, {
+    "iri" : "https://w3id.org/reloc#meetBottom",
+    "baseIri" : "https://w3id.org/reloc",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "meetBottom"
+    },
+    "domain" : "28",
+    "attributes" : [ "object", "external" ],
+    "id" : "234"
+  }, {
+    "iri" : "https://w3id.org/BEDRO#PAVxxXXn00",
+    "baseIri" : "https://w3id.org/BEDRO",
+    "range" : "209",
+    "label" : {
+      "IRI-based" : "PAVxxXXn00"
+    },
+    "domain" : "55",
+    "comment" : {
+      "de" : "Neigung des Fahrbahnbelags",
+      "en" : "Inclination of the pavement",
+      "undefined" : "[-]"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "235"
+  } ]
+}
