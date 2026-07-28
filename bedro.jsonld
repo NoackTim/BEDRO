@@ -436,7 +436,7 @@
   "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brot#Bridge"
@@ -445,7 +445,7 @@
   "@id" : "_:genid160",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#s"
+    "@id" : "https://w3id.org/s"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/bedro#Slab"
@@ -454,7 +454,7 @@
   "@id" : "_:genid162",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brcomp#Pavement"
@@ -463,10 +463,10 @@
   "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bcore#partOfZone"
@@ -475,10 +475,10 @@
   "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#s"
+    "@id" : "https://w3id.org/s"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bcore#partOfZone"
@@ -487,10 +487,10 @@
   "@id" : "_:genid168",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#s"
+    "@id" : "https://w3id.org/s"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/reloc#meetTop"
@@ -2234,13 +2234,13 @@
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/bedro#bb"
+      "@id" : "https://w3id.org/bb"
     }, {
-      "@id" : "https://w3id.org/bedro#br"
+      "@id" : "https://w3id.org/br"
     }, {
-      "@id" : "https://w3id.org/bedro#bl"
+      "@id" : "https://w3id.org/bl"
     }, {
-      "@id" : "https://w3id.org/bedro#bp"
+      "@id" : "https://w3id.org/bp"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#builtin" : [ {
@@ -2633,10 +2633,10 @@
   "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#bp"
+    "@id" : "https://w3id.org/bp"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bedro#PAVxxXXb00"
@@ -2736,7 +2736,7 @@
   "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brcomp#Pavement"
@@ -2825,10 +2825,10 @@
   "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#p"
+    "@id" : "https://w3id.org/p"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/brot#containsComponent"
@@ -2861,10 +2861,10 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cr"
+    "@id" : "https://w3id.org/cr"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#br"
+    "@id" : "https://w3id.org/br"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bedro#CAPxxXXb01"
@@ -2873,7 +2873,7 @@
   "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cr"
+    "@id" : "https://w3id.org/cr"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2886,7 +2886,7 @@
   "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cr"
+    "@id" : "https://w3id.org/cr"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brcomp#Cap"
@@ -2895,10 +2895,10 @@
   "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#cr"
+    "@id" : "https://w3id.org/cr"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/brot#containsComponent"
@@ -2907,10 +2907,10 @@
   "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cl"
+    "@id" : "https://w3id.org/cl"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#bl"
+    "@id" : "https://w3id.org/bl"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bedro#CAPxxXXb01"
@@ -2919,7 +2919,7 @@
   "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cl"
+    "@id" : "https://w3id.org/cl"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -2932,7 +2932,7 @@
   "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#cl"
+    "@id" : "https://w3id.org/cl"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brcomp#Cap"
@@ -2941,10 +2941,10 @@
   "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#cl"
+    "@id" : "https://w3id.org/cl"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/brot#containsComponent"
@@ -2953,7 +2953,7 @@
   "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "https://w3id.org/brot#Bridge"
@@ -2962,10 +2962,10 @@
   "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "https://w3id.org/bedro#b"
+    "@id" : "https://w3id.org/b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "https://w3id.org/bedro#bb"
+    "@id" : "https://w3id.org/bb"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "https://w3id.org/bedro#BridgeWidth"
@@ -3212,6 +3212,9 @@
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://schema.org/image",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -3311,6 +3314,9 @@
   "@id" : "https://w3id.org/b",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
+  "@id" : "https://w3id.org/bb",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
   "@id" : "https://w3id.org/bcore#FootCycleRouteType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
@@ -3365,9 +3371,6 @@
   "@id" : "https://w3id.org/bcore#partOfZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/bcore#vann:preferredNamespacePrefix",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "https://w3id.org/bedro",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
@@ -3409,6 +3412,9 @@
     "@language" : "en",
     "@value" : "Ontology Specification Draft"
   } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "bedro"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Bridge Element Design Rule Ontology"
   } ],
@@ -3428,9 +3434,6 @@
   } ],
   "https://schema.org/codeRepository" : [ {
     "@value" : "https://github.com/NoackTim/BEDRO"
-  } ],
-  "https://w3id.org/bcore#vann:preferredNamespacePrefix" : [ {
-    "@value" : "bedro"
   } ]
 }, {
   "@id" : "https://w3id.org/bedro#Asphalt",
@@ -4089,25 +4092,7 @@
   "@id" : "https://w3id.org/bedro#b",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
-  "@id" : "https://w3id.org/bedro#bb",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#bl",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#bp",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#br",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
   "@id" : "https://w3id.org/bedro#c",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#cl",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#cr",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "https://w3id.org/bedro#equalsRoutePoint",
@@ -4129,9 +4114,6 @@
   } ]
 }, {
   "@id" : "https://w3id.org/bedro#n",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "https://w3id.org/bedro#p",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "https://w3id.org/bedro#r",
@@ -4161,9 +4143,6 @@
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "https://w3id.org/bedro#s",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
   "@id" : "https://w3id.org/bedro/b",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
@@ -4182,6 +4161,9 @@
   "@id" : "https://w3id.org/bedro/t",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
+  "@id" : "https://w3id.org/bl",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
   "@id" : "https://w3id.org/bmat#BuildingMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -4190,6 +4172,12 @@
 }, {
   "@id" : "https://w3id.org/bot#Zone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/bp",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/br",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "https://w3id.org/brcomp#Cap",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -4278,6 +4266,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/cl",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/cr",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/p",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "https://w3id.org/reloc#meetBottom",

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:bedro="https://w3id.org/bedro#"
+<rdf:RDF xmlns="https://w3id.org/bedro#"
      xml:base="https://w3id.org/bedro"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -14,7 +14,8 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="https://schema.org/">
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/bedro">
         <owl:imports rdf:resource="https://w3id.org/bcore"/>
         <owl:imports rdf:resource="https://w3id.org/bcore/comp"/>
@@ -32,10 +33,10 @@
         <terms:license>https://creativecommons.org/licenses/by/4.0/deed.en</terms:license>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-28</terms:modified>
         <bibo:status xml:lang="en">Ontology Specification Draft</bibo:status>
+        <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
         <rdfs:label>Bridge Element Design Rule Ontology</rdfs:label>
         <owl:versionInfo>0.1.0</owl:versionInfo>
         <schema:codeRepository>https://github.com/NoackTim/BEDRO</schema:codeRepository>
-        <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
 
@@ -80,6 +81,13 @@
     
 
 
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
     <!-- http://schema.org/image -->
 
 
@@ -98,13 +106,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/image"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
@@ -1031,28 +1032,28 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/tim.noack/ontologies/bedro/c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#b">
+    <rdf:Description rdf:about="https://w3id.org/b">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#cl">
+    <rdf:Description rdf:about="https://w3id.org/cl">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#bl">
+    <rdf:Description rdf:about="https://w3id.org/bl">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#cr">
+    <rdf:Description rdf:about="https://w3id.org/cr">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#br">
+    <rdf:Description rdf:about="https://w3id.org/br">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#p">
+    <rdf:Description rdf:about="https://w3id.org/p">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#bp">
+    <rdf:Description rdf:about="https://w3id.org/bp">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#bb">
+    <rdf:Description rdf:about="https://w3id.org/bb">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/tim.noack/ontologies/bedro/b">
@@ -1070,13 +1071,7 @@
     <rdf:Description rdf:about="https://w3id.org/s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/b">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/c">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro/b">
@@ -1104,6 +1099,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#r">
@@ -1490,8 +1488,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#partOfZone"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#s"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/s"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/b"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1501,8 +1499,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#partOfZone"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/p"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/b"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -1512,7 +1510,7 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/p"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -1522,7 +1520,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                 <swrl:classPredicate rdf:resource="https://w3id.org/bedro#Slab"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#s"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/s"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -1532,7 +1530,7 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                         <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/b"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1553,8 +1551,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#s"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/p"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2933,7 +2931,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/b"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2943,8 +2941,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#cl"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/b"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/cl"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2954,7 +2952,7 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#cl"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/cl"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2964,7 +2962,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#cl"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/cl"/>
                                                 <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
                                             </rdf:Description>
                                         </rdf:first>
@@ -2975,8 +2973,8 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb01"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#cl"/>
-                                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#bl"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/cl"/>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/bl"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2986,8 +2984,8 @@
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#cr"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/b"/>
+                                                                <swrl:argument2 rdf:resource="https://w3id.org/cr"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2997,7 +2995,7 @@
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                                         <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
-                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#cr"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/cr"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -3007,7 +3005,7 @@
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
-                                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#cr"/>
+                                                                                <swrl:argument1 rdf:resource="https://w3id.org/cr"/>
                                                                                 <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
                                                                             </rdf:Description>
                                                                         </rdf:first>
@@ -3018,8 +3016,8 @@
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                                         <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb01"/>
-                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#cr"/>
-                                                                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#br"/>
+                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/cr"/>
+                                                                                        <swrl:argument2 rdf:resource="https://w3id.org/br"/>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
                                                                                 <rdf:rest>
@@ -3029,8 +3027,8 @@
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/b"/>
+                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/p"/>
                                                                                             </rdf:Description>
                                                                                         </rdf:first>
                                                                                         <rdf:rest>
@@ -3040,7 +3038,7 @@
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                                                                         <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
-                                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/p"/>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:first>
                                                                                                 <rdf:rest>
@@ -3050,8 +3048,8 @@
                                                                                                             <rdf:Description>
                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#PAVxxXXb00"/>
-                                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
-                                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#bp"/>
+                                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/p"/>
+                                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/bp"/>
                                                                                                             </rdf:Description>
                                                                                                         </rdf:first>
                                                                                                         <rdf:rest>
@@ -3062,10 +3060,10 @@
                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                                         <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
                                                                                                                         <swrl:arguments rdf:parseType="Collection">
-                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#bb"/>
-                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#br"/>
-                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#bl"/>
-                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#bp"/>
+                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bb"/>
+                                                                                                                            <rdf:Description rdf:about="https://w3id.org/br"/>
+                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bl"/>
+                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bp"/>
                                                                                                                         </swrl:arguments>
                                                                                                                     </rdf:Description>
                                                                                                                 </rdf:first>
@@ -3103,8 +3101,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#BridgeWidth"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#bb"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
