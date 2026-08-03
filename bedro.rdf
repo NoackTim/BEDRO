@@ -44,7 +44,7 @@
         <bibo:status xml:lang="en">Ontology Specification Draft</bibo:status>
         <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
         <rdfs:label>Bridge Element Design Rule Ontology</rdfs:label>
-        <owl:versionInfo>0.1.1</owl:versionInfo>
+        <owl:versionInfo>0.1.2</owl:versionInfo>
         <schema:codeRepository>https://github.com/NoackTim/BEDRO</schema:codeRepository>
     </owl:Ontology>
     
@@ -259,6 +259,19 @@
     
 
 
+    <!-- https://w3id.org/bedro#BridgeOntologyParameter -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#BridgeOntologyParameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="en">Parameter following the Bridge Ontology Parametercoding (BOP) convention, developed at the Institute of Concrete Structures, Technische Universität Dresden. The parameters define geometric and other attributes of bridge components. Each parameter is coded with a ten-character alphanumeric code: AAAbbCCdEE (A: component, b: transversal position, C: sub-component, d: attribute type, E: attribute number). X or 00 means global [applies for every (sub-)component/ attribute of that kind].</rdfs:comment>
+        <rdfs:comment xml:lang="de">Parameter, der der Bridge Ontology Parametercoding (BOP) Namenskonvention folgt, die am Institut für Massivbau, Technische Universität Dresden, entwickelt wurde. Die Parameter definieren geometrische und weitere Attribute von Brückenbauteilen. Jeder Parameter ist mit einem zehnstelligen alphanumerischen Code beschrieben: AAAbbCCdEE (A: Bauteil, b: transversale Position, C: Teilbauteil, d: Art des Attributs, E: Nummer des Attributs). X oder 00 bedeutet global [gilt für alle (Teil-)Bauteile/Attribute dieser Art].</rdfs:comment>
+        <rdfs:label xml:lang="de">Brückenontologieparameter</rdfs:label>
+        <rdfs:label xml:lang="en">bridge ontology parameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/bedro#BridgeWidth -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#BridgeWidth">
@@ -278,7 +291,7 @@
     <!-- https://w3id.org/bedro#CAPxxCUe00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxCUe00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -293,7 +306,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXb01 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXb01">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -309,7 +322,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXb02 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXb02">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -325,7 +338,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXb03 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXb03">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -338,10 +351,26 @@
     
 
 
+    <!-- https://w3id.org/bedro#CAPxxXXb04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXb04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 4 der Kappe</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 4 of the cap</rdfs:comment>
+        <rdfs:label xml:lang="de">Kappe Breite 4</rdfs:label>
+        <rdfs:label xml:lang="en">cap width 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/bedro#CAPxxXXg00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXg00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -356,7 +385,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXh01 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXh01">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -372,7 +401,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXh02 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXh02">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -388,7 +417,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXh03 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXh03">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -401,10 +430,26 @@
     
 
 
+    <!-- https://w3id.org/bedro#CAPxxXXh04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXh04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 4 of the cap</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 4 der Kappe</rdfs:comment>
+        <rdfs:label xml:lang="de">Kappe Höhe 4</rdfs:label>
+        <rdfs:label xml:lang="en">cap height 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/bedro#CAPxxXXn01 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXn01">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -420,7 +465,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXn02 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXn02">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -436,7 +481,7 @@
     <!-- https://w3id.org/bedro#CAPxxXXn03 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#CAPxxXXn03">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Cap"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -449,26 +494,42 @@
     
 
 
-    <!-- https://w3id.org/bedro#PAVxxXXb00 -->
+    <!-- https://w3id.org/bedro#PAV00XXb01 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAVxxXXb00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAV00XXb01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Pavement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment xml:lang="de">Breite des Fahrbahnbelags</rdfs:comment>
-        <rdfs:comment xml:lang="en">Width of the pavement</rdfs:comment>
-        <rdfs:label xml:lang="de">Fahrbahnbreite</rdfs:label>
-        <rdfs:label xml:lang="en">pavement width</rdfs:label>
+        <rdfs:comment xml:lang="de">Breite 1 des Fahrbahnbelags</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 1 of the pavement</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrbahnbreite 1</rdfs:label>
+        <rdfs:label xml:lang="en">pavement width 1</rdfs:label>
         <schema:unitText>m</schema:unitText>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/bedro#PAVxxXXh00 -->
+    <!-- https://w3id.org/bedro#PAV00XXb02 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAVxxXXh00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAV00XXb02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#Pavement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 2 des Fahrbahnbelags</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 2 of the pavement</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrbahnbreite 2</rdfs:label>
+        <rdfs:label xml:lang="en">pavement width 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#PAV00XXh00 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAV00XXh00">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Pavement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -481,17 +542,770 @@
     
 
 
-    <!-- https://w3id.org/bedro#PAVxxXXn00 -->
+    <!-- https://w3id.org/bedro#PAV00XXn01 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAVxxXXn00">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAV00XXn01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#Pavement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment xml:lang="en">Inclination of the pavement</rdfs:comment>
-        <rdfs:comment xml:lang="de">Neigung des Fahrbahnbelags</rdfs:comment>
-        <rdfs:label xml:lang="de">Fahrbahn Neigung</rdfs:label>
-        <rdfs:label xml:lang="en">pavement inclination</rdfs:label>
+        <rdfs:comment xml:lang="en">Inclination 1 of the pavement</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 1 des Fahrbahnbelags</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrbahn Neigung 1</rdfs:label>
+        <rdfs:label xml:lang="en">pavement inclination 1</rdfs:label>
         <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#PAV00XXn02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#PAV00XXn02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#Pavement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 2 of the pavement</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 2 des Fahrbahnbelags</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrbahn Neigung 2</rdfs:label>
+        <rdfs:label xml:lang="en">pavement inclination 2</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 1 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 1 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 1</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 2 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 2 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 2</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 3 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 3 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 3</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 4 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 4 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 4</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 5 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 5 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 5</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 5</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb06 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb06">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 6 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 6 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 6</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 6</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb07 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb07">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 7 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 7 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 7</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 7</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb08 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb08">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 8 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 8 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 8</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 8</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLb09 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLb09">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 9 der Betonplatte</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 9 of the concrete slab</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Breite 9</rdfs:label>
+        <rdfs:label xml:lang="en">slab width 9</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 1 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 1 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 1</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 2 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 2 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 2</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 3 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 3 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 3</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 4 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 4 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 4</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 5 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 5 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 5</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 5</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLh06 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLh06">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 6 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 6 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Höhe 6</rdfs:label>
+        <rdfs:label xml:lang="en">slab height 6</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLn01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLn01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 1 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 1 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Neigung 1</rdfs:label>
+        <rdfs:label xml:lang="en">slab inclination 1</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLn02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLn02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 2 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 2 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Neigung 2</rdfs:label>
+        <rdfs:label xml:lang="en">slab inclination 2</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLn03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLn03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 3 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 3 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Neigung 3</rdfs:label>
+        <rdfs:label xml:lang="en">slab inclination 3</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLn04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLn04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 4 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 4 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Neigung 4</rdfs:label>
+        <rdfs:label xml:lang="en">slab inclination 4</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00SLn05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00SLn05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 5 of the concrete slab</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 5 der Betonplatte</rdfs:comment>
+        <rdfs:label xml:lang="de">Platte Neigung 5</rdfs:label>
+        <rdfs:label xml:lang="en">slab inclination 5</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 1 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 1 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 1</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 2 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 2 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 2</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 3 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 3 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 3</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 4 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 4 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 4</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 5 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 5 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 5</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 5</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb06 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb06">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 6 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 6 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 6</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 6</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBb07 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBb07">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 7 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 7 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Breite 7</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck width 7</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBh01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBh01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 1 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 1 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Höhe 1</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck height 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBh02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBh02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 2 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 2 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Höhe 2</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck height 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBh03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBh03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 3 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 3 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Höhe 3</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck height 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBh04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBh04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 4 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 4 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Höhe 4</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck height 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBn01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBn01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 1 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 1 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Neigung 1</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck inclination 1</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBn02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBn02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 2 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 2 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Neigung 2</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck inclination 2</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBn03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBn03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 3 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 3 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Neigung 3</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck inclination 3</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUP00TBn04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUP00TBn04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brcomp#GirderDeck"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Inclination 4 of the deck of the concrete T-Beam bridge</rdfs:comment>
+        <rdfs:comment xml:lang="de">Neigung 4 der Platte der Beton-Plattenbalkenbrücke</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalkenplatte Neigung 4</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam deck inclination 4</rdfs:label>
+        <schema:unitText>-</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 1 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 1 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 1</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 2 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 2 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 2</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 3 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 3 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 3</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 4 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 4 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 4</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 5 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 5 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 5</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 5</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBb06 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBb06">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="de">Breite 6 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width 6 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Breite 6</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam width 6</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBh01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBh01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 1 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 1 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Höhe 1</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam height 1</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBh02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBh02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 2 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 2 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Höhe 2</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam height 2</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBh03 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBh03">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 3 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 3 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Höhe 3</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam height 3</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBh04 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBh04">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 4 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 4 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Höhe 4</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam height 4</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#SUPxxTBh05 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#SUPxxTBh05">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Height 5 of the xx-th concrete T-Beam</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe 5 des xx-ten Beton-Plattenbalkens</rdfs:comment>
+        <rdfs:label xml:lang="de">Plattenbalken Höhe 5</rdfs:label>
+        <rdfs:label xml:lang="en">T-beam height 5</rdfs:label>
+        <schema:unitText>m</schema:unitText>
     </owl:DatatypeProperty>
     
 
@@ -529,7 +1343,7 @@
     <!-- https://w3id.org/bedro#TRBxxXXb00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#TRBxxXXb00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brcomp#TrafficBarrier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -545,7 +1359,7 @@
     <!-- https://w3id.org/bedro#XXXxxXXf00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXf00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -561,7 +1375,7 @@
     <!-- https://w3id.org/bedro#XXXxxXXp00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXp00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -576,7 +1390,7 @@
     <!-- https://w3id.org/bedro#XXXxxXXq00 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXq00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -589,34 +1403,66 @@
     
 
 
-    <!-- https://w3id.org/bedro#XXXxxXXs00 -->
+    <!-- https://w3id.org/bedro#XXXxxXXs01 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXs00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXs01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="de">Kilometrierung des Bauteilbeginns (Stationierung)</rdfs:comment>
         <rdfs:comment xml:lang="en">Station of the component beginning (kilometer of route)</rdfs:comment>
-        <rdfs:label xml:lang="de">Bauteilstationierung</rdfs:label>
-        <rdfs:label xml:lang="en">component station</rdfs:label>
+        <rdfs:label xml:lang="de">Bauteilstationierung Start</rdfs:label>
+        <rdfs:label xml:lang="en">component station start</rdfs:label>
         <schema:unitText>m</schema:unitText>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://w3id.org/bedro#XXXxxXXz00 -->
+    <!-- https://w3id.org/bedro#XXXxxXXs02 -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXz00">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXs02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment xml:lang="en">Altitude of the component</rdfs:comment>
-        <rdfs:comment xml:lang="de">Höhe des Bauteils über NN</rdfs:comment>
-        <rdfs:comment>[m AMSL]</rdfs:comment>
-        <rdfs:label xml:lang="de">Bauteilkote</rdfs:label>
-        <rdfs:label xml:lang="en">component altitude</rdfs:label>
+        <rdfs:comment xml:lang="de">Kilometrierung des Bauteilendes (Stationierung)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Station of the component ending (kilometer of route)</rdfs:comment>
+        <rdfs:label xml:lang="de">Bauteilstationierung Ende</rdfs:label>
+        <rdfs:label xml:lang="en">component station end</rdfs:label>
+        <schema:unitText>m</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#XXXxxXXz01 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXz01">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Altitude of the component beginning</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe des Bauteilanfangs über NN</rdfs:comment>
+        <rdfs:label xml:lang="de">Bauteilkote Start</rdfs:label>
+        <rdfs:label xml:lang="en">component altitude start</rdfs:label>
+        <schema:unitText>m AMSL</schema:unitText>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bedro#XXXxxXXz02 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#XXXxxXXz02">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bedro#BridgeOntologyParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Altitude of the component ending</rdfs:comment>
+        <rdfs:comment xml:lang="de">Höhe des Bauteilendes über NN</rdfs:comment>
+        <rdfs:label xml:lang="de">Bauteilkote Ende</rdfs:label>
+        <rdfs:label xml:lang="en">component altitude end</rdfs:label>
+        <schema:unitText>m AMSL</schema:unitText>
     </owl:DatatypeProperty>
     
 
@@ -635,6 +1481,12 @@
     <!-- https://w3id.org/bcore#InfrastructureRoute -->
 
     <owl:Class rdf:about="https://w3id.org/bcore#InfrastructureRoute"/>
+    
+
+
+    <!-- https://w3id.org/bcore/comp#EquipmentComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/bcore/comp#EquipmentComponent"/>
     
 
 
@@ -801,11 +1653,6 @@
     
 
 
-    <!-- https://w3id.org/bcore/comp#EquipmentComponent -->
-
-    <owl:Class rdf:about="https://w3id.org/bcore/comp#EquipmentComponent"/>
-
-
     <!-- https://w3id.org/brcomp#Cap -->
 
     <owl:Class rdf:about="https://w3id.org/brcomp#Cap">
@@ -923,8 +1770,436 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="https://w3id.org/bedro#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Geländer rechts auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the right side of a bridge, the railing is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP99_RAI99</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Railing"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Schutzeinrichtung links auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the left side of a bridge, the traffic barrier is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP01_TRB01</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#TrafficBarrier"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Schutzeinrichtung rechts auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the right side of a bridge, the traffic barrier is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP99_TRB99</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#TrafficBarrier"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#t"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn eine Kappe auf einer Plattenbrücke liegt, ist die Platte direkt unter der Kappe positioniert.; EN: If a cap is part of a slab bridge, the slab is directly below the cap.</rdfs:comment>
+        <rdfs:label>CAPXX_SUP00SL</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#s"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/bcore/comp#Slab"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -953,6 +2228,525 @@
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXn01"/>
                         <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
                         <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.075</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Lärmschutzwand links auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the left side of a bridge, the barrier is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP01_NOB01</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#NoiseBarrier"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Lärmschutzwand rechts auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the right side of a bridge, the barrier is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP99_NOB99</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#NoiseBarrier"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#n"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Kappe liegt links des Fahrbahnbelags; EN: Cap is left of pavement.</rdfs:comment>
+        <rdfs:label>CAP01_PAV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetLeft"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Kappe liegt rechts des Fahrbahnbelags; EN: Cap is right of pavement.</rdfs:comment>
+        <rdfs:label>CAP99_PAV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetRight"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Geländer links auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the left side of a bridge, the railing is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP01_RAI01</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Railing"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

@@ -34,7 +34,7 @@
                           <http://purl.org/ontology/bibo/status> "Ontology Specification Draft"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "bedro" ;
                           rdfs:label "Bridge Element Design Rule Ontology" ;
-                          owl:versionInfo "0.1.1" ;
+                          owl:versionInfo "0.1.2" ;
                           <https://schema.org/codeRepository> "https://github.com/NoackTim/BEDRO" .
 
 #################################################################
@@ -169,6 +169,16 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/bcore#LocalY> rdf:type owl:DatatypeProperty .
 
 
+###  https://w3id.org/bedro#BridgeOntologyParameter
+:BridgeOntologyParameter rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain <https://w3id.org/brot#Component> ;
+                         rdfs:comment "Parameter following the Bridge Ontology Parametercoding (BOP) convention, developed at the Institute of Concrete Structures, Technische Universität Dresden. The parameters define geometric and other attributes of bridge components. Each parameter is coded with a ten-character alphanumeric code: AAAbbCCdEE (A: component, b: transversal position, C: sub-component, d: attribute type, E: attribute number). X or 00 means global [applies for every (sub-)component/ attribute of that kind]."@en ,
+                                      "Parameter, der der Bridge Ontology Parametercoding (BOP) Namenskonvention folgt, die am Institut für Massivbau, Technische Universität Dresden, entwickelt wurde. Die Parameter definieren geometrische und weitere Attribute von Brückenbauteilen. Jeder Parameter ist mit einem zehnstelligen alphanumerischen Code beschrieben: AAAbbCCdEE (A: Bauteil, b: transversale Position, C: Teilbauteil, d: Art des Attributs, E: Nummer des Attributs). X oder 00 bedeutet global [gilt für alle (Teil-)Bauteile/Attribute dieser Art]."@de ;
+                         rdfs:label "Brückenontologieparameter"@de ,
+                                    "bridge ontology parameter"@en .
+
+
 ###  https://w3id.org/bedro#BridgeWidth
 :BridgeWidth rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
@@ -184,7 +194,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxCUe00
 :CAPxxCUe00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:boolean ;
@@ -196,7 +206,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXb01
 :CAPxxXXb01 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -209,7 +219,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXb02
 :CAPxxXXb02 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -222,7 +232,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXb03
 :CAPxxXXb03 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -233,9 +243,22 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "m" .
 
 
+###  https://w3id.org/bedro#CAPxxXXb04
+:CAPxxXXb04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#Cap> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 4 der Kappe"@de ,
+                         "Width 4 of the cap"@en ;
+            rdfs:label "Kappe Breite 4"@de ,
+                       "cap width 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
 ###  https://w3id.org/bedro#CAPxxXXg00
 :CAPxxXXg00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:string ;
@@ -247,7 +270,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXh01
 :CAPxxXXh01 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -260,7 +283,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXh02
 :CAPxxXXh02 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -273,7 +296,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXh03
 :CAPxxXXh03 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -284,9 +307,22 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "m" .
 
 
+###  https://w3id.org/bedro#CAPxxXXh04
+:CAPxxXXh04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#Cap> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 4 of the cap"@en ,
+                         "Höhe 4 der Kappe"@de ;
+            rdfs:label "Kappe Höhe 4"@de ,
+                       "cap height 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
 ###  https://w3id.org/bedro#CAPxxXXn01
 :CAPxxXXn01 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -299,7 +335,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXn02
 :CAPxxXXn02 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -312,7 +348,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#CAPxxXXn03
 :CAPxxXXn03 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Cap> ;
             rdfs:range xsd:decimal ;
@@ -323,22 +359,35 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "-" .
 
 
-###  https://w3id.org/bedro#PAVxxXXb00
-:PAVxxXXb00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+###  https://w3id.org/bedro#PAV00XXb01
+:PAV00XXb01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Pavement> ;
             rdfs:range xsd:decimal ;
-            rdfs:comment "Breite des Fahrbahnbelags"@de ,
-                         "Width of the pavement"@en ;
-            rdfs:label "Fahrbahnbreite"@de ,
-                       "pavement width"@en ;
+            rdfs:comment "Breite 1 des Fahrbahnbelags"@de ,
+                         "Width 1 of the pavement"@en ;
+            rdfs:label "Fahrbahnbreite 1"@de ,
+                       "pavement width 1"@en ;
             <https://schema.org/unitText> "m" .
 
 
-###  https://w3id.org/bedro#PAVxxXXh00
-:PAVxxXXh00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+###  https://w3id.org/bedro#PAV00XXb02
+:PAV00XXb02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#Pavement> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 2 des Fahrbahnbelags"@de ,
+                         "Width 2 of the pavement"@en ;
+            rdfs:label "Fahrbahnbreite 2"@de ,
+                       "pavement width 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#PAV00XXh00
+:PAV00XXh00 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Pavement> ;
             rdfs:range xsd:decimal ;
@@ -349,16 +398,628 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "m" .
 
 
-###  https://w3id.org/bedro#PAVxxXXn00
-:PAVxxXXn00 rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
+###  https://w3id.org/bedro#PAV00XXn01
+:PAV00XXn01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#Pavement> ;
             rdfs:range xsd:decimal ;
-            rdfs:comment "Inclination of the pavement"@en ,
-                         "Neigung des Fahrbahnbelags"@de ;
-            rdfs:label "Fahrbahn Neigung"@de ,
-                       "pavement inclination"@en ;
+            rdfs:comment "Inclination 1 of the pavement"@en ,
+                         "Neigung 1 des Fahrbahnbelags"@de ;
+            rdfs:label "Fahrbahn Neigung 1"@de ,
+                       "pavement inclination 1"@en ;
             <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#PAV00XXn02
+:PAV00XXn02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#Pavement> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 2 of the pavement"@en ,
+                         "Neigung 2 des Fahrbahnbelags"@de ;
+            rdfs:label "Fahrbahn Neigung 2"@de ,
+                       "pavement inclination 2"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00SLb01
+:SUP00SLb01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 1 der Betonplatte"@de ,
+                         "Width 1 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 1"@de ,
+                       "slab width 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb02
+:SUP00SLb02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 2 der Betonplatte"@de ,
+                         "Width 2 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 2"@de ,
+                       "slab width 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb03
+:SUP00SLb03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 3 der Betonplatte"@de ,
+                         "Width 3 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 3"@de ,
+                       "slab width 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb04
+:SUP00SLb04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 4 der Betonplatte"@de ,
+                         "Width 4 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 4"@de ,
+                       "slab width 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb05
+:SUP00SLb05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 5 der Betonplatte"@de ,
+                         "Width 5 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 5"@de ,
+                       "slab width 5"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb06
+:SUP00SLb06 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 6 der Betonplatte"@de ,
+                         "Width 6 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 6"@de ,
+                       "slab width 6"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb07
+:SUP00SLb07 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 7 der Betonplatte"@de ,
+                         "Width 7 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 7"@de ,
+                       "slab width 7"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb08
+:SUP00SLb08 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 8 der Betonplatte"@de ,
+                         "Width 8 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 8"@de ,
+                       "slab width 8"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLb09
+:SUP00SLb09 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 9 der Betonplatte"@de ,
+                         "Width 9 of the concrete slab"@en ;
+            rdfs:label "Platte Breite 9"@de ,
+                       "slab width 9"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh01
+:SUP00SLh01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 1 of the concrete slab"@en ,
+                         "Höhe 1 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 1"@de ,
+                       "slab height 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh02
+:SUP00SLh02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 2 of the concrete slab"@en ,
+                         "Höhe 2 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 2"@de ,
+                       "slab height 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh03
+:SUP00SLh03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 3 of the concrete slab"@en ,
+                         "Höhe 3 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 3"@de ,
+                       "slab height 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh04
+:SUP00SLh04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 4 of the concrete slab"@en ,
+                         "Höhe 4 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 4"@de ,
+                       "slab height 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh05
+:SUP00SLh05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 5 of the concrete slab"@en ,
+                         "Höhe 5 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 5"@de ,
+                       "slab height 5"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLh06
+:SUP00SLh06 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 6 of the concrete slab"@en ,
+                         "Höhe 6 der Betonplatte"@de ;
+            rdfs:label "Platte Höhe 6"@de ,
+                       "slab height 6"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00SLn01
+:SUP00SLn01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 1 of the concrete slab"@en ,
+                         "Neigung 1 der Betonplatte"@de ;
+            rdfs:label "Platte Neigung 1"@de ,
+                       "slab inclination 1"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00SLn02
+:SUP00SLn02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 2 of the concrete slab"@en ,
+                         "Neigung 2 der Betonplatte"@de ;
+            rdfs:label "Platte Neigung 2"@de ,
+                       "slab inclination 2"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00SLn03
+:SUP00SLn03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 3 of the concrete slab"@en ,
+                         "Neigung 3 der Betonplatte"@de ;
+            rdfs:label "Platte Neigung 3"@de ,
+                       "slab inclination 3"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00SLn04
+:SUP00SLn04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 4 of the concrete slab"@en ,
+                         "Neigung 4 der Betonplatte"@de ;
+            rdfs:label "Platte Neigung 4"@de ,
+                       "slab inclination 4"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00SLn05
+:SUP00SLn05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#Slab> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 5 of the concrete slab"@en ,
+                         "Neigung 5 der Betonplatte"@de ;
+            rdfs:label "Platte Neigung 5"@de ,
+                       "slab inclination 5"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00TBb01
+:SUP00TBb01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 1 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 1 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 1"@de ,
+                       "T-beam deck width 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb02
+:SUP00TBb02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 2 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 2 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 2"@de ,
+                       "T-beam deck width 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb03
+:SUP00TBb03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 3 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 3 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 3"@de ,
+                       "T-beam deck width 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb04
+:SUP00TBb04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 4 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 4 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 4"@de ,
+                       "T-beam deck width 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb05
+:SUP00TBb05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 5 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 5 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 5"@de ,
+                       "T-beam deck width 5"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb06
+:SUP00TBb06 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 6 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 6 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 6"@de ,
+                       "T-beam deck width 6"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBb07
+:SUP00TBb07 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 7 der Platte der Beton-Plattenbalkenbrücke"@de ,
+                         "Width 7 of the deck of the concrete T-Beam bridge"@en ;
+            rdfs:label "Plattenbalkenplatte Breite 7"@de ,
+                       "T-beam deck width 7"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBh01
+:SUP00TBh01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 1 of the deck of the concrete T-Beam bridge"@en ,
+                         "Höhe 1 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Höhe 1"@de ,
+                       "T-beam deck height 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBh02
+:SUP00TBh02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 2 of the deck of the concrete T-Beam bridge"@en ,
+                         "Höhe 2 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Höhe 2"@de ,
+                       "T-beam deck height 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBh03
+:SUP00TBh03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 3 of the deck of the concrete T-Beam bridge"@en ,
+                         "Höhe 3 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Höhe 3"@de ,
+                       "T-beam deck height 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBh04
+:SUP00TBh04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 4 of the deck of the concrete T-Beam bridge"@en ,
+                         "Höhe 4 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Höhe 4"@de ,
+                       "T-beam deck height 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUP00TBn01
+:SUP00TBn01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 1 of the deck of the concrete T-Beam bridge"@en ,
+                         "Neigung 1 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Neigung 1"@de ,
+                       "T-beam deck inclination 1"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00TBn02
+:SUP00TBn02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 2 of the deck of the concrete T-Beam bridge"@en ,
+                         "Neigung 2 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Neigung 2"@de ,
+                       "T-beam deck inclination 2"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00TBn03
+:SUP00TBn03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 3 of the deck of the concrete T-Beam bridge"@en ,
+                         "Neigung 3 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Neigung 3"@de ,
+                       "T-beam deck inclination 3"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUP00TBn04
+:SUP00TBn04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Inclination 4 of the deck of the concrete T-Beam bridge"@en ,
+                         "Neigung 4 der Platte der Beton-Plattenbalkenbrücke"@de ;
+            rdfs:label "Plattenbalkenplatte Neigung 4"@de ,
+                       "T-beam deck inclination 4"@en ;
+            <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb01
+:SUPxxTBb01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 1 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 1 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 1"@de ,
+                       "T-beam width 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb02
+:SUPxxTBb02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 2 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 2 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 2"@de ,
+                       "T-beam width 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb03
+:SUPxxTBb03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 3 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 3 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 3"@de ,
+                       "T-beam width 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb04
+:SUPxxTBb04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 4 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 4 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 4"@de ,
+                       "T-beam width 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb05
+:SUPxxTBb05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 5 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 5 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 5"@de ,
+                       "T-beam width 5"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBb06
+:SUPxxTBb06 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Breite 6 des xx-ten Beton-Plattenbalkens"@de ,
+                         "Width 6 of the xx-th concrete T-Beam"@en ;
+            rdfs:label "Plattenbalken Breite 6"@de ,
+                       "T-beam width 6"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBh01
+:SUPxxTBh01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 1 of the xx-th concrete T-Beam"@en ,
+                         "Höhe 1 des xx-ten Beton-Plattenbalkens"@de ;
+            rdfs:label "Plattenbalken Höhe 1"@de ,
+                       "T-beam height 1"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBh02
+:SUPxxTBh02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 2 of the xx-th concrete T-Beam"@en ,
+                         "Höhe 2 des xx-ten Beton-Plattenbalkens"@de ;
+            rdfs:label "Plattenbalken Höhe 2"@de ,
+                       "T-beam height 2"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBh03
+:SUPxxTBh03 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 3 of the xx-th concrete T-Beam"@en ,
+                         "Höhe 3 des xx-ten Beton-Plattenbalkens"@de ;
+            rdfs:label "Plattenbalken Höhe 3"@de ,
+                       "T-beam height 3"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBh04
+:SUPxxTBh04 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 4 of the xx-th concrete T-Beam"@en ,
+                         "Höhe 4 des xx-ten Beton-Plattenbalkens"@de ;
+            rdfs:label "Plattenbalken Höhe 4"@de ,
+                       "T-beam height 4"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#SUPxxTBh05
+:SUPxxTBh05 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/bcore/comp#TBeam> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Height 5 of the xx-th concrete T-Beam"@en ,
+                         "Höhe 5 des xx-ten Beton-Plattenbalkens"@de ;
+            rdfs:label "Plattenbalken Höhe 5"@de ,
+                       "T-beam height 5"@en ;
+            <https://schema.org/unitText> "m" .
 
 
 ###  https://w3id.org/bedro#SupportNotPossible
@@ -387,7 +1048,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#TRBxxXXb00
 :TRBxxXXb00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brcomp#TrafficBarrier> ;
             rdfs:range xsd:decimal ;
@@ -400,7 +1061,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#XXXxxXXf00
 :XXXxxXXf00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brot#Component> ;
             rdfs:range xsd:string ;
@@ -413,7 +1074,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#XXXxxXXp00
 :XXXxxXXp00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brot#Component> ;
             rdfs:range xsd:integer ;
@@ -425,7 +1086,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#XXXxxXXq00
 :XXXxxXXq00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brot#Component> ;
             rdfs:range xsd:decimal ;
@@ -436,30 +1097,56 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "m" .
 
 
-###  https://w3id.org/bedro#XXXxxXXs00
-:XXXxxXXs00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+###  https://w3id.org/bedro#XXXxxXXs01
+:XXXxxXXs01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brot#Component> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Kilometrierung des Bauteilbeginns (Stationierung)"@de ,
                          "Station of the component beginning (kilometer of route)"@en ;
-            rdfs:label "Bauteilstationierung"@de ,
-                       "component station"@en ;
+            rdfs:label "Bauteilstationierung Start"@de ,
+                       "component station start"@en ;
             <https://schema.org/unitText> "m" .
 
 
-###  https://w3id.org/bedro#XXXxxXXz00
-:XXXxxXXz00 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+###  https://w3id.org/bedro#XXXxxXXs02
+:XXXxxXXs02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain <https://w3id.org/brot#Component> ;
             rdfs:range xsd:decimal ;
-            rdfs:comment "Altitude of the component"@en ,
-                         "Höhe des Bauteils über NN"@de ,
-                         "[m AMSL]" ;
-            rdfs:label "Bauteilkote"@de ,
-                       "component altitude"@en .
+            rdfs:comment "Kilometrierung des Bauteilendes (Stationierung)"@de ,
+                         "Station of the component ending (kilometer of route)"@en ;
+            rdfs:label "Bauteilstationierung Ende"@de ,
+                       "component station end"@en ;
+            <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bedro#XXXxxXXz01
+:XXXxxXXz01 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brot#Component> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Altitude of the component beginning"@en ,
+                         "Höhe des Bauteilanfangs über NN"@de ;
+            rdfs:label "Bauteilkote Start"@de ,
+                       "component altitude start"@en ;
+            <https://schema.org/unitText> "m AMSL" .
+
+
+###  https://w3id.org/bedro#XXXxxXXz02
+:XXXxxXXz02 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BridgeOntologyParameter ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <https://w3id.org/brot#Component> ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Altitude of the component ending"@en ,
+                         "Höhe des Bauteilendes über NN"@de ;
+            rdfs:label "Bauteilkote Ende"@de ,
+                       "component altitude end"@en ;
+            <https://schema.org/unitText> "m AMSL" .
 
 
 #################################################################
@@ -684,6 +1371,201 @@ xsd:date rdf:type rdfs:Datatype .
 
 :c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Geländer rechts auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the right side of a bridge, the railing is positioned directly above the cap." ;
+   rdfs:label "CAP99_RAI99" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Railing> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Schutzeinrichtung links auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the left side of a bridge, the traffic barrier is positioned directly above the cap." ;
+   rdfs:label "CAP01_TRB01" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#TrafficBarrier> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Schutzeinrichtung rechts auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the right side of a bridge, the traffic barrier is positioned directly above the cap." ;
+   rdfs:label "CAP99_TRB99" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#TrafficBarrier> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :t
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "DE: Die Neigung 1 der Kappe beträgt immer 7.5%; EN: The inclination 1 of the cap is always 7.5%" ;
    rdfs:label "CAPxxXXn01" ;
@@ -700,6 +1582,344 @@ xsd:date rdf:type rdfs:Datatype .
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXn01 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> 0.075
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Kappe liegt links des Fahrbahnbelags; EN: Cap is left of pavement." ;
+   rdfs:label "CAP01_PAV" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetLeft> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Kappe liegt rechts des Fahrbahnbelags; EN: Cap is right of pavement." ;
+   rdfs:label "CAP99_PAV" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetRight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn eine Kappe auf einer Plattenbrücke liegt, ist die Platte direkt unter der Kappe positioniert.; EN: If a cap is part of a slab bridge, the slab is directly below the cap." ;
+   rdfs:label "CAPXX_SUP00SL" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore/comp#Slab> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :s
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Lärmschutzwand links auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the left side of a bridge, the barrier is positioned directly above the cap." ;
+   rdfs:label "CAP01_NOB01" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#NoiseBarrier> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :n
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Lärmschutzwand rechts auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the right side of a bridge, the barrier is positioned directly above the cap." ;
+   rdfs:label "CAP99_NOB99" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#NoiseBarrier> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :n
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :n ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn Kappe und Geländer links auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the left side of a bridge, the railing is positioned directly above the cap." ;
+   rdfs:label "CAP01_RAI01" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Railing> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetTop> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
