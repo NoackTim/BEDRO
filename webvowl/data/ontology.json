@@ -48,12 +48,6 @@
         "value" : "2026-07-29",
         "type" : "label"
       } ],
-      "codeRepository" : [ {
-        "identifier" : "codeRepository",
-        "language" : "undefined",
-        "value" : "https://github.com/NoackTim/BEDRO",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
@@ -71,15 +65,21 @@
         "value" : "This ontology is structuring bridge desing rules for the dimensioning of bridge components in the early phases of bridge design.",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "Ontology for structuring design rules for bridge components",
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/NoackTim/BEDRO",
         "type" : "label"
-      }, {
+      } ],
+      "title" : [ {
         "identifier" : "title",
         "language" : "de",
         "value" : "Ontologie für die Strukturierung von Brückenentwurfsregeln",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Ontology for structuring design rules for bridge components",
         "type" : "label"
       } ],
       "status" : [ {
@@ -614,13 +614,13 @@
     "id" : "239",
     "type" : "owl:Class"
   }, {
-    "id" : "412",
+    "id" : "413",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "225",
     "type" : "owl:Class"
   }, {
-    "id" : "147",
+    "id" : "148",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "142",
@@ -1051,12 +1051,12 @@
   }, {
     "instances" : 0,
     "union" : [ "119", "109" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "122"
   }, {
     "instances" : 0,
     "union" : [ "119", "109" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "123"
   }, {
     "iri" : "https://w3id.org/bot#Building",
@@ -2023,7 +2023,7 @@
   }, {
     "instances" : 0,
     "union" : [ "9", "33" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "417"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
@@ -2552,7 +2552,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "412",
+    "id" : "413",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -2574,7 +2574,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "147",
+    "id" : "148",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -3163,7 +3163,7 @@
     "id" : "146",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "148",
+    "id" : "147",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "149",
@@ -3652,7 +3652,7 @@
     "id" : "411",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "413",
+    "id" : "412",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "414",
@@ -3994,37 +3994,37 @@
   "propertyAttribute" : [ {
     "range" : "3",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "1"
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "7"
   }, {
     "range" : "9",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "range" : "9",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "range" : "19",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "8",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "21"
   }, {
     "range" : "8",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -4055,12 +4055,12 @@
   }, {
     "range" : "3",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "range" : "3",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "iri" : "https://w3id.org/bedro#SupportNotRecommended",
@@ -4076,52 +4076,52 @@
       "de" : "Ist hier die Errichtung einer Stütze nicht empfohlen?",
       "en" : "Is the construction of a bridge superstructure not recommended at this location?"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "41"
   }, {
     "range" : "3",
     "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "50",
     "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "range" : "50",
     "domain" : "53",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "52"
   }, {
     "range" : "3",
     "domain" : "56",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "55"
   }, {
     "range" : "3",
     "domain" : "59",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "58"
   }, {
     "range" : "3",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
     "range" : "3",
     "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "64"
   }, {
     "range" : "3",
     "domain" : "71",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "70"
   }, {
     "range" : "3",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "73"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXp00",
@@ -4137,27 +4137,27 @@
       "de" : "Position des Bauteils horizontal senkrecht zur Trasse (Index)",
       "en" : "Position of the component horizontally perpendicular to the alignment (index)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "76"
   }, {
     "range" : "50",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
     "range" : "50",
     "domain" : "86",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
     "range" : "78",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
     "range" : "78",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
     "iri" : "https://w3id.org/bcore/infra#RoadRouteClass",
@@ -4169,9 +4169,9 @@
     "domain" : "90",
     "comment" : {
       "de" : "Straßenklasse",
-      "en" : "road classification"
+      "en" : "possible values:\n- highway\n- federal road\n- country road\n- district road\n- urban road\n- non-public road"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "89"
   }, {
     "iri" : "https://w3id.org/bcore/mat#ExpositionClass",
@@ -4193,22 +4193,22 @@
       "de" : "Expositionsklasse (z. B. nach Eurocode 2-1-1)",
       "en" : "exposure class (e.g., according to Eurocode 2-1-1)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "92"
   }, {
     "range" : "96",
     "domain" : "95",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
     "range" : "96",
     "domain" : "98",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
     "range" : "96",
     "domain" : "100",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "99"
   }, {
     "iri" : "https://w3id.org/bcore/mat#isCompositeOf",
@@ -4227,22 +4227,22 @@
   }, {
     "range" : "96",
     "domain" : "104",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "103"
   }, {
     "range" : "50",
     "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
     "range" : "50",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "50",
     "domain" : "93",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "108"
   }, {
     "iri" : "https://w3id.org/brot#containsComponent",
@@ -4270,27 +4270,27 @@
       "de" : "Ländercode nach ISO-3166-1 (ALPHA-2)",
       "en" : "country code according to ISO 3166-1 (ALPHA-2)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "114"
   }, {
     "range" : "78",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "range" : "66",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "124"
   }, {
     "range" : "66",
     "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
     "range" : "66",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "126"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXq00",
@@ -4314,7 +4314,7 @@
       "de" : "Normaldistanz des Referenzpunkts des Bauteilquerschnitts zur Trasse (positiv nach rechts)",
       "en" : "Normal distance of the component cross section's reference point transversal to alignment (positive to the right)/ Offset of the bridge's axis"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "127"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXn01",
@@ -4338,8 +4338,23 @@
       "de" : "Neigung 1 der Kappe",
       "en" : "Inclination 1 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/bcore/comp#followsSpan",
+    "baseIri" : "https://w3id.org/bcore/comp",
+    "range" : "133",
+    "label" : {
+      "IRI-based" : "followsSpan",
+      "en" : "follows span"
+    },
+    "domain" : "133",
+    "comment" : {
+      "de" : "Spannweite liegt hinter einer anderen Spannweite (wird genutzt, um Teilspannweiten darzustellen, z. B. bei Einzelspannweiten eines Durchlaufträgers oder Hängerabstände einer Schrägkabelbrücke)",
+      "en" : "span is located behind another span (used to represent partial spans, e.g., individual spans of a continuous girder or suspension spans of a cable-stayed bridge)"
+    },
+    "attributes" : [ "object", "transitive", "external" ],
+    "id" : "132"
   }, {
     "iri" : "https://w3id.org/bcore/comp#endsAtSupport",
     "baseIri" : "https://w3id.org/bcore/comp",
@@ -4354,21 +4369,6 @@
       "en" : "span ends at a component of the bridge substructure"
     },
     "attributes" : [ "object", "external" ],
-    "id" : "132"
-  }, {
-    "iri" : "https://w3id.org/bcore/comp#followsSpan",
-    "baseIri" : "https://w3id.org/bcore/comp",
-    "range" : "133",
-    "label" : {
-      "IRI-based" : "followsSpan",
-      "en" : "follows span"
-    },
-    "domain" : "133",
-    "comment" : {
-      "de" : "Spannweite liegt hinter einer anderen Spannweite (wird genutzt, um Teilspannweiten darzustellen, z. B. bei Einzelspannweiten eines Durchlaufträgers oder Hängerabstände einer Schrägkabelbrücke)",
-      "en" : "span is located behind another span (used to represent partial spans, e.g., individual spans of a continuous girder or suspension spans of a cable-stayed bridge)"
-    },
-    "attributes" : [ "transitive", "object", "external" ],
     "id" : "134"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXn03",
@@ -4392,7 +4392,7 @@
       "de" : "Neigung 3 der Kappe",
       "en" : "Inclination 3 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/bcore#InfrastructureRouteWidth",
@@ -4404,9 +4404,9 @@
     "domain" : "34",
     "comment" : {
       "de" : "Querschnittsbreite der Infrastrukturtrasse",
-      "undefined" : "[m]"
+      "undefined" : "cross-sectional width of the infrastructure route"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "137"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXn02",
@@ -4430,7 +4430,7 @@
       "de" : "Neigung 2 der Kappe",
       "en" : "Inclination 2 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "139"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBh02",
@@ -4454,7 +4454,7 @@
       "de" : "Höhe 2 des xx-ten Beton-Plattenbalkens",
       "en" : "Height 2 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "141"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBh03",
@@ -4478,7 +4478,7 @@
       "de" : "Höhe 3 des xx-ten Beton-Plattenbalkens",
       "en" : "Height 3 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "143"
   }, {
     "iri" : "https://w3id.org/bcore/mat#fyk",
@@ -4493,12 +4493,22 @@
       "en" : "characteristic tensile strength of the steel",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "145"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "146"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBh01",
     "baseIri" : "https://w3id.org/bedro",
-    "range" : "147",
+    "range" : "148",
     "annotations" : {
       "unitText" : [ {
         "identifier" : "unitText",
@@ -4517,18 +4527,8 @@
       "de" : "Höhe 1 des xx-ten Beton-Plattenbalkens",
       "en" : "Height 1 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "146"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
-    "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "117",
-    "label" : {
-      "IRI-based" : "topDataProperty"
-    },
-    "domain" : "28",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "148"
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "147"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBh04",
     "baseIri" : "https://w3id.org/bedro",
@@ -4551,7 +4551,7 @@
       "de" : "Höhe 4 des xx-ten Beton-Plattenbalkens",
       "en" : "Height 4 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "149"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBh05",
@@ -4575,7 +4575,7 @@
       "de" : "Höhe 5 des xx-ten Beton-Plattenbalkens",
       "en" : "Height 5 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "151"
   }, {
     "iri" : "https://w3id.org/bcore#traversesBridge",
@@ -4594,42 +4594,42 @@
   }, {
     "range" : "5",
     "domain" : "155",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
     "range" : "5",
     "domain" : "158",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "157"
   }, {
     "range" : "5",
     "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "160"
   }, {
     "range" : "12",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "163"
   }, {
     "range" : "12",
     "domain" : "166",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "165"
   }, {
     "range" : "12",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "170"
   }, {
     "range" : "86",
     "domain" : "110",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "172"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   }, {
     "iri" : "https://w3id.org/bedro#PAV00XXb02",
@@ -4653,12 +4653,12 @@
       "de" : "Breite 2 des Fahrbahnbelags",
       "en" : "Width 2 of the pavement"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "175"
   }, {
     "range" : "5",
     "domain" : "179",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "178"
   }, {
     "iri" : "https://w3id.org/bedro#PAV00XXb01",
@@ -4682,57 +4682,57 @@
       "de" : "Breite 1 des Fahrbahnbelags",
       "en" : "Width 1 of the pavement"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "180"
   }, {
     "range" : "5",
     "domain" : "184",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "183"
   }, {
     "range" : "34",
     "domain" : "187",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "186"
   }, {
     "range" : "34",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "189"
   }, {
     "range" : "12",
     "domain" : "193",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "192"
   }, {
     "range" : "12",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "195"
   }, {
     "range" : "15",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "200"
   }, {
     "range" : "53",
     "domain" : "203",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "202"
   }, {
     "range" : "53",
     "domain" : "206",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "205"
   }, {
     "range" : "53",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "208"
   }, {
     "range" : "34",
     "domain" : "90",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "211"
   }, {
     "iri" : "https://w3id.org/bcore/comp#ArchShape",
@@ -4747,37 +4747,37 @@
       "de" : "Form des Bogens",
       "en" : "shape of the arch"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "212"
   }, {
     "range" : "34",
     "domain" : "215",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "214"
   }, {
     "range" : "46",
     "domain" : "217",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "216"
   }, {
     "range" : "15",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "218"
   }, {
     "range" : "15",
     "domain" : "96",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "220"
   }, {
     "range" : "15",
     "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "222"
   }, {
     "range" : "15",
     "domain" : "225",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "224"
   }, {
     "iri" : "https://w3id.org/bcore#InfrastructureRouteName",
@@ -4791,57 +4791,57 @@
       "de" : "Name oder Bezeichnung der Infrastrukturtrasse",
       "en" : "name or designation of the infrastructure route"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "227"
   }, {
     "range" : "168",
     "domain" : "230",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "229"
   }, {
     "range" : "168",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "232"
   }, {
     "range" : "168",
     "domain" : "235",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "234"
   }, {
     "range" : "46",
     "domain" : "237",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "236"
   }, {
     "range" : "46",
     "domain" : "239",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "238"
   }, {
     "range" : "8",
     "domain" : "198",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "241"
   }, {
     "range" : "8",
     "domain" : "168",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "243"
   }, {
     "range" : "8",
     "domain" : "225",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "245"
   }, {
     "range" : "8",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "247"
   }, {
     "range" : "42",
     "domain" : "250",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "249"
   }, {
     "iri" : "https://w3id.org/reloc#meetTop",
@@ -4860,7 +4860,7 @@
   }, {
     "range" : "168",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "253"
   }, {
     "iri" : "https://w3id.org/brcomp#length",
@@ -4875,7 +4875,7 @@
       "en" : "length",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "255"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXs01",
@@ -4899,7 +4899,7 @@
       "de" : "Kilometrierung des Bauteilbeginns (Stationierung)",
       "en" : "Station of the component beginning (kilometer of route)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "257"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXs02",
@@ -4923,32 +4923,32 @@
       "de" : "Kilometrierung des Bauteilendes (Stationierung)",
       "en" : "Station of the component ending (kilometer of route)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "259"
   }, {
     "range" : "8",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "262"
   }, {
     "range" : "8",
     "domain" : "111",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "264"
   }, {
     "range" : "8",
     "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "266"
   }, {
     "range" : "8",
     "domain" : "96",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "269"
   }, {
     "range" : "90",
     "domain" : "187",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "270"
   }, {
     "iri" : "https://w3id.org/bcore/comp#endsAtLocation",
@@ -4963,7 +4963,7 @@
       "de" : "Spannweite endet an einer Lokalisation (Punkt)",
       "en" : "span ends at localision (location point)"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "271"
   }, {
     "iri" : "https://w3id.org/bot#intersectsZone",
@@ -4977,57 +4977,57 @@
       "de" : "Zone schneidet Zone",
       "en" : "zone intersects zone"
     },
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "object", "external", "symmetric" ],
     "id" : "272"
   }, {
     "range" : "190",
     "domain" : "187",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "273"
   }, {
-    "range" : "8",
+    "range" : "15",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "274"
   }, {
     "range" : "4",
     "domain" : "155",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "275"
   }, {
     "range" : "184",
     "domain" : "155",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "276"
   }, {
-    "range" : "15",
+    "range" : "8",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "277"
   }, {
     "range" : "4",
     "domain" : "184",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "278"
   }, {
     "range" : "155",
     "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "279"
   }, {
     "range" : "225",
     "domain" : "111",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "280"
   }, {
     "range" : "4",
     "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "281"
   }, {
     "range" : "184",
     "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "282"
   }, {
     "iri" : "https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks",
@@ -5041,7 +5041,7 @@
       "de" : "Anzahl der Gleise des Schienenweges",
       "en" : "number of tracks on the railroad"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "283"
   }, {
     "iri" : "https://w3id.org/bedro#runsToTheRightOf",
@@ -5058,37 +5058,37 @@
       "de" : "Die Infrastrukturtrasse verläuft parallel zu einer anderen Trasse, in Trassierungsrichtung rechts davon.",
       "en" : "The infrastructure route runs parallely to another route, in direction of the route right of it."
     },
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "29"
   }, {
     "range" : "111",
     "domain" : "198",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "284"
   }, {
     "range" : "225",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "285"
   }, {
     "range" : "225",
     "domain" : "198",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "286"
   }, {
     "range" : "225",
     "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "287"
   }, {
     "range" : "111",
     "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "288"
   }, {
     "range" : "111",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "289"
   }, {
     "iri" : "https://w3id.org/bcore/comp#hasMainSpan",
@@ -5103,27 +5103,27 @@
       "de" : "Brücke hat eine Hauptspannweite",
       "en" : "bridge has main span"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "290"
   }, {
     "range" : "198",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "291"
   }, {
     "range" : "225",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "292"
   }, {
     "range" : "198",
     "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "293"
   }, {
     "range" : "19",
     "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "294"
   }, {
     "iri" : "https://w3id.org/bedro#BridgeOntologyParameter",
@@ -5144,17 +5144,17 @@
   }, {
     "range" : "230",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "296"
   }, {
     "range" : "230",
     "domain" : "235",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "297"
   }, {
     "range" : "18",
     "domain" : "235",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "298"
   }, {
     "iri" : "https://w3id.org/bcore/mat#Ep",
@@ -5169,7 +5169,7 @@
       "en" : "modulus of elasticity (Young's modulus) of the prestressing steel",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "299"
   }, {
     "iri" : "https://w3id.org/bcore#isLocatedInZone",
@@ -5198,7 +5198,7 @@
       "en" : "modulus of elasticity (Young's modulus) of the concrete",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "303"
   }, {
     "iri" : "https://w3id.org/bcore/mat#Ey",
@@ -5213,57 +5213,57 @@
       "en" : "modulus of elasticity (Young's modulus) of the steel",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "304"
   }, {
     "range" : "80",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "305"
   }, {
     "range" : "80",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "306"
   }, {
     "range" : "18",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "307"
   }, {
     "range" : "235",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "308"
   }, {
     "range" : "206",
     "domain" : "203",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "309"
   }, {
     "range" : "206",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "310"
   }, {
     "range" : "79",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "311"
   }, {
     "range" : "314",
     "domain" : "313",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "312"
   }, {
     "range" : "203",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "315"
   }, {
     "range" : "318",
     "domain" : "317",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "316"
   }, {
     "iri" : "https://w3id.org/bcore#isPartOfRoute",
@@ -5277,7 +5277,7 @@
       "de" : "Trassenpunkt ist Teil von Trasse",
       "en" : "route point is part of a route"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "319"
   }, {
     "iri" : "https://w3id.org/bcore/mat#fpk",
@@ -5292,7 +5292,7 @@
       "en" : "characteristic tensile strength of the prestressing steel",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "320"
   }, {
     "iri" : "https://w3id.org/bcore/media#MediaFileSize",
@@ -5307,7 +5307,7 @@
       "en" : "file size of a digital media file",
       "undefined" : "[byte]"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "321"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeID",
@@ -5321,7 +5321,7 @@
       "de" : "Identifikationsnummer der Brücke",
       "en" : "bridge identification number"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "323"
   }, {
     "iri" : "https://w3id.org/reloc#meetRear",
@@ -5340,17 +5340,17 @@
   }, {
     "range" : "318",
     "domain" : "261",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "326"
   }, {
     "range" : "93",
     "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "327"
   }, {
     "range" : "86",
     "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "328"
   }, {
     "iri" : "https://w3id.org/bedro#runsToTheLeftOf",
@@ -5368,17 +5368,17 @@
       "de" : "Die Infrastrukturtrasse verläuft parallel zu einer anderen Trasse, in Trassierungsrichtung links davon.",
       "en" : "The infrastructure route runs parallely to another route, in direction of the route left of it."
     },
-    "attributes" : [ "transitive", "object" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "30"
   }, {
     "range" : "317",
     "domain" : "261",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "329"
   }, {
     "range" : "93",
     "domain" : "86",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "330"
   }, {
     "iri" : "https://w3id.org/brcomp#height",
@@ -5393,52 +5393,52 @@
       "en" : "height",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "331"
   }, {
     "range" : "90",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "333"
   }, {
     "range" : "215",
     "domain" : "187",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "334"
   }, {
     "range" : "215",
     "domain" : "90",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "335"
   }, {
     "range" : "215",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "336"
   }, {
     "range" : "193",
     "domain" : "166",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "337"
   }, {
     "range" : "193",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "338"
   }, {
     "range" : "5",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "339"
   }, {
     "range" : "68",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "340"
   }, {
     "range" : "166",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "341"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeName",
@@ -5452,7 +5452,7 @@
       "de" : "Name der Brücke",
       "en" : "name of the bridge"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "342"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBh01",
@@ -5476,7 +5476,7 @@
       "de" : "Höhe 1 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Height 1 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "344"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBh02",
@@ -5500,7 +5500,7 @@
       "de" : "Höhe 2 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Height 2 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "346"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBh03",
@@ -5524,17 +5524,17 @@
       "de" : "Höhe 3 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Height 3 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "348"
   }, {
     "range" : "193",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "350"
   }, {
     "range" : "166",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "351"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBh04",
@@ -5558,47 +5558,47 @@
       "de" : "Höhe 4 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Height 4 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "352"
   }, {
     "range" : "166",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "354"
   }, {
     "range" : "78",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "355"
   }, {
     "range" : "78",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "356"
   }, {
     "range" : "193",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "357"
   }, {
     "range" : "96",
     "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "358"
   }, {
     "range" : "225",
     "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "359"
   }, {
     "range" : "196",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "360"
   }, {
     "range" : "96",
     "domain" : "225",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "361"
   }, {
     "iri" : "https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity",
@@ -5613,7 +5613,7 @@
       "en" : "maximum permitted speed on the rail line",
       "undefined" : "[km/h]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "362"
   }, {
     "iri" : "https://w3id.org/bedro#PAV00XXn02",
@@ -5637,7 +5637,7 @@
       "de" : "Neigung 2 des Fahrbahnbelags",
       "en" : "Inclination 2 of the pavement"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "363"
   }, {
     "iri" : "https://w3id.org/bcore#Latitude",
@@ -5651,7 +5651,7 @@
       "de" : "Breitengrad",
       "en" : "latitude"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "364"
   }, {
     "iri" : "https://w3id.org/bedro#PAV00XXn01",
@@ -5675,7 +5675,7 @@
       "de" : "Neigung 1 des Fahrbahnbelags",
       "en" : "Inclination 1 of the pavement"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "366"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeStatus",
@@ -5689,7 +5689,7 @@
       "de" : "Status der Brücke",
       "en" : "status of the bridge"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "367"
   }, {
     "iri" : "https://w3id.org/bcore#locationAt",
@@ -5716,17 +5716,17 @@
   }, {
     "range" : "225",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "370"
   }, {
     "range" : "66",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "371"
   }, {
     "range" : "96",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "372"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXf00",
@@ -5750,12 +5750,12 @@
       "de" : "Farbe des Bauteils",
       "en" : "Colour of the component"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "373"
   }, {
     "range" : "219",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "375"
   }, {
     "iri" : "https://w3id.org/bcore#LocalisationName",
@@ -5769,22 +5769,22 @@
       "de" : "Name der Lokalisierung (Standort)",
       "en" : "name of the localisation (location)"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "376"
   }, {
     "range" : "230",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "378"
   }, {
     "range" : "96",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "379"
   }, {
     "range" : "66",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "380"
   }, {
     "iri" : "https://w3id.org/bcore#isPartialStructureOf",
@@ -5798,7 +5798,7 @@
       "de" : "Brückenzug ist Teil genau einer Brücke",
       "en" : "bridge section is part of exactly one bridge"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "384"
   }, {
     "iri" : "https://w3id.org/bedro#equalsRoutePoint",
@@ -5839,7 +5839,7 @@
       "de" : "Breite 1 des xx-ten Beton-Plattenbalkens",
       "en" : "Width 1 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "385"
   }, {
     "iri" : "https://w3id.org/bcore#LocalisationStation",
@@ -5854,7 +5854,7 @@
       "en" : "kilometer marking of the localisation (location) on the route",
       "undefined" : "[km]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "388"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeConstructionStart",
@@ -5869,7 +5869,7 @@
       "en" : "start date of the bridge's construction",
       "undefined" : "[ISO Date Format]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "391"
   }, {
     "iri" : "https://w3id.org/bcore#bridgesRoute",
@@ -5907,7 +5907,7 @@
       "de" : "Höhe 2 der Betonplatte",
       "en" : "Height 2 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "398"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBb04",
@@ -5931,7 +5931,7 @@
       "de" : "Breite 4 des xx-ten Beton-Plattenbalkens",
       "en" : "Width 4 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "399"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLh01",
@@ -5955,7 +5955,7 @@
       "de" : "Höhe 1 der Betonplatte",
       "en" : "Height 1 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "401"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBb05",
@@ -5979,7 +5979,7 @@
       "de" : "Breite 5 des xx-ten Beton-Plattenbalkens",
       "en" : "Width 5 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "402"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBb02",
@@ -6003,7 +6003,7 @@
       "de" : "Breite 2 des xx-ten Beton-Plattenbalkens",
       "en" : "Width 2 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "404"
   }, {
     "iri" : "https://w3id.org/bedro#SUPxxTBb03",
@@ -6027,7 +6027,7 @@
       "de" : "Breite 3 des xx-ten Beton-Plattenbalkens",
       "en" : "Width 3 of the xx-th concrete T-Beam"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "406"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLh06",
@@ -6051,7 +6051,7 @@
       "de" : "Höhe 6 der Betonplatte",
       "en" : "Height 6 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "408"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLh05",
@@ -6075,7 +6075,7 @@
       "de" : "Höhe 5 der Betonplatte",
       "en" : "Height 5 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "409"
   }, {
     "iri" : "https://w3id.org/reloc#meetBottom",
@@ -6092,30 +6092,6 @@
     },
     "attributes" : [ "object", "external" ],
     "id" : "410"
-  }, {
-    "iri" : "https://w3id.org/bedro#SUPxxTBb06",
-    "baseIri" : "https://w3id.org/bedro",
-    "range" : "412",
-    "annotations" : {
-      "unitText" : [ {
-        "identifier" : "unitText",
-        "language" : "undefined",
-        "value" : "m",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "de" : "Plattenbalken Breite 6",
-      "IRI-based" : "SUPxxTBb06",
-      "en" : "T-beam width 6"
-    },
-    "domain" : "4",
-    "comment" : {
-      "de" : "Breite 6 des xx-ten Beton-Plattenbalkens",
-      "en" : "Width 6 of the xx-th concrete T-Beam"
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "411"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLh04",
     "baseIri" : "https://w3id.org/bedro",
@@ -6138,8 +6114,32 @@
       "de" : "Höhe 4 der Betonplatte",
       "en" : "Height 4 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "413"
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "411"
+  }, {
+    "iri" : "https://w3id.org/bedro#SUPxxTBb06",
+    "baseIri" : "https://w3id.org/bedro",
+    "range" : "413",
+    "annotations" : {
+      "unitText" : [ {
+        "identifier" : "unitText",
+        "language" : "undefined",
+        "value" : "m",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Plattenbalken Breite 6",
+      "IRI-based" : "SUPxxTBb06",
+      "en" : "T-beam width 6"
+    },
+    "domain" : "4",
+    "comment" : {
+      "de" : "Breite 6 des xx-ten Beton-Plattenbalkens",
+      "en" : "Width 6 of the xx-th concrete T-Beam"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "412"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLh03",
     "baseIri" : "https://w3id.org/bedro",
@@ -6162,7 +6162,7 @@
       "de" : "Höhe 3 der Betonplatte",
       "en" : "Height 3 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "414"
   }, {
     "iri" : "https://w3id.org/bcore#LocalZ",
@@ -6177,7 +6177,7 @@
       "en" : "local Z-coordinate",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "415"
   }, {
     "iri" : "https://w3id.org/bcore#LocalY",
@@ -6192,7 +6192,7 @@
       "en" : "local Y-coordinate",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "416"
   }, {
     "iri" : "https://w3id.org/bcore#LocalX",
@@ -6207,12 +6207,12 @@
       "en" : "local X-coordinate",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "418"
   }, {
     "range" : "5",
     "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "419"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb06",
@@ -6236,7 +6236,7 @@
       "de" : "Breite 6 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 6 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "422"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb07",
@@ -6260,7 +6260,7 @@
       "de" : "Breite 7 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 7 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "424"
   }, {
     "iri" : "https://w3id.org/bcore#isLocatedAt",
@@ -6274,7 +6274,7 @@
       "de" : "Zone befindet sich an Lokalisierung (Ort)",
       "en" : "zone is located at localisation (location)"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "426"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb02",
@@ -6298,7 +6298,7 @@
       "de" : "Breite 2 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 2 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "427"
   }, {
     "iri" : "https://w3id.org/bcore/comp#hasSpan",
@@ -6337,7 +6337,7 @@
       "de" : "Breite 3 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 3 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "430"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb04",
@@ -6361,7 +6361,7 @@
       "de" : "Breite 4 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 4 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "432"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb05",
@@ -6385,7 +6385,7 @@
       "de" : "Breite 5 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 5 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "434"
   }, {
     "iri" : "https://w3id.org/bcore#Volume",
@@ -6400,7 +6400,7 @@
       "en" : "volume",
       "undefined" : "[m³]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "436"
   }, {
     "iri" : "https://w3id.org/bcore#BridgePlanningStart",
@@ -6415,7 +6415,7 @@
       "en" : "start date of the bridge's planning phase",
       "undefined" : "[ISO Date Format]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "437"
   }, {
     "iri" : "https://w3id.org/brcomp#width",
@@ -6430,7 +6430,7 @@
       "en" : "width",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "438"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXg00",
@@ -6446,7 +6446,7 @@
       "de" : "Typologie (Art) der Kappe",
       "en" : "Typology of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "440"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBb01",
@@ -6470,7 +6470,7 @@
       "de" : "Breite 1 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Width 1 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "441"
   }, {
     "iri" : "https://w3id.org/bedro#SupportNotPossible",
@@ -6486,7 +6486,7 @@
       "de" : "Lässt sich hier keine Stütze errichten?",
       "en" : "Is the construction of a bridge superstructure not possible at this location?"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "444"
   }, {
     "iri" : "https://w3id.org/bcore#liesWithin",
@@ -6501,7 +6501,7 @@
       "de" : "Zone liegt in Zone",
       "en" : "zone lies within zone"
     },
-    "attributes" : [ "transitive", "object", "external" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "448"
   }, {
     "iri" : "https://w3id.org/bcore#crossesRoute",
@@ -6515,7 +6515,7 @@
       "de" : "Trasse kreuzt Trasse",
       "en" : "route crosses route"
     },
-    "attributes" : [ "object", "symmetric", "external" ],
+    "attributes" : [ "object", "external", "symmetric" ],
     "id" : "450"
   }, {
     "iri" : "https://w3id.org/bcore#isMadeOfMaterial",
@@ -6557,7 +6557,7 @@
       "de" : "Name der Zone",
       "en" : "name of the zone"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "453"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb08",
@@ -6581,7 +6581,7 @@
       "de" : "Breite 8 der Betonplatte",
       "en" : "Width 8 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "454"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb07",
@@ -6605,7 +6605,7 @@
       "de" : "Breite 7 der Betonplatte",
       "en" : "Width 7 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "455"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb06",
@@ -6629,7 +6629,7 @@
       "de" : "Breite 6 der Betonplatte",
       "en" : "Width 6 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "456"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb05",
@@ -6653,7 +6653,7 @@
       "de" : "Breite 5 der Betonplatte",
       "en" : "Width 5 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "457"
   }, {
     "iri" : "https://w3id.org/bedro#TRBxxXXb00",
@@ -6677,7 +6677,7 @@
       "de" : "Breite der Schutzeinrichtung",
       "en" : "Width of the traffic barrier"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "458"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb09",
@@ -6701,7 +6701,7 @@
       "de" : "Breite 9 der Betonplatte",
       "en" : "Width 9 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "460"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb04",
@@ -6725,7 +6725,7 @@
       "de" : "Breite 4 der Betonplatte",
       "en" : "Width 4 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "461"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb03",
@@ -6749,7 +6749,7 @@
       "de" : "Breite 3 der Betonplatte",
       "en" : "Width 3 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "462"
   }, {
     "iri" : "https://w3id.org/bcore#isPartOfComponent",
@@ -6764,7 +6764,7 @@
       "de" : "Bauteil ist Teil von Bauteil",
       "en" : "component is part of component"
     },
-    "attributes" : [ "transitive", "object", "external" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "463"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb02",
@@ -6788,7 +6788,7 @@
       "de" : "Breite 2 der Betonplatte",
       "en" : "Width 2 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "465"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLb01",
@@ -6812,7 +6812,7 @@
       "de" : "Breite 1 der Betonplatte",
       "en" : "Width 1 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "466"
   }, {
     "iri" : "https://w3id.org/bcore#locationEndsAt",
@@ -6841,7 +6841,7 @@
       "de" : "Form des Pfeilers",
       "en" : "shape of the pier"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "468"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXz01",
@@ -6865,7 +6865,7 @@
       "de" : "Höhe des Bauteilanfangs über NN",
       "en" : "Altitude of the component beginning"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "469"
   }, {
     "iri" : "https://w3id.org/bedro#XXXxxXXz02",
@@ -6889,7 +6889,7 @@
       "de" : "Höhe des Bauteilendes über NN",
       "en" : "Altitude of the component ending"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "471"
   }, {
     "iri" : "https://w3id.org/bcore#Longitude",
@@ -6903,7 +6903,7 @@
       "de" : "Längengrad",
       "en" : "longitude"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "473"
   }, {
     "iri" : "https://w3id.org/bcore/comp#GirderShape",
@@ -6918,7 +6918,7 @@
       "de" : "Form des Trägers",
       "en" : "shape of the girder"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "474"
   }, {
     "iri" : "https://w3id.org/bedro#BridgeWidth",
@@ -6942,7 +6942,7 @@
       "de" : "Gesamtbreite des Regelquerschnitts der Brücke",
       "en" : "bridge width/ bridge broadth"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "475"
   }, {
     "iri" : "https://w3id.org/bcore/mat#fck",
@@ -6957,7 +6957,7 @@
       "en" : "characteristic compressive strength of the concrete",
       "undefined" : "[N/m²]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "476"
   }, {
     "iri" : "https://w3id.org/bcore/infra#FootCycleRouteType",
@@ -6971,7 +6971,7 @@
       "de" : "Art des Fuß- und/oder Radweges",
       "en" : "type of pedestrian and/or bike path"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "477"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXh01",
@@ -6995,7 +6995,7 @@
       "de" : "Höhe 1 der Kappe",
       "en" : "Breite 1 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "478"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXh02",
@@ -7019,7 +7019,7 @@
       "de" : "Höhe 2 der Kappe",
       "en" : "Breite 2 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "479"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXh03",
@@ -7043,7 +7043,7 @@
       "de" : "Höhe 3 der Kappe",
       "en" : "Breite 3 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "480"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXh04",
@@ -7067,7 +7067,7 @@
       "de" : "Höhe 4 der Kappe",
       "en" : "Height 4 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "481"
   }, {
     "iri" : "https://w3id.org/bcore#isPartOfZone",
@@ -7082,7 +7082,7 @@
       "de" : "Bauteil ist Teil genau einer Zone (z.B. Brücke)",
       "en" : "component is part of exactly one zone (e.g., bridge)"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "482"
   }, {
     "iri" : "https://w3id.org/bcore#BridgePlanningEnd",
@@ -7097,7 +7097,7 @@
       "en" : "end date of the bridge's planning phase",
       "undefined" : "[ISO Date Format]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "484"
   }, {
     "iri" : "https://w3id.org/brot#aggregates",
@@ -7111,7 +7111,7 @@
       "de" : "Bauteil besteht aus Bauteil",
       "en" : "component consists of component"
     },
-    "attributes" : [ "transitive", "object", "external" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "464"
   }, {
     "iri" : "https://w3id.org/bedro#PAV00XXh00",
@@ -7135,7 +7135,7 @@
       "de" : "Höhe des Fahrbahnbelags",
       "en" : "Height of the pavement"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "485"
   }, {
     "iri" : "https://w3id.org/reloc#meetLeft",
@@ -7165,7 +7165,7 @@
       "de" : "Spannweite beginnt an einer Lokalisation (Punkt)",
       "en" : "span begins at localision (location point)"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "488"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBn02",
@@ -7189,7 +7189,7 @@
       "de" : "Neigung 2 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Inclination 2 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "489"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBn03",
@@ -7213,7 +7213,7 @@
       "de" : "Neigung 3 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Inclination 3 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "491"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBn04",
@@ -7237,7 +7237,7 @@
       "de" : "Neigung 4 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Inclination 4 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "493"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00TBn01",
@@ -7261,7 +7261,7 @@
       "de" : "Neigung 1 der Platte der Beton-Plattenbalkenbrücke",
       "en" : "Inclination 1 of the deck of the concrete T-Beam bridge"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "495"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxCUe00",
@@ -7277,7 +7277,7 @@
       "de" : "Existenz des Schrammbords der Kappe",
       "en" : "Existence of the curb at the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "497"
   }, {
     "iri" : "https://w3id.org/bcore#bridgesZone",
@@ -7344,7 +7344,7 @@
       "de" : "Neigung 4 der Betonplatte",
       "en" : "Inclination 4 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "501"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLn03",
@@ -7368,7 +7368,7 @@
       "de" : "Neigung 3 der Betonplatte",
       "en" : "Inclination 3 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "502"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeLoadCase",
@@ -7382,7 +7382,7 @@
       "de" : "maximaler Lastfall, für den die Brücke bemessen wurde (z.B. \"LM1\" oder \"BK30/60\" in Deutschland)",
       "en" : "maximum load case the bridge is designed for (e.g., \"LM1\" or \"BK30/60\" in Germany)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "503"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLn02",
@@ -7406,7 +7406,7 @@
       "de" : "Neigung 2 der Betonplatte",
       "en" : "Inclination 2 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "504"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLn01",
@@ -7430,7 +7430,7 @@
       "de" : "Neigung 1 der Betonplatte",
       "en" : "Inclination 1 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "505"
   }, {
     "iri" : "https://w3id.org/bedro#SUP00SLn05",
@@ -7454,22 +7454,8 @@
       "de" : "Neigung 5 der Betonplatte",
       "en" : "Inclination 5 of the concrete slab"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "506"
-  }, {
-    "iri" : "https://w3id.org/bcore#RegionISOCode",
-    "baseIri" : "https://w3id.org/bcore",
-    "range" : "84",
-    "label" : {
-      "IRI-based" : "RegionISOCode"
-    },
-    "domain" : "74",
-    "comment" : {
-      "de" : "Regionalcode nach ISO-3166-2",
-      "en" : "regional code according to ISO 3166-2"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "507"
   }, {
     "iri" : "https://w3id.org/bcore#Altitude",
     "baseIri" : "https://w3id.org/bcore",
@@ -7483,22 +7469,36 @@
       "en" : "elevation above sea level (according to the locally applicable official elevation system)",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "507"
+  }, {
+    "iri" : "https://w3id.org/bcore#RegionISOCode",
+    "baseIri" : "https://w3id.org/bcore",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "RegionISOCode"
+    },
+    "domain" : "74",
+    "comment" : {
+      "de" : "Regionalcode nach ISO-3166-2",
+      "en" : "regional code according to ISO 3166-2"
+    },
+    "attributes" : [ "external", "datatype" ],
     "id" : "508"
   }, {
     "range" : "110",
     "domain" : "300",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "509"
   }, {
     "range" : "110",
     "domain" : "119",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "510"
   }, {
     "range" : "110",
     "domain" : "109",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "511"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXb04",
@@ -7522,7 +7522,7 @@
       "de" : "Breite 4 der Kappe",
       "en" : "Width 4 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "512"
   }, {
     "iri" : "https://w3id.org/bcore/comp#SpanLength",
@@ -7545,7 +7545,7 @@
       "de" : "Spannweite",
       "en" : "length of bridge span"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "513"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXb01",
@@ -7569,7 +7569,7 @@
       "de" : "Breite 1 der Kappe",
       "en" : "Width 1 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "514"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXb02",
@@ -7593,7 +7593,7 @@
       "de" : "Breite 2 der Kappe",
       "en" : "Width 2 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "515"
   }, {
     "iri" : "https://w3id.org/bedro#CAPxxXXb03",
@@ -7617,7 +7617,7 @@
       "de" : "Breite 3 der Kappe",
       "en" : "Width 3 of the cap"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "516"
   }, {
     "iri" : "https://w3id.org/bcore#includesPoint",
@@ -7637,7 +7637,7 @@
   }, {
     "range" : "113",
     "domain" : "483",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "518"
   }, {
     "iri" : "https://w3id.org/bcore/media#MediaIsDigital",
@@ -7651,27 +7651,27 @@
       "de" : "Boolean: wahr, wenn die Mediendatei digital ist",
       "en" : "boolean: true, if media file is digital"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "519"
   }, {
     "range" : "113",
     "domain" : "443",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "520"
   }, {
     "range" : "113",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "521"
   }, {
     "range" : "49",
     "domain" : "313",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "522"
   }, {
     "range" : "49",
     "domain" : "314",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "523"
   }, {
     "iri" : "https://w3id.org/bcore#hasPartialStructure",
@@ -7691,17 +7691,17 @@
   }, {
     "range" : "102",
     "domain" : "318",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "525"
   }, {
     "range" : "102",
     "domain" : "261",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "526"
   }, {
     "range" : "102",
     "domain" : "317",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "527"
   }, {
     "iri" : "https://w3id.org/bcore#InfrastructureRouteClearanceHeight",
@@ -7716,7 +7716,7 @@
       "en" : "height of the route's clearance profile",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "528"
   }, {
     "iri" : "https://w3id.org/bcore/comp#beginsAtSupport",
@@ -7745,7 +7745,7 @@
       "de" : "Duktilität",
       "en" : "ductility"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "530"
   }, {
     "iri" : "https://w3id.org/bcore/infra#RoadRouteNumberOfLanes",
@@ -7759,7 +7759,7 @@
       "de" : "Anzahl der Fahrstreifen der Straße (Gesamtzahl beider Richtungsfahrbahnen)",
       "en" : "number of lanes on the road (total number of lanes in both directions)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "531"
   }, {
     "iri" : "https://w3id.org/bcore/comp#isSpanOf",
@@ -7774,7 +7774,7 @@
       "de" : "ist Feld von genau einer Brücke",
       "en" : "the span belongs to just one bridge"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "532"
   }, {
     "iri" : "https://w3id.org/bcore#MaterialName",
@@ -7788,47 +7788,47 @@
       "de" : "Name des Materials",
       "en" : "name of the material"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "533"
   }, {
     "range" : "19",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "534"
   }, {
     "range" : "198",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "535"
   }, {
     "range" : "111",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "536"
   }, {
     "range" : "225",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "537"
   }, {
     "range" : "267",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "538"
   }, {
     "range" : "19",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "539"
   }, {
     "range" : "198",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "540"
   }, {
     "range" : "111",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "541"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeConstructionEndDate",
@@ -7843,7 +7843,7 @@
       "en" : "end date of the bridge's construction (completion)",
       "undefined" : "[ISO Date Format]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "542"
   }, {
     "iri" : "https://w3id.org/bcore#Density",
@@ -7858,17 +7858,17 @@
       "en" : "density",
       "undefined" : "[kg/m³]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "543"
   }, {
     "range" : "199",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "544"
   }, {
     "range" : "267",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "545"
   }, {
     "iri" : "https://w3id.org/bot#containsZone",
@@ -7882,7 +7882,7 @@
       "de" : "Zone enthält Zone",
       "en" : "zone contains zone"
     },
-    "attributes" : [ "transitive", "object", "external" ],
+    "attributes" : [ "object", "transitive", "external" ],
     "id" : "449"
   }, {
     "iri" : "https://w3id.org/reloc#meetRight",
@@ -7911,7 +7911,7 @@
       "de" : "Form des Pylons",
       "en" : "shape of the pylon"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "546"
   }, {
     "iri" : "https://w3id.org/bcore#BridgeLength",
@@ -7926,7 +7926,7 @@
       "en" : "length of the bridge",
       "undefined" : "[m]"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "external", "datatype", "functional" ],
     "id" : "547"
   }, {
     "iri" : "https://w3id.org/bcore#describes",
