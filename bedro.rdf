@@ -40,11 +40,11 @@
         <terms:description xml:lang="de">Ontologie für die Implementierung von deutschen Brückenentwurfsregeln.</terms:description>
         <terms:description xml:lang="en">Ontology for the implementation of German design rules for bridges and bridge components.</terms:description>
         <terms:license>https://creativecommons.org/licenses/by/4.0/deed.en</terms:license>
-        <terms:modified>2026-07-29</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-04</terms:modified>
         <bibo:status xml:lang="en">Ontology Specification Draft</bibo:status>
         <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
         <rdfs:label>Bridge Element Design Rule Ontology</rdfs:label>
-        <owl:versionInfo>0.1.2</owl:versionInfo>
+        <owl:versionInfo>0.1.3</owl:versionInfo>
         <schema:codeRepository>https://github.com/NoackTim/BEDRO</schema:codeRepository>
     </owl:Ontology>
     
@@ -264,6 +264,16 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/bedro#BridgeOntologyParameter">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Parameter following the Bridge Ontology Parametercoding (BOP) convention, developed at the Institute of Concrete Structures, Technische Universität Dresden. The parameters define geometric and other attributes of bridge components. Each parameter is coded with a ten-character alphanumeric code: AAAbbCCdEE (A: component, b: transversal position, C: sub-component, d: attribute type, E: attribute number). X or 00 means global [applies for every (sub-)component/ attribute of that kind].</rdfs:comment>
         <rdfs:comment xml:lang="de">Parameter, der der Bridge Ontology Parametercoding (BOP) Namenskonvention folgt, die am Institut für Massivbau, Technische Universität Dresden, entwickelt wurde. Die Parameter definieren geometrische und weitere Attribute von Brückenbauteilen. Jeder Parameter ist mit einem zehnstelligen alphanumerischen Code beschrieben: AAAbbCCdEE (A: Bauteil, b: transversale Position, C: Teilbauteil, d: Art des Attributs, E: Nummer des Attributs). X oder 00 bedeutet global [gilt für alle (Teil-)Bauteile/Attribute dieser Art].</rdfs:comment>
         <rdfs:label xml:lang="de">Brückenontologieparameter</rdfs:label>
@@ -1779,17 +1789,387 @@
     <rdf:Description rdf:about="https://w3id.org/bedro#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#n">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#p">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/bedro#r">
+    <rdf:Description rdf:about="https://w3id.org/bedro#ph">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/bedro#t">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b01">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#n01">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h01">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b02">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#n02">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#n03">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h03">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b04">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h04">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h5">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h6">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h7">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h2notround">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#v1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#v2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h02">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#bges">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#b4">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/bedro#h3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Kappe liegt links des Fahrbahnbelags; EN: Cap is left of pavement.</rdfs:comment>
+        <rdfs:label>CAP01_PAV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetLeft"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Kappe liegt rechts des Fahrbahnbelags; EN: Cap is right of pavement.</rdfs:comment>
+        <rdfs:label>CAP99_PAV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetRight"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Wenn Kappe und Geländer links auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the left side of a bridge, the railing is positioned directly above the cap.</rdfs:comment>
+        <rdfs:label>CAP01_RAI01</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Railing"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -2203,6 +2583,637 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Kappe ohne Schrammbord: Höhe 3 beträgt immer 7.5cm; EN: Cap without curb: height 3 is always 7.5cm</rdfs:comment>
+        <rdfs:label>CAPxxXXh03</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxCUe00"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh03"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.075</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Berechnung der Kappenhöhe 2; EN: Calculation of cap height 2; h2=round(h1+h3+h4+b1*n1+b2*n2-b4*n3)</rdfs:comment>
+        <rdfs:label>CAPxxXXh02</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb01"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b01"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXn01"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#n01"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh01"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#h01"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb02"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b02"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXn02"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#n02"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXn03"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#n03"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh03"/>
+                                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#h03"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb04"/>
+                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b04"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh04"/>
+                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#h04"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#h5"/>
+                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#n01"/>
+                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#b01"/>
+                                                                                                        </swrl:arguments>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h6"/>
+                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#b02"/>
+                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#n02"/>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                                                                                        <swrl:arguments>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:resource="https://w3id.org/bedro#h7"/>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first rdf:resource="https://w3id.org/bedro#b04"/>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first rdf:resource="https://w3id.org/bedro#n03"/>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</rdf:first>
+                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </swrl:arguments>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h2notround"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h01"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h03"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h04"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h5"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h6"/>
+                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#h7"/>
+                                                                                                                                </swrl:arguments>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                                                                                                        <swrl:arguments>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first rdf:resource="https://w3id.org/bedro#v1"/>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                                                                                                                        <rdf:rest rdf:parseType="Collection">
+                                                                                                                                                            <rdf:Description rdf:about="https://w3id.org/bedro#h2notround"/>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </swrl:arguments>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#round"/>
+                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#v2"/>
+                                                                                                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#v1"/>
+                                                                                                                                                </swrl:arguments>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                                <rdf:first>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+                                                                                                                                                        <swrl:arguments>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first rdf:resource="https://w3id.org/bedro#h02"/>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                        <rdf:first rdf:resource="https://w3id.org/bedro#v2"/>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</rdf:first>
+                                                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:first>
+                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh02"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#h02"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Die Breite 4 der Kappe beträgt b04=b02+b03-b01; EN: The width 4 of the cap b04=b02+b03-b01</rdfs:comment>
+        <rdfs:label>CAPxxXXb04</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb01"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb02"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb03"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="https://w3id.org/bedro#bges"/>
+                                                            <rdf:Description rdf:about="https://w3id.org/bedro#b2"/>
+                                                            <rdf:Description rdf:about="https://w3id.org/bedro#b3"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#b4"/>
+                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#bges"/>
+                                                                    <rdf:Description rdf:about="https://w3id.org/bedro#b1"/>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb04"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b4"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Die Breite 3 der Kappe beträgt immer 1/5 der Höhe 3; EN: The width 3 of the cap is always 1/5 times height 3.</rdfs:comment>
+        <rdfs:label>CAPxxXXb03</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh03"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#h3"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="https://w3id.org/bedro#b3"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/bedro#h3"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXb03"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b3"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>DE: Ist die Brücke eine Wirtschaftswegbrücke, dann ist auch der Typ der Kappen dementsprechend (RiZ-ING Kap 6); EN: If an agricultural road traverses the bridge, the bridge cap is an agricultural road cap (RiZ-ING Kap 6)</rdfs:comment>
+        <rdfs:label>CAPxxXXg00_Kap6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://w3id.org/bcore/infra#RoadRoute"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#carriesRoute"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore/infra#RoadRouteClass"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                                <swrl:argument2>agricultural road</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXg00"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2>Kap6</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment>DE: Die Neigung 1 der Kappe beträgt immer 7.5%; EN: The inclination 1 of the cap is always 7.5%</rdfs:comment>
         <rdfs:label>CAPxxXXn01</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -2454,114 +3465,17 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>DE: Kappe liegt links des Fahrbahnbelags; EN: Cap is left of pavement.</rdfs:comment>
-        <rdfs:label>CAP01_PAV</rdfs:label>
+        <rdfs:comment>DE: Die Höhe 4 der Kappe entspricht immer der Höhe des benachbarten Fahrbahnbelags.; EN: The height 4 of the cap always equals the height of the adjacent pavement.</rdfs:comment>
+        <rdfs:label>CAPxxXXh04</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetLeft"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
                         <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>DE: Kappe liegt rechts des Fahrbahnbelags; EN: Cap is right of pavement.</rdfs:comment>
-        <rdfs:label>CAP99_PAV</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2569,10 +3483,9 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://w3id.org/brot#containsComponent"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2580,106 +3493,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
                                         <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</swrl:argument2>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Pavement"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetRight"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#p"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>DE: Wenn Kappe und Geländer links auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the left side of a bridge, the railing is positioned directly above the cap.</rdfs:comment>
-        <rdfs:label>CAP01_RAI01</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#XXXxxXXp00"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
-                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2689,7 +3506,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/bcore#isPartOfZone"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
                                                 <swrl:argument2 rdf:resource="https://w3id.org/bedro#b"/>
                                             </rdf:Description>
                                         </rdf:first>
@@ -2699,8 +3516,8 @@
                                                 <rdf:first>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Cap"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2708,24 +3525,13 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                <swrl:classPredicate rdf:resource="https://w3id.org/brcomp#Railing"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#PAV00XXh00"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/bedro#p"/>
+                                                                <swrl:argument2 rdf:resource="https://w3id.org/bedro#ph"/>
                                                             </rdf:Description>
                                                         </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                        <swrl:classPredicate rdf:resource="https://w3id.org/brot#Bridge"/>
-                                                                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#b"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                             </rdf:Description>
@@ -2743,10 +3549,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/reloc#meetTop"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#r"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#c"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/bedro#CAPxxXXh04"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/bedro#c"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/bedro#ph"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
