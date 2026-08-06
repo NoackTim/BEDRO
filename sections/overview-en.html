@@ -21,10 +21,6 @@ This ontology has the following classes and properties.</span>
       <a href="#Elastomer" title="https://w3id.org/bedro#Elastomer">elastomer</a>
    </li>
    <li>
-      <a href="#PavementImperviousBlanket"
-         title="https://w3id.org/bedro#PavementImperviousBlanket">impervious blanket</a>
-   </li>
-   <li>
       <a href="#MasticAsphalt" title="https://w3id.org/bedro#MasticAsphalt">mastic asphalt</a>
    </li>
    <li>
@@ -34,13 +30,21 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">pavement</a>
    </li>
    <li>
-      <a href="#PavementCover" title="https://w3id.org/bedro#PavementCover">pavement cover</a>
+      <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">
+         <span>Pavement Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">pavement cover layer</a>
+   </li>
+   <li>
+      <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">pavement protection layer</a>
+   </li>
+   <li>
+      <a href="#PavementWaterproofLayer" title="https://w3id.org/bedro#PavementWaterproofLayer">pavement waterproof layer</a>
    </li>
    <li>
       <a href="#Plastic" title="https://w3id.org/bedro#Plastic">plastic</a>
-   </li>
-   <li>
-      <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">protection layer</a>
    </li>
    <li>
       <a href="#PTFE" title="https://w3id.org/bedro#PTFE">PTFE</a>
@@ -139,6 +143,9 @@ This ontology has the following classes and properties.</span>
       <a href="#CAPxxCUe00" title="https://w3id.org/bedro#CAPxxCUe00">curb existence</a>
    </li>
    <li>
+      <a href="#PAV00CLh00" title="https://w3id.org/bedro#PAV00CLh00">pavement cover height</a>
+   </li>
+   <li>
       <a href="#PAV00XXh00" title="https://w3id.org/bedro#PAV00XXh00">pavement height</a>
    </li>
    <li>
@@ -146,6 +153,12 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#PAV00XXn02" title="https://w3id.org/bedro#PAV00XXn02">pavement inclination 2</a>
+   </li>
+   <li>
+      <a href="#PAV00PLh00" title="https://w3id.org/bedro#PAV00PLh00">pavement protection layer height</a>
+   </li>
+   <li>
+      <a href="#PAV00WLh00" title="https://w3id.org/bedro#PAV00WLh00">pavement waterproof layer height</a>
    </li>
    <li>
       <a href="#PAV00XXb01" title="https://w3id.org/bedro#PAV00XXb01">pavement width 1</a>
@@ -349,51 +362,84 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#d4e4146">CAP01_NOB01</a>
+      <a href="#d4e4225">Bridge_Width</a>
    </li>
    <li>
-      <a href="#d4e3602">CAP01_PAV</a>
+      <a href="#d4e7131">CAP01meetNOB01</a>
    </li>
    <li>
-      <a href="#d4e4528">CAP01_RAI01</a>
+      <a href="#d4e6504">CAP01meetPAV</a>
    </li>
    <li>
-      <a href="#d4e5077">CAP01_TRB01</a>
+      <a href="#d4e7513">CAP01meetRAI01</a>
    </li>
    <li>
-      <a href="#d4e4337">CAP99_NOB99</a>
+      <a href="#d4e7895">CAP01meetTRB01</a>
    </li>
    <li>
-      <a href="#d4e3770">CAP99_PAV</a>
+      <a href="#d4e8507">CAP01XXq00</a>
    </li>
    <li>
-      <a href="#d4e4886">CAP99_RAI99</a>
+      <a href="#d4e7322">CAP99meetNOB99</a>
    </li>
    <li>
-      <a href="#d4e5269">CAP99_TRB99</a>
+      <a href="#d4e6672">CAP99meetPAV</a>
    </li>
    <li>
-      <a href="#d4e3938">CAPXX_SUP00SL</a>
+      <a href="#d4e7704">CAP99meetRAI99</a>
    </li>
    <li>
-      <a href="#d4e3213">CAPxxXXb03</a>
+      <a href="#d4e8087">CAP99meetTRB99</a>
    </li>
    <li>
-      <a href="#d4e3032">CAPxxXXb04</a>
+      <a href="#d4e3291">CAP99XXq00</a>
    </li>
    <li>
-      <a href="#d4e3433">CAPxxXXg00_Kap6</a>
+      <a href="#d4e4626">CAPxxXXb03</a>
    </li>
    <li>
-      <a href="#d4e5460">CAPxxXXh02</a>
+      <a href="#d4e4044">CAPxxXXb04</a>
    </li>
    <li>
-      <a href="#d4e3348">CAPxxXXh03</a>
+      <a href="#d4e6335">CAPxxXXg00_Kap6</a>
    </li>
    <li>
-      <a href="#d4e4719">CAPxxXXh04</a>
+      <a href="#d4e3514">CAPxxXXh02</a>
    </li>
    <li>
-      <a href="#d4e4083">CAPxxXXn01</a>
+      <a href="#d4e4761">CAPxxXXh03</a>
+   </li>
+   <li>
+      <a href="#d4e8340">CAPxxXXh04</a>
+   </li>
+   <li>
+      <a href="#d4e8278">CAPxxXXn01</a>
+   </li>
+   <li>
+      <a href="#d4e4846">PAV00XXh00</a>
+   </li>
+   <li>
+      <a href="#d4e5252">SUP00SL_CAP01</a>
+   </li>
+   <li>
+      <a href="#d4e5444">SUP00SL_CAP99</a>
+   </li>
+   <li>
+      <a href="#d4e5637">SUP00SL_PAV</a>
+   </li>
+   <li>
+      <a href="#d4e5960">SUP00SLb04_b06</a>
+   </li>
+   <li>
+      <a href="#d4e5128">SUP00SLh01</a>
+   </li>
+   <li>
+      <a href="#d4e5190">SUP00SLh06</a>
+   </li>
+   <li>
+      <a href="#d4e6840">SUP00SLmeetCAPXX</a>
+   </li>
+   <li>
+      <a href="#d4e6986">SUP00SLmeetPAV</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
