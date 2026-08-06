@@ -1,5 +1,5 @@
 # Bridge Element Design Rule Ontology
-The Bridge Element Design Rule Ontology (BEDRO) is structuring bridge desing rules for the dimensioning of bridge components in the early phases of bridge design.
+The Bridge Element Design Rule Ontology (BEDRO) is structuring bridge desing rules for the design of bridge components in the early phases of bridge design.
 
 BEDRO has the URI: https://w3id.org/bedro#
 
