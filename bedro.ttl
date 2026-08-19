@@ -31,11 +31,11 @@
                           <http://purl.org/dc/terms/description> "Ontologie für die Implementierung von deutschen Brückenentwurfsregeln."@de ,
                                                                  "Ontology for the implementation of German design rules for bridges and bridge components."@en ;
                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/deed.en" ;
-                          <http://purl.org/dc/terms/modified> "2026-08-06"^^xsd:date ;
+                          <http://purl.org/dc/terms/modified> "2026-08-07"^^xsd:date ;
                           <http://purl.org/ontology/bibo/status> "Ontology Specification Draft"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "bedro" ;
                           rdfs:label "Bridge Element Design Rule Ontology" ;
-                          owl:versionInfo "0.1.4" ;
+                          owl:versionInfo "0.1.5" ;
                           <https://schema.org/codeRepository> "https://github.com/NoackTim/BEDRO" .
 
 #################################################################
@@ -50,12 +50,32 @@
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -70,8 +90,28 @@
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/image
 <http://xmlns.com/foaf/0.1/image> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/codeRepository
+<https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/unitText
+<https://schema.org/unitText> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -86,12 +126,312 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/bcore#bridgesRoute
+<https://w3id.org/bcore#bridgesRoute> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                      rdfs:range <https://w3id.org/bcore#InfrastructureRoute> ;
+                                      rdfs:comment "Brücke überquert Trasse"@de ,
+                                                   "bridge bridges route"@en ;
+                                      rdfs:label "bridges route"@en ,
+                                                 "überquert Trasse"@de .
+
+
+###  https://w3id.org/bcore#bridgesZone
+<https://w3id.org/bcore#bridgesZone> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                     rdfs:range <https://w3id.org/bot#Zone> ;
+                                     rdfs:comment "Brücke überquert Zone"@de ,
+                                                  "bridge bridges zone"@en ;
+                                     rdfs:label "bridges zone"@en ,
+                                                "überquert Zone"@de .
+
+
 ###  https://w3id.org/bcore#carriesRoute
-<https://w3id.org/bcore#carriesRoute> rdf:type owl:ObjectProperty .
+<https://w3id.org/bcore#carriesRoute> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/bcore#traversesBridge> ;
+                                      rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                      rdfs:range <https://w3id.org/bcore#InfrastructureRoute> ;
+                                      rdfs:comment "Brücke überführt Trasse"@de ,
+                                                   "bridge carries route"@en ;
+                                      rdfs:label "carries route"@en ,
+                                                 "überführt Trasse"@de .
 
 
 ###  https://w3id.org/bcore#crossesRoute
-<https://w3id.org/bcore#crossesRoute> rdf:type owl:ObjectProperty .
+<https://w3id.org/bcore#crossesRoute> rdf:type owl:ObjectProperty ,
+                                               owl:SymmetricProperty ;
+                                      rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                      rdfs:range <https://w3id.org/bcore#InfrastructureRoute> ;
+                                      rdfs:comment "Trasse kreuzt Trasse im Lageplan (ohne Beachtung der Altitude)"@de ,
+                                                   "route crosses route on the site plan (without regard of the altitude)"@en ;
+                                      rdfs:label "crosses route"@en ,
+                                                 "kreuzt Trasse"@de .
+
+
+###  https://w3id.org/bcore#crossesZone
+<https://w3id.org/bcore#crossesZone> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                     rdfs:range <https://w3id.org/bot#Zone> ;
+                                     rdfs:comment "Trasse durchquert Zone"@de ,
+                                                  "route crosses zone"@en ;
+                                     rdfs:label "crosses zone"@en ,
+                                                "durchquert Zone"@de .
+
+
+###  https://w3id.org/bcore#describes
+<https://w3id.org/bcore#describes> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/bcore#MediaFile> ;
+                                   rdfs:range [ rdf:type owl:Class ;
+                                                owl:unionOf ( <https://w3id.org/brot#Bridge>
+                                                              <https://w3id.org/brot#Component>
+                                                            )
+                                              ] ;
+                                   rdfs:comment "Mediendatei beschreibt (stellt dar, zeigt, veranschaulicht) eine Brücke"@de ,
+                                                "media file describes (represents, depicts, illustrates) a bridge"@en ;
+                                   rdfs:label "beschreibt"@de ,
+                                              "describes"@en .
+
+
+###  https://w3id.org/bcore#endsAt
+<https://w3id.org/bcore#endsAt> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                owl:propertyDisjointWith <https://w3id.org/bcore#startsAt> ;
+                                rdfs:comment "Endpunkt der Linienlokalisierung"@de ,
+                                             "end point of the line localisation"@en ;
+                                rdfs:label "endet an"@de ,
+                                           "ends at"@en .
+
+
+###  https://w3id.org/bcore#hasLocationAt
+<https://w3id.org/bcore#hasLocationAt> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                       rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                       rdfs:comment "Punkt der Lokalisierung (Ort)"@de ,
+                                                    "point of the line localisation (location)"@en ;
+                                       rdfs:label "has location at"@en ,
+                                                  "ist lokalisiert an"@de ;
+                                       rdfs:seeAlso "https://dtc-ontology.cms.ed.tum.de/infraspatialot#isisLocatedAt" .
+
+
+###  https://w3id.org/bcore#hasPartialStructure
+<https://w3id.org/bcore#hasPartialStructure> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <https://w3id.org/bcore#isPartialStructureOf> ;
+                                             rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                             rdfs:range <https://w3id.org/brot#Bridge> ;
+                                             rdfs:comment "Brücke besitzt Brückenzug"@de ,
+                                                          "bridge contains partial structure (bridge section)"@en ;
+                                             rdfs:label "contains partial structure"@en ,
+                                                        "enthält Brückenzug"@de .
+
+
+###  https://w3id.org/bcore#includesLocalisation
+<https://w3id.org/bcore#includesLocalisation> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/bcore#isPartOfRoute> ;
+                                              rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                              rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                              rdfs:comment "Trasse enthält Lokalisation (Trassenpunkt)"@de ,
+                                                           "route contains localisation (route point)"@en ;
+                                              rdfs:label "enthält Lokalisation"@de ,
+                                                         "includes localisation"@en .
+
+
+###  https://w3id.org/bcore#isLocatedAt
+<https://w3id.org/bcore#isLocatedAt> rdf:type owl:ObjectProperty ,
+                                              owl:FunctionalProperty ;
+                                     rdfs:domain <https://w3id.org/bot#Zone> ;
+                                     rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                     rdfs:comment "Zone befindet sich an Lokalisierung (Ort)"@de ,
+                                                  "zone is located at localisation (location)"@en ;
+                                     rdfs:label "befindet sich an"@de ,
+                                                "is located at"@en .
+
+
+###  https://w3id.org/bcore#isLocatedInZone
+<https://w3id.org/bcore#isLocatedInZone> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                         rdfs:range <https://w3id.org/bot#Zone> ;
+                                         rdfs:comment "Lokalisierung (Ort) befindet sich in Zone"@de ,
+                                                      "localisation (location) is located in zone"@en ;
+                                         rdfs:label "befindet sich in Zone"@de ,
+                                                    "is located in zone"@en .
+
+
+###  https://w3id.org/bcore#isMadeOfMaterial
+<https://w3id.org/bcore#isMadeOfMaterial> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/brot#Component> ;
+                                          rdfs:range <https://w3id.org/bmat#BuildingMaterial> ;
+                                          rdfs:comment "Bauteil besteht aus Material"@de ,
+                                                       "component consists of material"@en ;
+                                          rdfs:label "besteht aus Material"@de ,
+                                                     "is made of material"@en .
+
+
+###  https://w3id.org/bcore#isPartOfComponent
+<https://w3id.org/bcore#isPartOfComponent> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <https://w3id.org/brot#aggregates> ;
+                                           rdf:type owl:TransitiveProperty ;
+                                           rdfs:domain <https://w3id.org/brot#Component> ;
+                                           rdfs:range <https://w3id.org/brot#Component> ;
+                                           rdfs:comment "Brückenauteil ist Teil eines anderen Bauteils"@de ,
+                                                        "bridge element is part of another element"@en ;
+                                           rdfs:label "is part of component"@en ,
+                                                      "ist Teil von Bauteil"@de .
+
+
+###  https://w3id.org/bcore#isPartOfRoute
+<https://w3id.org/bcore#isPartOfRoute> rdf:type owl:ObjectProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                       rdfs:range <https://w3id.org/bcore#InfrastructureRoute> ;
+                                       rdfs:comment "Trassenpunkt ist Teil einer Trasse"@de ,
+                                                    "localisation (route point) is part of a route"@en ;
+                                       rdfs:label "is part of route"@en ,
+                                                  "ist Teil von Trasse"@de .
+
+
+###  https://w3id.org/bcore#isPartOfZone
+<https://w3id.org/bcore#isPartOfZone> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://w3id.org/brot#containsComponent> ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:domain <https://w3id.org/brot#Component> ;
+                                      rdfs:range <https://w3id.org/brot#SpatialZone> ;
+                                      rdfs:comment "Bauteil ist Teil genau einer Zone (z.B. Brücke)"@de ,
+                                                   "component is part of exactly one zone (e.g., bridge)"@en ;
+                                      rdfs:label "is part of zone"@en ,
+                                                 "ist Teil einer Zone"@de .
+
+
+###  https://w3id.org/bcore#isPartialStructureOf
+<https://w3id.org/bcore#isPartialStructureOf> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                              rdfs:range <https://w3id.org/brot#Bridge> ;
+                                              rdfs:comment "Brückenzug ist Teil genau einer Brücke"@de ,
+                                                           "bridge section is part of exactly one bridge"@en ;
+                                              rdfs:label "is partial structure of"@en ,
+                                                         "ist Brückenzug von"@de .
+
+
+###  https://w3id.org/bcore#liesWithin
+<https://w3id.org/bcore#liesWithin> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <https://w3id.org/bot#containsZone> ;
+                                    rdf:type owl:TransitiveProperty ;
+                                    rdfs:domain <https://w3id.org/bot#Zone> ;
+                                    rdfs:range <https://w3id.org/bot#Zone> ;
+                                    rdfs:comment "Zone wird vollständig von anderer Zone umschlossen"@de ,
+                                                 "zone is fully enclosed by another zone"@en ;
+                                    rdfs:label "liegt in"@de ,
+                                               "lies within"@en .
+
+
+###  https://w3id.org/bcore#startsAt
+<https://w3id.org/bcore#startsAt> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                  rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                  rdfs:comment "Startpunkt der Linienlokalisierung"@de ,
+                                               "starting point of the line localisation"@en ;
+                                  rdfs:label "beginnt an"@de ,
+                                             "starts at"@en .
+
+
+###  https://w3id.org/bcore#traversesBridge
+<https://w3id.org/bcore#traversesBridge> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                         rdfs:range <https://w3id.org/brot#Bridge> ;
+                                         rdfs:comment "Trasse überquert/führt über Brücke"@de ,
+                                                      "route crosses/goes over bridge"@en ;
+                                         rdfs:label "traverses bridge"@en ,
+                                                    "überquert Brücke"@de .
+
+
+###  https://w3id.org/bcore/comp#beginsAtLocation
+<https://w3id.org/bcore/comp#beginsAtLocation> rdf:type owl:ObjectProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                               rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                               owl:propertyDisjointWith <https://w3id.org/bcore/comp#endsAtLocation> ;
+                                               rdfs:comment "Spannweite beginnt an einer Lokalisation (Punkt)"@de ,
+                                                            "span begins at localision (location point)"@en ;
+                                               rdfs:label "begins at location"@en .
+
+
+###  https://w3id.org/bcore/comp#beginsAtSupport
+<https://w3id.org/bcore/comp#beginsAtSupport> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                              rdfs:range <https://w3id.org/brcomp#SubStructureComponent> ;
+                                              owl:propertyDisjointWith <https://w3id.org/bcore/comp#endsAtSupport> ;
+                                              rdfs:comment "Spannweite beginnt an einem Bauteil des Brückenunterbaus"@de ,
+                                                           "span begins at a component of the bridge substructure"@en ;
+                                              rdfs:label "begins at support"@en .
+
+
+###  https://w3id.org/bcore/comp#endsAtLocation
+<https://w3id.org/bcore/comp#endsAtLocation> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                             rdfs:range <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                             rdfs:comment "Spannweite endet an einer Lokalisation (Punkt)"@de ,
+                                                          "span ends at localision (location point)"@en ;
+                                             rdfs:label "ends at location"@en .
+
+
+###  https://w3id.org/bcore/comp#endsAtSupport
+<https://w3id.org/bcore/comp#endsAtSupport> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                            rdfs:range <https://w3id.org/brcomp#SubStructureComponent> ;
+                                            rdfs:comment "Spannweite endet an einem Bauteil des Brückenunterbaus"@de ,
+                                                         "span ends at a component of the bridge substructure"@en ;
+                                            rdfs:label "ends at support"@en .
+
+
+###  https://w3id.org/bcore/comp#followsSpan
+<https://w3id.org/bcore/comp#followsSpan> rdf:type owl:ObjectProperty ,
+                                                   owl:TransitiveProperty ;
+                                          rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                          rdfs:range <https://w3id.org/bcore/comp#Span> ;
+                                          rdfs:comment "Spannweite liegt hinter einer anderen Spannweite (wird genutzt, um Teilspannweiten darzustellen, z. B. bei Einzelspannweiten eines Durchlaufträgers oder Hängerabstände einer Schrägkabelbrücke)"@de ,
+                                                       "span is located behind another span (used to represent partial spans, e.g., individual spans of a continuous girder or suspension spans of a cable-stayed bridge)"@en ;
+                                          rdfs:label "follows span"@en .
+
+
+###  https://w3id.org/bcore/comp#hasMainSpan
+<https://w3id.org/bcore/comp#hasMainSpan> rdf:type owl:ObjectProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                          rdfs:range <https://w3id.org/bcore/comp#Span> ;
+                                          rdfs:comment "Brücke hat eine Hauptspannweite"@de ,
+                                                       "bridge has main span"@en ;
+                                          rdfs:label "has main span"@en .
+
+
+###  https://w3id.org/bcore/comp#hasSpan
+<https://w3id.org/bcore/comp#hasSpan> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                      rdfs:range <https://w3id.org/bcore/comp#Span> ;
+                                      rdfs:comment "Bauteil hat eine Spannweite"@de ,
+                                                   "component has span"@en ;
+                                      rdfs:label "has span"@en .
+
+
+###  https://w3id.org/bcore/comp#isSpanOf
+<https://w3id.org/bcore/comp#isSpanOf> rdf:type owl:ObjectProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                       rdfs:range <https://w3id.org/brot#Bridge> ;
+                                       rdfs:comment "ist Feld von genau einer Brücke"@de ,
+                                                    "the span belongs to just one bridge"@en ;
+                                       rdfs:label "is span of"@en .
+
+
+###  https://w3id.org/bcore/mat#isCompositeOf
+<https://w3id.org/bcore/mat#isCompositeOf> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/bcore/mat#CompositeMaterial> ;
+                                           rdfs:range <https://w3id.org/bmat#BuildingMaterial> ;
+                                           rdfs:comment "Verbundmaterial ist Verbund aus anderem Material"@de ,
+                                                        "composite material is a composite of another material"@en ;
+                                           rdfs:label "is composite of"@en ,
+                                                      "ist Verbund aus"@de .
 
 
 ###  https://w3id.org/bedro#equalsRoutePoint
@@ -130,44 +470,688 @@ xsd:date rdf:type rdfs:Datatype .
                              "verläuft rechts von"@de .
 
 
+###  https://w3id.org/bot#containsZone
+<https://w3id.org/bot#containsZone> rdf:type owl:ObjectProperty ,
+                                             owl:TransitiveProperty ;
+                                    rdfs:domain <https://w3id.org/bot#Zone> ;
+                                    rdfs:range <https://w3id.org/bot#Zone> ;
+                                    rdfs:comment "Zone enthält Zone"@de ,
+                                                 "zone contains zone"@en ;
+                                    rdfs:label "contains zone"@en ,
+                                               "enthält Zone"@de .
+
+
+###  https://w3id.org/bot#intersectsZone
+<https://w3id.org/bot#intersectsZone> rdf:type owl:ObjectProperty ,
+                                               owl:SymmetricProperty ;
+                                      rdfs:domain <https://w3id.org/bot#Zone> ;
+                                      rdfs:range <https://w3id.org/bot#Zone> ;
+                                      rdfs:comment "ein Teil der Zone liegt in einer anderen Zone"@de ,
+                                                   "part of the zone lies within another zone"@en ;
+                                      rdfs:label "intersects Zone"@en ,
+                                                 "schneidet Zone"@de .
+
+
+###  https://w3id.org/brot#aggregates
+<https://w3id.org/brot#aggregates> rdf:type owl:ObjectProperty ,
+                                            owl:TransitiveProperty ;
+                                   rdfs:domain <https://w3id.org/brot#Component> ;
+                                   rdfs:range <https://w3id.org/brot#Component> ;
+                                   rdfs:comment "Bauteil besteht aus Bauteil"@de ,
+                                                "component consists of component"@en ;
+                                   rdfs:label "aggregates"@en ,
+                                              "besteht aus"@de .
+
+
 ###  https://w3id.org/brot#containsComponent
-<https://w3id.org/brot#containsComponent> rdf:type owl:ObjectProperty .
+<https://w3id.org/brot#containsComponent> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/brot#SpatialZone> ;
+                                          rdfs:range <https://w3id.org/brot#Component> ;
+                                          rdfs:comment "Brücke besteht aus Bauteil"@de ,
+                                                       "bridge consists of component"@en ;
+                                          rdfs:label "beinhaltet Bauteil"@de ,
+                                                     "contains component"@en .
 
 
 ###  https://w3id.org/reloc#meetBottom
-<https://w3id.org/reloc#meetBottom> rdf:type owl:ObjectProperty .
+<https://w3id.org/reloc#meetBottom> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <https://w3id.org/reloc#meetTop> ;
+                                    rdfs:domain <https://w3id.org/brot#Component> ;
+                                    rdfs:range <https://w3id.org/brot#Component> ;
+                                    rdfs:comment "Bauteil liegt direkt unter anderem Bauteil"@de ,
+                                                 "component is located directly below another component"@en ;
+                                    rdfs:label "liegt unter"@de ,
+                                               "meet bottom"@en .
+
+
+###  https://w3id.org/reloc#meetFront
+<https://w3id.org/reloc#meetFront> rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf <https://w3id.org/reloc#meetRear> ;
+                                   rdfs:domain <https://w3id.org/brot#Component> ;
+                                   rdfs:range <https://w3id.org/brot#Component> ;
+                                   rdfs:comment "Bauteil liegt direkt vor anderem Bauteil"@de ,
+                                                "component is located directly in front of another component"@en ;
+                                   rdfs:label "liegt vor"@de ,
+                                              "meet front"@en .
 
 
 ###  https://w3id.org/reloc#meetLeft
-<https://w3id.org/reloc#meetLeft> rdf:type owl:ObjectProperty .
+<https://w3id.org/reloc#meetLeft> rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf <https://w3id.org/reloc#meetRight> ;
+                                  rdfs:domain <https://w3id.org/brot#Component> ;
+                                  rdfs:range <https://w3id.org/brot#Component> ;
+                                  rdfs:comment "Bauteil liegt links angrenzend zu anderem Bauteil"@de ,
+                                               "component is located directly to the left of another component"@en ;
+                                  rdfs:label "liegt links von"@de ,
+                                             "meet left"@en .
+
+
+###  https://w3id.org/reloc#meetRear
+<https://w3id.org/reloc#meetRear> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/brot#Component> ;
+                                  rdfs:range <https://w3id.org/brot#Component> ;
+                                  rdfs:comment "Bauteil liegt direkt hinter anderem Bauteil"@de ,
+                                               "component is located directly behind another component"@en ;
+                                  rdfs:label "liegt hinter"@de ,
+                                             "meet rear"@en .
 
 
 ###  https://w3id.org/reloc#meetRight
-<https://w3id.org/reloc#meetRight> rdf:type owl:ObjectProperty .
+<https://w3id.org/reloc#meetRight> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/brot#Component> ;
+                                   rdfs:range <https://w3id.org/brot#Component> ;
+                                   rdfs:comment "Bauteil liegt rechts angrenzend zu anderem Bauteil"@de ,
+                                                "component is located directly to the right of another component"@en ;
+                                   rdfs:label "liegt rechts von"@de ,
+                                              "meet right"@en .
 
 
 ###  https://w3id.org/reloc#meetTop
-<https://w3id.org/reloc#meetTop> rdf:type owl:ObjectProperty .
+<https://w3id.org/reloc#meetTop> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/brot#Component> ;
+                                 rdfs:range <https://w3id.org/brot#Component> ;
+                                 rdfs:comment "Bauteil liegt direkt über anderem Bauteil"@de ,
+                                              "component is located directly above another component"@en ;
+                                 rdfs:label "liegt über"@de ,
+                                            "meet top"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
+###  https://w3id.org/bcore#Altitude
+<https://w3id.org/bcore#Altitude> rdf:type owl:DatatypeProperty ,
+                                           owl:FunctionalProperty ;
+                                  rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                  rdfs:range xsd:decimal ;
+                                  rdfs:comment "Höhe ü. NN (bezogen auf das lokal gültige amtliche Höhensystem)"@de ,
+                                               "elevation above sea level (according to the locally applicable official elevation system)"@en ;
+                                  rdfs:label "Altitude"@de ,
+                                             "altitude"@en ;
+                                  <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#BridgeConstructionEndDate
+<https://w3id.org/bcore#BridgeConstructionEndDate> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                                   rdfs:range xsd:date ;
+                                                   rdfs:comment "Enddatum des Baus der Brücke (Fertigstellung)"@de ,
+                                                                "end date of the bridge's construction (completion)"@en ;
+                                                   rdfs:label "Brücke Fertigstellung"@de ,
+                                                              "bridge construction end date"@en ;
+                                                   <https://schema.org/unitText> "ISO Date Format" .
+
+
+###  https://w3id.org/bcore#BridgeConstructionStartDate
+<https://w3id.org/bcore#BridgeConstructionStartDate> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                                     rdfs:range xsd:date ;
+                                                     rdfs:comment "Startdatum des Baus der Brücke"@de ,
+                                                                  "start date of the bridge's construction"@en ;
+                                                     rdfs:label "Brücke Baubeginn"@de ,
+                                                                "bridge construction start date"@en ;
+                                                     <https://schema.org/unitText> "ISO Date Format" .
+
+
+###  https://w3id.org/bcore#BridgeID
+<https://w3id.org/bcore#BridgeID> rdf:type owl:DatatypeProperty ,
+                                           owl:FunctionalProperty ;
+                                  rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                  rdfs:range xsd:int ;
+                                  rdfs:comment "Identifikationsnummer der Brücke"@de ,
+                                               "bridge identification number"@en ;
+                                  rdfs:label "Brücke ID"@de ,
+                                             "bridge ID"@en .
+
+
+###  https://w3id.org/bcore#BridgeLength
+<https://w3id.org/bcore#BridgeLength> rdf:type owl:DatatypeProperty ,
+                                               owl:FunctionalProperty ;
+                                      rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                      rdfs:range xsd:decimal ;
+                                      rdfs:comment "Länge der Brücke"@de ,
+                                                   "length of the bridge"@en ;
+                                      rdfs:label "Brückenlänge"@de ,
+                                                 "bridge length"@en ;
+                                      <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#BridgeLoadCase
+<https://w3id.org/bcore#BridgeLoadCase> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "maximaler Lastfall, für den die Brücke bemessen wurde (z.B. \"LM1\" oder \"BK30/60\" in Deutschland)"@de ,
+                                                     "maximum load case the bridge is designed for (e.g., \"LM1\" or \"BK30/60\" in Germany)"@en ;
+                                        rdfs:label "Brücke Lastfall"@de ,
+                                                   "bridge load case"@en .
+
+
+###  https://w3id.org/bcore#BridgeName
+<https://w3id.org/bcore#BridgeName> rdf:type owl:DatatypeProperty ,
+                                             owl:FunctionalProperty ;
+                                    rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "Name der Brücke"@de ,
+                                                 "name of the bridge"@en ;
+                                    rdfs:label "Brückenname"@de ,
+                                               "bridge name"@en .
+
+
+###  https://w3id.org/bcore#BridgePlanningEndDate
+<https://w3id.org/bcore#BridgePlanningEndDate> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                               rdfs:range xsd:date ;
+                                               rdfs:comment "Enddatum der Planungsphase der Brücke"@de ,
+                                                            "end date of the bridge's planning phase"@en ;
+                                               rdfs:label "Brücke Planungsbeginn"@de ,
+                                                          "bridge planning end date"@en ;
+                                               <https://schema.org/unitText> "ISO Date Format" .
+
+
+###  https://w3id.org/bcore#BridgePlanningStartDate
+<https://w3id.org/bcore#BridgePlanningStartDate> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                                 rdfs:range xsd:date ;
+                                                 rdfs:comment "Startdatum der Planungsphase der Brücke"@de ,
+                                                              "start date of the bridge's planning phase"@en ;
+                                                 rdfs:label "Brücke Planungsbeginn"@de ,
+                                                            "bridge planning start date"@en ;
+                                                 <https://schema.org/unitText> "ISO Date Format" .
+
+
+###  https://w3id.org/bcore#BridgeStatus
+<https://w3id.org/bcore#BridgeStatus> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Status der Brücke"@de ,
+                                                   "status of the bridge"@en ;
+                                      rdfs:label "Brückenstatus"@de ,
+                                                 "bridge status"@en .
+
+
+###  https://w3id.org/bcore#CountryISOCode
+<https://w3id.org/bcore#CountryISOCode> rdf:type owl:DatatypeProperty ,
+                                                 owl:FunctionalProperty ;
+                                        rdfs:domain <https://w3id.org/bcore#Country> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Ländercode nach ISO-3166-1 (ALPHA-2)"@de ,
+                                                     "country code according to ISO 3166-1 (ALPHA-2)"@en ;
+                                        rdfs:label "Ländercode ISO"@de ,
+                                                   "country ISO code"@en .
+
+
+###  https://w3id.org/bcore#Density
+<https://w3id.org/bcore#Density> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://w3id.org/bmat#BuildingMaterial> ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "average mass density of material"@en ,
+                                              "durchschnittliche Massendichte des Materials"@de ;
+                                 rdfs:label "Dichte"@de ,
+                                            "density"@en ;
+                                 <https://schema.org/unitText> "kg/m³" .
+
+
+###  https://w3id.org/bcore#InfrastructureRouteClearanceHeight
+<https://w3id.org/bcore#InfrastructureRouteClearanceHeight> rdf:type owl:DatatypeProperty ,
+                                                                     owl:FunctionalProperty ;
+                                                            rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                            rdfs:range xsd:decimal ;
+                                                            rdfs:comment "Höhe des Lichtraumprofils der Trasse"@de ,
+                                                                         "height of the route's clearance profile"@en ;
+                                                            rdfs:label "Infrastrukturtrasse lichte Höhe"@de ,
+                                                                       "infrastructure route clearance height"@en ;
+                                                            <https://schema.org/unitText> "m" .
+
+
 ###  https://w3id.org/bcore#InfrastructureRouteName
-<https://w3id.org/bcore#InfrastructureRouteName> rdf:type owl:DatatypeProperty .
+<https://w3id.org/bcore#InfrastructureRouteName> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:comment "Name oder Bezeichnung der Infrastrukturtrasse"@de ,
+                                                              "name or designation of the infrastructure route"@en ;
+                                                 rdfs:label "Infrastrukturtrasse Name"@de ,
+                                                            "infrastructure route name"@en .
 
 
 ###  https://w3id.org/bcore#InfrastructureRouteWidth
-<https://w3id.org/bcore#InfrastructureRouteWidth> rdf:type owl:DatatypeProperty .
+<https://w3id.org/bcore#InfrastructureRouteWidth> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                  rdfs:range xsd:decimal ;
+                                                  rdfs:comment "Querschnittsbreite der Infrastrukturtrasse"@de ,
+                                                               "cross-sectional width of the infrastructure route"@en ;
+                                                  rdfs:label "Infrastrukturtrasse Breite"@de ,
+                                                             "infrastructure route width"@en ;
+                                                  <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#Latitude
+<https://w3id.org/bcore#Latitude> rdf:type owl:DatatypeProperty ,
+                                           owl:FunctionalProperty ;
+                                  rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                  rdfs:range xsd:decimal ;
+                                  rdfs:comment "geografische Breite"@de ,
+                                               "geographic latitude"@en ;
+                                  rdfs:label "Breitengrad"@de ,
+                                             "latitude"@en .
 
 
 ###  https://w3id.org/bcore#LocalX
-<https://w3id.org/bcore#LocalX> rdf:type owl:DatatypeProperty .
+<https://w3id.org/bcore#LocalX> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "local X-coordinate"@en ,
+                                             "lokale X-Koordinate"@de ;
+                                rdfs:label "local X"@en ,
+                                           "lokales X"@de ;
+                                <https://schema.org/unitText> "m" .
 
 
 ###  https://w3id.org/bcore#LocalY
-<https://w3id.org/bcore#LocalY> rdf:type owl:DatatypeProperty .
+<https://w3id.org/bcore#LocalY> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "local Y-coordinate"@en ,
+                                             "lokale Y-Koordinate"@de ;
+                                rdfs:label "local Y"@en ,
+                                           "lokales Y"@de ;
+                                <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#LocalZ
+<https://w3id.org/bcore#LocalZ> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "local Z-coordinate"@en ,
+                                             "lokale Z-Koordinate"@de ;
+                                rdfs:label "local Z"@en ,
+                                           "lokales Z"@de ;
+                                <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#LocalisationName
+<https://w3id.org/bcore#LocalisationName> rdf:type owl:DatatypeProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Name der Lokalisierung (Standort)"@de ,
+                                                       "name of the localisation (location)"@en ;
+                                          rdfs:label "Lokalisierung Name"@de ,
+                                                     "localisation name"@en .
+
+
+###  https://w3id.org/bcore#LocalisationStation
+<https://w3id.org/bcore#LocalisationStation> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                             rdfs:range xsd:decimal ;
+                                             rdfs:comment "Kilometrierung der Lokalisierung (des Standortes) auf der Trasse"@de ,
+                                                          "kilometer marking of the localisation (location) on the route"@en ;
+                                             rdfs:label "Lokalisierung Stationierung"@de ,
+                                                        "localisation station"@en ;
+                                             <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#Longitude
+<https://w3id.org/bcore#Longitude> rdf:type owl:DatatypeProperty ,
+                                            owl:FunctionalProperty ;
+                                   rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
+                                   rdfs:range xsd:decimal ;
+                                   rdfs:comment "geografische Länge"@de ,
+                                                "geographic longitude"@en ;
+                                   rdfs:label "Längengrad"@de ,
+                                              "longitude"@en .
+
+
+###  https://w3id.org/bcore#MaterialName
+<https://w3id.org/bcore#MaterialName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/bmat#BuildingMaterial> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Name des Materials"@de ,
+                                                   "name of the material"@en ;
+                                      rdfs:label "Materialname"@de ,
+                                                 "material name"@en .
+
+
+###  https://w3id.org/bcore#RegionISOCode
+<https://w3id.org/bcore#RegionISOCode> rdf:type owl:DatatypeProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/bcore#Region> ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "Regionalcode nach ISO-3166-2"@de ,
+                                                    "regional code according to ISO 3166-2"@en ;
+                                       rdfs:label "Regionalcode ISO"@de ,
+                                                  "region ISO code"@en .
+
+
+###  https://w3id.org/bcore#Volume
+<https://w3id.org/bcore#Volume> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://w3id.org/brot#Component> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "metrisches Volumen des Bauteils"@de ,
+                                             "volume of the component"@en ;
+                                rdfs:label "Volumen"@de ,
+                                           "volume"@en ;
+                                <https://schema.org/unitText> "m³" .
+
+
+###  https://w3id.org/bcore#ZoneName
+<https://w3id.org/bcore#ZoneName> rdf:type owl:DatatypeProperty ,
+                                           owl:FunctionalProperty ;
+                                  rdfs:domain <https://w3id.org/bot#Zone> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Name der Zone"@de ,
+                                               "name of the zone"@en ;
+                                  rdfs:label "Zonenname"@de ,
+                                             "zone name"@en .
+
+
+###  https://w3id.org/bcore/comp#ArchShape
+<https://w3id.org/bcore/comp#ArchShape> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/brcomp#Arch> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Form des Bogens"@de ,
+                                                     "shape of the arch"@en ;
+                                        rdfs:label "arch shape"@en .
+
+
+###  https://w3id.org/bcore/comp#GirderShape
+<https://w3id.org/bcore/comp#GirderShape> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/brcomp#Girder> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Form des Trägers"@de ,
+                                                       "shape of the girder"@en ;
+                                          rdfs:label "girder shape"@en .
+
+
+###  https://w3id.org/bcore/comp#PierShape
+<https://w3id.org/bcore/comp#PierShape> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/brcomp#Pier> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Form des Pfeilers"@de ,
+                                                     "shape of the pier"@en ;
+                                        rdfs:label "pier shape"@en .
+
+
+###  https://w3id.org/bcore/comp#PylonShape
+<https://w3id.org/bcore/comp#PylonShape> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/brcomp#Pylon> ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "Form des Pylons"@de ,
+                                                      "shape of the pylon"@en ;
+                                         rdfs:label "pylon shape"@en .
+
+
+###  https://w3id.org/bcore/comp#SpanLength
+<https://w3id.org/bcore/comp#SpanLength> rdf:type owl:DatatypeProperty ,
+                                                  owl:FunctionalProperty ;
+                                         rdfs:domain <https://w3id.org/bcore/comp#Span> ;
+                                         rdfs:range xsd:decimal ;
+                                         rdfs:comment "Spannweite"@de ,
+                                                      "length of bridge span"@en ;
+                                         rdfs:label "span length"@en ;
+                                         <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore/infra#FootCycleRouteType
+<https://w3id.org/bcore/infra#FootCycleRouteType> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <https://w3id.org/bcore/infra#FootCycleRoute> ;
+                                                  rdfs:range [ rdf:type rdfs:Datatype ;
+                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                           rdf:first "bike only" ;
+                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                      rdf:first "foot only" ;
+                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                 rdf:first "segregated" ;
+                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                            rdf:first "shared-use" ;
+                                                                                                            rdf:rest rdf:nil
+                                                                                                          ]
+                                                                                               ]
+                                                                                    ]
+                                                                         ]
+                                                             ] ;
+                                                  rdfs:comment "Art des Fuß- und/oder Radweges"@de ,
+                                                               """Type of pedestrian and/or bike path. Possible values:
+- foot only
+- bike only
+- segregated
+- shared-use"""@en ;
+                                                  rdfs:label "Fuß- oder Gehwegtyp"@de ,
+                                                             "foot or cycle route type"@en .
+
+
+###  https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity
+<https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity> rdf:type owl:DatatypeProperty ,
+                                                                    owl:FunctionalProperty ;
+                                                           rdfs:domain <https://w3id.org/bcore/infra#RailwayRoute> ;
+                                                           rdfs:range xsd:decimal ;
+                                                           rdfs:comment "maximal zulässige Geschwindigkeit auf dem Schienenweg"@de ,
+                                                                        "maximum permitted speed on the rail line"@en ;
+                                                           rdfs:label "Eisenbahntrasse maximale Geschwindigkeit"@de ,
+                                                                      "railway route maximum velocity"@en ;
+                                                           <https://schema.org/unitText> "km/h" .
+
+
+###  https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks
+<https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks> rdf:type owl:DatatypeProperty ,
+                                                                   owl:FunctionalProperty ;
+                                                          rdfs:domain <https://w3id.org/bcore/infra#RailwayRoute> ;
+                                                          rdfs:range xsd:integer ;
+                                                          rdfs:comment "Anzahl der Gleise des Schienenweges"@de ,
+                                                                       "number of tracks on the railroad"@en ;
+                                                          rdfs:label "Eisenbahntrasse Gleisanzahl"@de ,
+                                                                     "railway route number of tracks"@en ;
+                                                          <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bcore/infra#RoadRouteClass
+<https://w3id.org/bcore/infra#RoadRouteClass> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/bcore/infra#RoadRoute> ;
+                                              rdfs:range [ rdf:type rdfs:Datatype ;
+                                                           owl:oneOf [ rdf:type rdf:List ;
+                                                                       rdf:first "agricultural road" ;
+                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                  rdf:first "country road" ;
+                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                             rdf:first "district road" ;
+                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                        rdf:first "federal road" ;
+                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                   rdf:first "highway" ;
+                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                              rdf:first "non-public road" ;
+                                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                         rdf:first "urban road" ;
+                                                                                                                                         rdf:rest rdf:nil
+                                                                                                                                       ]
+                                                                                                                            ]
+                                                                                                                 ]
+                                                                                                      ]
+                                                                                           ]
+                                                                                ]
+                                                                     ]
+                                                         ] ;
+                                              rdfs:comment "Klassifizierung der Straße"@de ,
+                                                           """Road classification. Possible values:
+- highway
+- federal road
+- country road
+- district road
+- urban road
+- agricultural road
+- non-public road"""@en ;
+                                              rdfs:label "Straßentrasse Klasse"@de ,
+                                                         "road route class"@en .
+
+
+###  https://w3id.org/bcore/infra#RoadRouteNumberOfLanes
+<https://w3id.org/bcore/infra#RoadRouteNumberOfLanes> rdf:type owl:DatatypeProperty ,
+                                                               owl:FunctionalProperty ;
+                                                      rdfs:domain <https://w3id.org/bcore/infra#RoadRoute> ;
+                                                      rdfs:range xsd:integer ;
+                                                      rdfs:comment "Anzahl der Fahrstreifen der Straße (Gesamtzahl beider Richtungsfahrbahnen)"@de ,
+                                                                   "number of lanes on the road (total number of lanes in both directions)"@en ;
+                                                      rdfs:label "Straßentrasse Spurenanzahl"@de ,
+                                                                 "road route number of lanes"@en ;
+                                                      <https://schema.org/unitText> "-" .
+
+
+###  https://w3id.org/bcore/mat#Ductility
+<https://w3id.org/bcore/mat#Ductility> rdf:type owl:DatatypeProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <https://w3id.org/bcore/mat#Steel> ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "die Eigenschaft eines Werkstoffes, sich unter Zugbelastung vor einem Bruch dauerhaft plastisch zu verformen (https://de.wikipedia.org/wiki/Duktilit%C3%A4t)"@de ,
+                                                    "the ability of a material to sustain significant plastic deformation before fracture when undergoing tension (https://en.wikipedia.org/wiki/Ductility)"@en ;
+                                       rdfs:label "Duktilität"@de ,
+                                                  "ductility"@en .
+
+
+###  https://w3id.org/bcore/mat#Ec
+<https://w3id.org/bcore/mat#Ec> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://w3id.org/bmat#Concrete> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "Elastizitätsmodul des Betons"@de ,
+                                             "modulus of elasticity (Young's modulus) of the concrete"@en ;
+                                rdfs:label "Ec"@de ,
+                                           "Ec"@en ;
+                                <https://schema.org/unitText> "N/m²" .
+
+
+###  https://w3id.org/bcore/mat#Ep
+<https://w3id.org/bcore/mat#Ep> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://w3id.org/bcore/mat#PrestressingSteel> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "Elastizitätsmodul des Spannstahls"@de ,
+                                             "modulus of elasticity (Young's modulus) of the prestressing steel"@en ;
+                                rdfs:label "Ep"@de ,
+                                           "Ep"@en ;
+                                <https://schema.org/unitText> "N/m²" .
+
+
+###  https://w3id.org/bcore/mat#ExpositionClass
+<https://w3id.org/bcore/mat#ExpositionClass> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/bmat#Concrete> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Expositionsklasse (z. B. nach Eurocode 2-1-1)"@de ,
+                                                          "exposure class (e.g., according to Eurocode 2-1-1)"@en ;
+                                             rdfs:label "Expositionsklasse"@de ,
+                                                        "exposition class"@en ;
+                                             rdfs:seeAlso "https://w3id.org/bmat#expositionClassConcrete" .
+
+
+###  https://w3id.org/bcore/mat#Ey
+<https://w3id.org/bcore/mat#Ey> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( <https://w3id.org/bcore/mat#ConstructionSteel>
+                                                            <https://w3id.org/bmat#ReinforcementSteel>
+                                                          )
+                                            ] ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "Elastizitätsmodul des Stahls"@de ,
+                                             "modulus of elasticity (Young's modulus) of the steel"@en ;
+                                rdfs:label "Ey"@de ,
+                                           "Ey"@en ;
+                                <https://schema.org/unitText> "N/m²" .
+
+
+###  https://w3id.org/bcore/mat#fck
+<https://w3id.org/bcore/mat#fck> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://w3id.org/bmat#Concrete> ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "characteristic compressive strength of the concrete"@en ,
+                                              "charakteristische Druckfestigkeit des Betons"@de ;
+                                 rdfs:label "fck"@de ,
+                                            "fck"@en ;
+                                 <https://schema.org/unitText> "N/m²" .
+
+
+###  https://w3id.org/bcore/mat#fpk
+<https://w3id.org/bcore/mat#fpk> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://w3id.org/bcore/mat#PrestressingSteel> ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "characteristic tensile strength of the prestressing steel"@en ,
+                                              "charakteristische Zugfestigkeit des Spannstahls"@de ,
+                                              "N/m²" ;
+                                 rdfs:label "fpk"@de ,
+                                            "fpk"@en .
+
+
+###  https://w3id.org/bcore/mat#fyk
+<https://w3id.org/bcore/mat#fyk> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain [ rdf:type owl:Class ;
+                                               owl:unionOf ( <https://w3id.org/bcore/mat#ConstructionSteel>
+                                                             <https://w3id.org/bmat#ReinforcementSteel>
+                                                           )
+                                             ] ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "characteristic tensile strength of the steel"@en ,
+                                              "charakteristische Zugfestigkeit des Stahls"@de ;
+                                 rdfs:label "fyk"@de ,
+                                            "fyk"@en ;
+                                 <https://schema.org/unitText> "N/m²" .
+
+
+###  https://w3id.org/bcore/media#MediaFileSize
+<https://w3id.org/bcore/media#MediaFileSize> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <https://w3id.org/bcore#MediaFile> ;
+                                             rdfs:range xsd:decimal ;
+                                             rdfs:comment "Dateigröße einer digitalen Mediendatei"@de ,
+                                                          "file size of a digital media file"@en ;
+                                             rdfs:label "Mediendatei Größe"@de ,
+                                                        "media file size"@en ;
+                                             <https://schema.org/unitText> "byte" .
+
+
+###  https://w3id.org/bcore/media#MediaIsDigital
+<https://w3id.org/bcore/media#MediaIsDigital> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/bcore#MediaFile> ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:comment "Boolean: wahr, wenn die Mediendatei digital ist"@de ,
+                                                           "boolean: true, if media file is digital"@en ;
+                                              rdfs:label "Mediendatei ist digital"@de ,
+                                                         "media is digital"@en .
 
 
 ###  https://w3id.org/bedro#BridgeOntologyParameter
@@ -397,7 +1381,7 @@ xsd:date rdf:type rdfs:Datatype .
 :PAV00WLh00 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain :PavementCoverLayer ;
+            rdfs:domain :PavementWaterproofLayer ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Height of the pavement waterproof layer"@en ,
                          "Höhe der Dichtungsschicht des Fahrbahnbelags"@de ;
@@ -1196,16 +2180,392 @@ xsd:date rdf:type rdfs:Datatype .
             <https://schema.org/unitText> "m AMSL" .
 
 
+###  https://w3id.org/brcomp#height
+<https://w3id.org/brcomp#height> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://w3id.org/brot#Component> ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "vertical distance of the ends of the component/ component's cross section"@en ,
+                                              "vertikaler Abstand der Enden des Bauteils/Bauteilquerschnitts"@de ;
+                                 rdfs:label "Höhe"@de ,
+                                            "height"@en ;
+                                 <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/brcomp#length
+<https://w3id.org/brcomp#length> rdf:type owl:DatatypeProperty ,
+                                          owl:FunctionalProperty ;
+                                 rdfs:domain <https://w3id.org/brot#Component> ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:comment "longitudinal distance of the ends of a component"@en ,
+                                              "longitudinaler Abstand der Enden eines Bauteils"@de ;
+                                 rdfs:label "Länge"@de ,
+                                            "length"@en ;
+                                 <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/brcomp#width
+<https://w3id.org/brcomp#width> rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain <https://w3id.org/brot#Component> ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:comment "transversaler Abstand der Enden eines Bauteils/ Bauteilquerschnitts"@de ,
+                                             "width/ broadth: transversal distance of the ends of the component/ component's cross section"@en ;
+                                rdfs:label "Breite"@de ,
+                                           "width"@en ;
+                                <https://schema.org/unitText> "m" .
+
+
 #################################################################
 #    Classes
 #################################################################
 
+###  https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation
+<https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                                                                     rdfs:comment "Linienlokalisierung (bezeichnet ein Linienobjekt, das durch einen Start- und einen Endpunkt definiert ist und für die lineare Referenzierung gemäß den in ISO 19148 festgelegten Grundsätzen verwendet wird)"@de ,
+                                                                                  "line localisation (describes a line object which is defined by a start point and an end point and is used for linear referencing according to the principles defined in ISO 19148)"@en ;
+                                                                     rdfs:label "Linienlokalisierung"@de ,
+                                                                                "line localisation"@en .
+
+
+###  https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation
+<https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> rdf:type owl:Class ;
+                                                                 rdfs:comment "Lokalisierung (Standort; beschreibt einen geografischen Ort in Bezug auf ein lineares Referenzelement gemäß den in ISO 19148 festgelegten Grundsätzen)"@de ,
+                                                                              "localisation (location; describes a geographic place in relation to a linear reference element according to the principles defined in ISO 19148)"@en ;
+                                                                 rdfs:label "Lokalisierung"@de ,
+                                                                            "localisation"@en .
+
+
+###  https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point
+<https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> rdf:type owl:Class ;
+                                                          rdfs:comment "Punkt im dreidimensionalen Raum"@de ,
+                                                                       "point in three-dimensional space"@en ;
+                                                          rdfs:label "Punkt"@de ,
+                                                                     "point"@en .
+
+
+###  https://w3id.org/bcore#City
+<https://w3id.org/bcore#City> rdf:type owl:Class ;
+                              rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                              rdfs:comment "Stadt (kann auch für andere Ortschaften verwendet werden)"@de ,
+                                           "city (can also be used for towns and thelike)"@en ;
+                              rdfs:label "Stadt"@de ,
+                                         "city"@en .
+
+
+###  https://w3id.org/bcore#Country
+<https://w3id.org/bcore#Country> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                 rdfs:comment "Land (Nationalstaat)"@de ,
+                                              "country (nation-state)"@en ;
+                                 rdfs:label "Land"@de ,
+                                            "country"@en .
+
+
 ###  https://w3id.org/bcore#InfrastructureRoute
-<https://w3id.org/bcore#InfrastructureRoute> rdf:type owl:Class .
+<https://w3id.org/bcore#InfrastructureRoute> rdf:type owl:Class ;
+                                             rdfs:comment "Trasse/ Linienführung einer linearen Infrastruktur"@de ,
+                                                          "route or alignment of a linear infrastructure"@en ;
+                                             rdfs:label "Infrastrukturtrasse"@de ,
+                                                        "infrastructure route"@en .
+
+
+###  https://w3id.org/bcore#MediaFile
+<https://w3id.org/bcore#MediaFile> rdf:type owl:Class ;
+                                   rdfs:comment "digital data or real object that transports/stores information"@en ,
+                                                "digitale Datei oder reales Objekt, das Informationen trägt"@de ;
+                                   rdfs:label "Mediendatei"@de ,
+                                              "media file"@en ;
+                                   rdfs:seeAlso "http://semanticscience.org/resource/SIO_001194" .
+
+
+###  https://w3id.org/bcore#Region
+<https://w3id.org/bcore#Region> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                rdfs:comment "Region/Bundesland"@de ,
+                                             "region/federal state"@en ;
+                                rdfs:label "Region"@de ,
+                                           "region"@en .
+
+
+###  https://w3id.org/bcore/comp#Abutment
+<https://w3id.org/bcore/comp#Abutment> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                                       rdfs:comment "Widerlager"@de ,
+                                                    "bridge abutment"@en ;
+                                       rdfs:label "abutment"@en .
+
+
+###  https://w3id.org/bcore/comp#BoxGirder
+<https://w3id.org/bcore/comp#BoxGirder> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                        rdfs:comment "Hohlkastenträger"@de ,
+                                                     "box girder/ hollow beam"@en ;
+                                        rdfs:label "box girder"@en .
 
 
 ###  https://w3id.org/bcore/comp#EquipmentComponent
-<https://w3id.org/bcore/comp#EquipmentComponent> rdf:type owl:Class .
+<https://w3id.org/bcore/comp#EquipmentComponent> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/brot#Component> ;
+                                                 owl:disjointWith <https://w3id.org/brcomp#SubStructureComponent> ,
+                                                                  <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                                 rdfs:comment "Bauteil der Brückenausstattung"@de ,
+                                                              "component of bridge equipment"@en ;
+                                                 rdfs:label "equipment component"@en ;
+                                                 rdfs:seeAlso "https://w3id.org/brcomp/#FinishingComponent" .
+
+
+###  https://w3id.org/bcore/comp#IBeam
+<https://w3id.org/bcore/comp#IBeam> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                    rdfs:comment "I-Träger"@de ,
+                                                 "I-shaped girder"@en ;
+                                    rdfs:label "I-beam"@en .
+
+
+###  https://w3id.org/bcore/comp#PierUnit
+<https://w3id.org/bcore/comp#PierUnit> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                                       rdfs:comment "Pfeilereinheit/-gruppe"@de ,
+                                                    "pier unit/group"@en ;
+                                       rdfs:label "pier unit"@en .
+
+
+###  https://w3id.org/bcore/comp#PlateGirder
+<https://w3id.org/bcore/comp#PlateGirder> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                          rdfs:comment "Vollwandträger (z. B. aus Stahl)"@de ,
+                                                       "plate girder (solid-web; e.g., made of steel)"@en ;
+                                          rdfs:label "plate girder"@en .
+
+
+###  https://w3id.org/bcore/comp#Rope
+<https://w3id.org/bcore/comp#Rope> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/brcomp#TensionComponent> ;
+                                   rdfs:comment "Seil"@de ,
+                                                "suspension rope"@en ;
+                                   rdfs:label "rope"@en .
+
+
+###  https://w3id.org/bcore/comp#Slab
+<https://w3id.org/bcore/comp#Slab> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                   rdfs:comment "Platte"@de ,
+                                                "bridge slab"@en ;
+                                   rdfs:label "slab"@en .
+
+
+###  https://w3id.org/bcore/comp#Span
+<https://w3id.org/bcore/comp#Span> rdf:type owl:Class ;
+                                   rdfs:subClassOf owl:Thing ;
+                                   rdfs:comment "Brückenfeld"@de ,
+                                                "bridge span"@en ;
+                                   rdfs:label "span"@en ;
+                                   <https://schema.org/image> "https://raw.githubusercontent.com/TUD-IMB/BCore/refs/heads/main/comp/BCore_Spans.svg" .
+
+
+###  https://w3id.org/bcore/comp#TBeam
+<https://w3id.org/bcore/comp#TBeam> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                    rdfs:comment "Plattenbalken (Beton)"@de ,
+                                                 "T-shaped girder"@en ;
+                                    rdfs:label "T-beam"@en .
+
+
+###  https://w3id.org/bcore/comp#Tendon
+<https://w3id.org/bcore/comp#Tendon> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/brcomp#TensionComponent> ;
+                                     rdfs:comment "Spannglied"@de ,
+                                                  "tendon for prestressed concrete"@en ;
+                                     rdfs:label "tendon"@en .
+
+
+###  https://w3id.org/bcore/comp#TrussGirder
+<https://w3id.org/bcore/comp#TrussGirder> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/brcomp#GirderMainGirder> ;
+                                          rdfs:comment "Fachwerkträger"@de ,
+                                                       "longitudinal truss"@en ;
+                                          rdfs:label "truss girder"@en .
+
+
+###  https://w3id.org/bcore/comp#Wire
+<https://w3id.org/bcore/comp#Wire> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/brcomp#TensionComponent> ;
+                                   rdfs:comment "Draht"@de ,
+                                                "tension wire"@en ;
+                                   rdfs:label "wire"@en .
+
+
+###  https://w3id.org/bcore/infra#FootCycleRoute
+<https://w3id.org/bcore/infra#FootCycleRoute> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/bcore#InfrastructureRoute> ;
+                                              rdfs:comment "Trasse eines Geh- und/oder Radweges"@de ,
+                                                           "route of a footpath and/or bike path"@en ;
+                                              rdfs:label "Fuß- oder Radwegtrasse"@de ,
+                                                         "foot or cycle route"@en .
+
+
+###  https://w3id.org/bcore/infra#RailwayRoute
+<https://w3id.org/bcore/infra#RailwayRoute> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/bcore#InfrastructureRoute> ;
+                                            rdfs:comment "Trasse eines Schienenweges"@de ,
+                                                         "railway line, railroad"@en ;
+                                            rdfs:label "Eisenbahntrasse"@de ,
+                                                       "railway route"@en .
+
+
+###  https://w3id.org/bcore/infra#RoadRoute
+<https://w3id.org/bcore/infra#RoadRoute> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/bcore#InfrastructureRoute> ;
+                                         rdfs:comment "Trasse einer Straße/ eines Feldweges/ einer Autobahn"@de ,
+                                                      "route of a street/road/highway/federal way/..."@en ;
+                                         rdfs:label "Straßentrasse"@de ,
+                                                    "road route" .
+
+
+###  https://w3id.org/bcore/infra#WaterWayRoute
+<https://w3id.org/bcore/infra#WaterWayRoute> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/bcore#InfrastructureRoute> ;
+                                             rdfs:comment "Trasse einer Wasserstraße"@de ,
+                                                          "route of a water way"@en ;
+                                             rdfs:label "Wasserstraßentrasse"@de ,
+                                                        "water way route"@en .
+
+
+###  https://w3id.org/bcore/mat#CompositeMaterial
+<https://w3id.org/bcore/mat#CompositeMaterial> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/bmat#BuildingMaterial> ;
+                                               rdfs:comment "Verbundstoff/ Material, das sich heterogen aus mehreren anderen Materialien zusammensetzt"@de ,
+                                                            "material, that is heterogenically composed of several materials"@en ;
+                                               rdfs:label "Verbundmaterial"@de ,
+                                                          "composite material"@en .
+
+
+###  https://w3id.org/bcore/mat#ConstructionSteel
+<https://w3id.org/bcore/mat#ConstructionSteel> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/bcore/mat#Steel> ;
+                                               rdfs:comment "Stahl für den Stahl- und den Maschinenbau"@en ,
+                                                            "structural steel, used for making construction elements in a variety of shapes"@en ;
+                                               rdfs:label "Baustahl"@de ,
+                                                          "construction steel"@en .
+
+
+###  https://w3id.org/bcore/mat#Metal
+<https://w3id.org/bcore/mat#Metal> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/bmat#BuildingMaterial> ;
+                                   rdfs:comment "elemental metal, metallic construction material or alloy"@en ,
+                                                "elementares Metall, metallischer Werkstoff oder Legierung"@de ;
+                                   rdfs:label "Metall"@de ,
+                                              "metal"@en .
+
+
+###  https://w3id.org/bcore/mat#PrestressedConcrete
+<https://w3id.org/bcore/mat#PrestressedConcrete> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/bcore/mat#CompositeMaterial> ;
+                                                 rdfs:comment "Beton, der mit vorgespannten Spanngliedern aus anderen Materialien (Stahl, Carbon, ...) durchsetzt ist"@de ,
+                                                              "concrete that is permeated by prestressed tendons of other material (steel, carbon fibers, ...)"@en ;
+                                                 rdfs:label "Spannbeton"@de ,
+                                                            "prestressed concrete"@en .
+
+
+###  https://w3id.org/bcore/mat#PrestressingSteel
+<https://w3id.org/bcore/mat#PrestressingSteel> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/bcore/mat#Steel> ;
+                                               rdfs:comment "high-tensile steel that is mostly used in prestressed concrete structures"@en ,
+                                                            "hochfester Stahl, der vor allem im Spannbetonbau zum Vorspannen verwendet wird (https://de.wikipedia.org/wiki/Spannstahl)"@de ;
+                                               rdfs:label "Spannstahl"@de ,
+                                                          "prestressing steel"@en .
+
+
+###  https://w3id.org/bcore/mat#Steel
+<https://w3id.org/bcore/mat#Steel> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/bcore/mat#Metal> ;
+                                   rdfs:comment "Werkstoff, der überwiegend aus Eisen mit geringem Kohlenstoffanteil besteht (de.wikipedia.org/wiki/Stahl)"@de ,
+                                                "alloy of iron and carbon (en.wikipedia.org/wiki/Steel)"@en ;
+                                   rdfs:label "Stahl"@de ,
+                                              "steel"@en .
+
+
+###  https://w3id.org/bcore/mat#SteelConcreteComposite
+<https://w3id.org/bcore/mat#SteelConcreteComposite> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/bcore/mat#CompositeMaterial> ;
+                                                    rdfs:comment "Verbund aus (bewehrtem) Beton und Baustahl, die aber räumlich bis auf eine Verbundfläche getrennt sind"@de ,
+                                                                 "composite of (reinforced) concrete and construction steel, that are spatially separated"@en ;
+                                                    rdfs:label "Stahl-Beton-Verbund"@de ,
+                                                               "steel-concrete composite"@en .
+
+
+###  https://w3id.org/bcore/zones#BuiltUpArea
+<https://w3id.org/bcore/zones#BuiltUpArea> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                           rdfs:comment "Ortschaft/ Fläche, die mit Gebäuden oder Bauwerken bebaut ist oder wird"@de ,
+                                                        "town/ area that is covered with buildings or anthropogene structures"@en ;
+                                           rdfs:label "bebautes Gebiet"@de ,
+                                                      "built-up area"@en .
+
+
+###  https://w3id.org/bcore/zones#Estate
+<https://w3id.org/bcore/zones#Estate> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                      rdfs:comment "Grundstück (Grundbesitz)"@de ,
+                                                   "estate (land ownership, real estate)"@en ;
+                                      rdfs:label "Grundstück"@de ,
+                                                 "estate"@en .
+
+
+###  https://w3id.org/bcore/zones#Field
+<https://w3id.org/bcore/zones#Field> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/bcore/zones#VegetationArea> ;
+                                     rdfs:comment "Feld (z. B. Landwirtschaft)"@de ,
+                                                  "field (e.g., agriculture)"@en ;
+                                     rdfs:label "Feld"@de ,
+                                                "field"@en .
+
+
+###  https://w3id.org/bcore/zones#Forest
+<https://w3id.org/bcore/zones#Forest> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/bcore/zones#VegetationArea> ;
+                                      rdfs:comment "bewaldetes Gebiet"@de ,
+                                                   "forrest/wood"@en ;
+                                      rdfs:label "Wald"@de ,
+                                                 "forest"@en .
+
+
+###  https://w3id.org/bcore/zones#LandscapeConservationMeasureArea
+<https://w3id.org/bcore/zones#LandscapeConservationMeasureArea> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                                                rdfs:comment "Fläche, die einem Landschafts- oder Naturschutz unterliegt"@de ,
+                                                                             "area that is protected by landscape or nature protection"@en ;
+                                                                rdfs:label "Landschaftsschutzgebiet"@de ,
+                                                                           "landscape conservation measure area"@en .
+
+
+###  https://w3id.org/bcore/zones#Meadow
+<https://w3id.org/bcore/zones#Meadow> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/bcore/zones#VegetationArea> ;
+                                      rdfs:comment "Wiese/Aue"@de ,
+                                                   "meadow/ lawn"@en ;
+                                      rdfs:label "Wiese"@de ,
+                                                 "meadow"@en .
+
+
+###  https://w3id.org/bcore/zones#VegetationArea
+<https://w3id.org/bcore/zones#VegetationArea> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                              rdfs:comment "bewachsene Fläche"@de ,
+                                                           "planted area"@en ;
+                                              rdfs:label "Vegetationsgebiet"@de ,
+                                                         "vegetation area"@en .
+
+
+###  https://w3id.org/bcore/zones#WaterBody
+<https://w3id.org/bcore/zones#WaterBody> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                         rdfs:comment "Fläche, die permanent mit Wasser bedeckt ist"@de ,
+                                                      "area that is permanently covered by water"@en ;
+                                         rdfs:label "Gewässer"@de ,
+                                                    "water body"@en .
 
 
 ###  https://w3id.org/bedro#Asphalt
@@ -1323,15 +2683,131 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/bmat#BuildingMaterial
-<https://w3id.org/bmat#BuildingMaterial> rdf:type owl:Class .
+<https://w3id.org/bmat#BuildingMaterial> rdf:type owl:Class ;
+                                         rdfs:comment "Material, aus dem Brücken(-bauteile) bestehen"@de ,
+                                                      "materials used to build bridges"@en ;
+                                         rdfs:label "Baumaterial"@de ,
+                                                    "building material"@en .
+
+
+###  https://w3id.org/bmat#Concrete
+<https://w3id.org/bmat#Concrete> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/bmat#BuildingMaterial> ;
+                                 rdfs:comment "Baustoff, der als Dispersion unter Zugabe von Flüssigkeit aus einem Bindemittel und Zuschlagstoffen angemischt wird (de.wikipedia.org/wiki/Beton)"@de ,
+                                              "composite material composed of aggregate bound together with a fluid cement that cures to a solid (en.wikipedia.org/wiki/Concrete)"@en ;
+                                 rdfs:label "Beton"@de ,
+                                            "concrete"@en .
+
+
+###  https://w3id.org/bmat#ReinforcedConcrete
+<https://w3id.org/bmat#ReinforcedConcrete> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/bcore/mat#CompositeMaterial> ;
+                                           rdfs:comment "Beton, der von schlaffer Stahlbewehrung durchsetzt ist"@de ,
+                                                        "concrete that is permeated by steel reinforcement"@en ;
+                                           rdfs:label "Stahlbeton"@de ,
+                                                      "reinforced concrete"@en .
+
+
+###  https://w3id.org/bmat#ReinforcementSteel
+<https://w3id.org/bmat#ReinforcementSteel> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/bcore/mat#Steel> ;
+                                           rdfs:comment "Bewehrungsstahl, für schlaffe Bewehrungen von Stahlbeton verwendet"@de ,
+                                                        "reinforcement (mild) steel"@en ;
+                                           rdfs:label "Betonstahl"@de ,
+                                                      "reinforcement steel"@en .
 
 
 ###  https://w3id.org/bot#Building
-<https://w3id.org/bot#Building> rdf:type owl:Class .
+<https://w3id.org/bot#Building> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                                rdfs:comment "Bauwerk, das Räume einschließt, betreten werden kann und dem Aufenthalt von Menschen, Tieren oder der Lagerung von Sachen dient (de.wikipedia.org/wiki/Gebäude)."@de ,
+                                             "Enclosed structure with a roof, walls and often windows, usually standing permanently in one place (en.wikipedia.org/wiki/Building)."@en ;
+                                rdfs:label "Gebäude"@de ,
+                                           "building"@en .
+
+
+###  https://w3id.org/bot#Site
+<https://w3id.org/bot#Site> rdf:type owl:Class ;
+                            rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+                            rdfs:comment "Areal, auf dem eine Bautätigkeit ausgeübt wird."@de ,
+                                         "building site"@en ;
+                            rdfs:label "Baustelle"@de ,
+                                       "site"@en .
 
 
 ###  https://w3id.org/bot#Zone
-<https://w3id.org/bot#Zone> rdf:type owl:Class .
+<https://w3id.org/bot#Zone> rdf:type owl:Class ;
+                            owl:equivalentClass <https://w3id.org/brot#SpatialZone> ;
+                            rdfs:comment "Räumliche Zone (Volumen, das ein materielles oder ideelles Objekt umschließt)"@de ,
+                                         "spatial zone (volume that encloses a physical or abstract object)"@en ;
+                            rdfs:label "Zone"@de ,
+                                       "zone"@en .
+
+
+###  https://w3id.org/brcomp#AbutmentBenching
+<https://w3id.org/brcomp#AbutmentBenching> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/brcomp#AbutmentComponent> ;
+                                           rdfs:comment "Auflagerbank"@de ,
+                                                        "abutment front wall (benching, breast wall, stem)"@en ;
+                                           rdfs:label "abutment benching"@en .
+
+
+###  https://w3id.org/brcomp#AbutmentChamberWall
+<https://w3id.org/brcomp#AbutmentChamberWall> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/brcomp#AbutmentComponent> ;
+                                              rdfs:comment "Widerlagerwand"@de ,
+                                                           "abutment wall (breast wall, stem)"@en ;
+                                              rdfs:label "abutment chamber wall"@en .
+
+
+###  https://w3id.org/brcomp#AbutmentComponent
+<https://w3id.org/brcomp#AbutmentComponent> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                                            rdfs:comment "Bauteil des Widerlagers"@de ,
+                                                         "component of the abutment"@en ;
+                                            rdfs:label "abutment component"@en .
+
+
+###  https://w3id.org/brcomp#AbutmentFooting
+<https://w3id.org/brcomp#AbutmentFooting> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/brcomp#AbutmentComponent> ,
+                                                          <https://w3id.org/brcomp#Foundation> ;
+                                          rdfs:comment "Fundament des Widerlagers"@de ,
+                                                       "abutment foundation"@en ;
+                                          rdfs:label "abutment footing"@en .
+
+
+###  https://w3id.org/brcomp#AbutmentWingWall
+<https://w3id.org/brcomp#AbutmentWingWall> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/brcomp#AbutmentComponent> ;
+                                           rdfs:comment "Flügelwand des Widerlagers"@de ,
+                                                        "wing wall of abutment"@en ;
+                                           rdfs:label "abutment wing wall"@en .
+
+
+###  https://w3id.org/brcomp#Arch
+<https://w3id.org/brcomp#Arch> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ,
+                                               <https://w3id.org/brcomp#SuperStructureComponent> ;
+                               rdfs:comment "Bogen"@de ,
+                                            "bridge arch"@en ;
+                               rdfs:label "arch"@en .
+
+
+###  https://w3id.org/brcomp#Bearing
+<https://w3id.org/brcomp#Bearing> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                                  rdfs:comment "Lager"@de ,
+                                               "bearing/ support"@en ;
+                                  rdfs:label "bearing"@en .
+
+
+###  https://w3id.org/brcomp#Cable
+<https://w3id.org/brcomp#Cable> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/brcomp#TensionComponent> ;
+                                rdfs:comment "Kabel"@de ,
+                                             "suspension cable"@en ;
+                                rdfs:label "cable"@en .
 
 
 ###  https://w3id.org/brcomp#Cap
@@ -1341,6 +2817,54 @@ xsd:date rdf:type rdfs:Datatype .
                                            "cap/ bridge cap/ edge beam/ rim beam"@en ;
                               rdfs:label "Kappe"@de ,
                                          "cap"@en .
+
+
+###  https://w3id.org/brcomp#Foundation
+<https://w3id.org/brcomp#Foundation> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                                     rdfs:comment "Gründung/ Fundament"@de ,
+                                                  "foundation  / footing / grounding"@en ;
+                                     rdfs:label "foundation"@en .
+
+
+###  https://w3id.org/brcomp#Girder
+<https://w3id.org/brcomp#Girder> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                 rdfs:comment "Brückenträger"@de ,
+                                              "girder/ beam"@en ;
+                                 rdfs:label "girder"@en .
+
+
+###  https://w3id.org/brcomp#GirderComponent
+<https://w3id.org/brcomp#GirderComponent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                          rdfs:comment "component of the girder"@en ,
+                                                       "Bauteil des Brückenträgers" ;
+                                          rdfs:label "girder component"@en .
+
+
+###  https://w3id.org/brcomp#GirderCrossGirder
+<https://w3id.org/brcomp#GirderCrossGirder> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/brcomp#GirderComponent> ;
+                                            rdfs:comment "Querträger"@de ,
+                                                         "cross girder/ cross beam"@en ;
+                                            rdfs:label "cross girder"@en .
+
+
+###  https://w3id.org/brcomp#GirderDeck
+<https://w3id.org/brcomp#GirderDeck> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/brcomp#GirderComponent> ;
+                                     rdfs:comment "Fahrbahnplatte"@de ,
+                                                  "bridge deck/slab"@en ;
+                                     rdfs:label "deck"@en .
+
+
+###  https://w3id.org/brcomp#GirderMainGirder
+<https://w3id.org/brcomp#GirderMainGirder> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/brcomp#GirderComponent> ;
+                                           rdfs:comment "Hauptträger (Längsträger)"@de ,
+                                                        "main (longitudinal) girder"@en ;
+                                           rdfs:label "main girder"@en .
 
 
 ###  https://w3id.org/brcomp#NoiseBarrier
@@ -1361,6 +2885,31 @@ xsd:date rdf:type rdfs:Datatype .
                                               "pavement"@en .
 
 
+###  https://w3id.org/brcomp#Pier
+<https://w3id.org/brcomp#Pier> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                               rdfs:comment "Stütze"@de ,
+                                            "bridge pier"@en ;
+                               rdfs:label "pier"@en .
+
+
+###  https://w3id.org/brcomp#Pile
+<https://w3id.org/brcomp#Pile> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ;
+                               rdfs:comment "Bohrpfahl"@de ,
+                                            "bored/drilled pile"@en ;
+                               rdfs:label "pile"@en .
+
+
+###  https://w3id.org/brcomp#Pylon
+<https://w3id.org/brcomp#Pylon> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ,
+                                                <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                rdfs:comment "Pylon"@de ,
+                                             "bridge pylon"@en ;
+                                rdfs:label "pylon"@en .
+
+
 ###  https://w3id.org/brcomp#Railing
 <https://w3id.org/brcomp#Railing> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://w3id.org/bcore/comp#EquipmentComponent> ;
@@ -1368,6 +2917,31 @@ xsd:date rdf:type rdfs:Datatype .
                                                "railing/ handrail/ guard railing/ balustrade"@en ;
                                   rdfs:label "Geländer"@de ,
                                              "railing"@en .
+
+
+###  https://w3id.org/brcomp#SubStructureComponent
+<https://w3id.org/brcomp#SubStructureComponent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/brot#Component> ;
+                                                rdfs:comment "Bauteil des Unterbaus"@de ,
+                                                             "component of bridge substructure"@en ;
+                                                rdfs:label "substructure component"@en .
+
+
+###  https://w3id.org/brcomp#SuperStructureComponent
+<https://w3id.org/brcomp#SuperStructureComponent> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/brot#Component> ;
+                                                  rdfs:comment "Bauteil des Überbaus"@de ,
+                                                               "component of bridge superstructure"@en ;
+                                                  rdfs:label "superstructure component"@en .
+
+
+###  https://w3id.org/brcomp#TensionComponent
+<https://w3id.org/brcomp#TensionComponent> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/brcomp#SubStructureComponent> ,
+                                                           <https://w3id.org/brcomp#SuperStructureComponent> ;
+                                           rdfs:comment "Zugkomponente"@de ,
+                                                        "components that only work on tension"@en ;
+                                           rdfs:label "tension component"@en .
 
 
 ###  https://w3id.org/brcomp#TrafficBarrier
@@ -1380,16 +2954,107 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/brot#Bridge
-<https://w3id.org/brot#Bridge> rdf:type owl:Class .
+<https://w3id.org/brot#Bridge> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+                               rdfs:comment "Bauwerk, das Verkehrswege oder Versorgungseinrichtungen über natürliche Hindernisse oder andere Verkehrswege hinwegführt (de.wikipedia.org/wiki/Brücke)."@de ,
+                                            "Structure designed to span an obstacle, allowing vehicles, pedestrians, and other loads to pass across (en.wikipedia.org/wiki/Bridge)."@en ;
+                               rdfs:label "Brücke"@de ,
+                                          "bridge"@en .
 
 
 ###  https://w3id.org/brot#Component
-<https://w3id.org/brot#Component> rdf:type owl:Class .
+<https://w3id.org/brot#Component> rdf:type owl:Class ;
+                                  rdfs:comment "Bauteil, aus dem Brücken bestehen"@de ,
+                                               "bridge element"@en ;
+                                  rdfs:label "Bauteil"@de ,
+                                             "component"@en .
+
+
+###  https://w3id.org/brot#SpatialZone
+<https://w3id.org/brot#SpatialZone> rdf:type owl:Class ;
+                                    rdfs:comment "Volumen, das ein materielles oder ideelles Objekt umschließt"@de ,
+                                                 "volume that encloses a physical or abstract object"@en ;
+                                    rdfs:label "räumliche Zone"@de ,
+                                               "spatial zone"@en .
+
+
+###  https://w3id.org/brot#SubStructure
+<https://w3id.org/brot#SubStructure> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+                                     rdfs:comment "Unterbau der Brücke"@de ,
+                                                  "bridge substructure"@en ;
+                                     rdfs:label "Unterbau"@de ,
+                                                "substructure"@en .
+
+
+###  https://w3id.org/brot#SuperStructure
+<https://w3id.org/brot#SuperStructure> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+                                       rdfs:comment "bridge superstructure, longitudinally supporting bridge elements"@en ,
+                                                    "Überbau der Brücke, Längstragglieder der Brücke"@de ;
+                                       rdfs:label "superstructure"@en ,
+                                                  "Überbau"@de .
 
 
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/comp#Abutment>
+                <https://w3id.org/brcomp#Arch>
+                <https://w3id.org/brcomp#Bearing>
+                <https://w3id.org/brcomp#Foundation>
+                <https://w3id.org/brcomp#Pier>
+                <https://w3id.org/brcomp#Pile>
+                <https://w3id.org/brcomp#Pylon>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/comp#BoxGirder>
+                <https://w3id.org/bcore/comp#IBeam>
+                <https://w3id.org/bcore/comp#PlateGirder>
+                <https://w3id.org/bcore/comp#TBeam>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/infra#FootCycleRoute>
+                <https://w3id.org/bcore/infra#RailwayRoute>
+                <https://w3id.org/bcore/infra#RoadRoute>
+                <https://w3id.org/bcore/infra#WaterWayRoute>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/mat#CompositeMaterial>
+                <https://w3id.org/bcore/mat#Metal>
+                <https://w3id.org/bmat#Concrete>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/mat#PrestressedConcrete>
+                <https://w3id.org/bcore/mat#SteelConcreteComposite>
+                <https://w3id.org/bmat#ReinforcedConcrete>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/zones#BuiltUpArea>
+                <https://w3id.org/bcore/zones#Estate>
+                <https://w3id.org/bcore/zones#LandscapeConservationMeasureArea>
+                <https://w3id.org/bcore/zones#VegetationArea>
+                <https://w3id.org/bcore/zones#WaterBody>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :AsphaltConcrete
@@ -1414,6 +3079,33 @@ xsd:date rdf:type rdfs:Datatype .
   owl:members ( :PavementCoverLayer
                 :PavementProtectionLayer
                 :PavementWaterproofLayer
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/brcomp#AbutmentBenching>
+                <https://w3id.org/brcomp#AbutmentChamberWall>
+                <https://w3id.org/brcomp#AbutmentFooting>
+                <https://w3id.org/brcomp#AbutmentWingWall>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/brcomp#Arch>
+                <https://w3id.org/brcomp#Girder>
+                <https://w3id.org/brcomp#GirderComponent>
+                <https://w3id.org/brcomp#Pylon>
+                <https://w3id.org/brcomp#TensionComponent>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/brcomp#GirderCrossGirder>
+                <https://w3id.org/brcomp#GirderDeck>
+                <https://w3id.org/brcomp#GirderMainGirder>
               )
 ] .
 
@@ -1543,6 +3235,146 @@ xsd:date rdf:type rdfs:Datatype .
 :n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Die Neigung 1 der Kappe beträgt immer 7.5%; EN: The inclination 1 of the cap is always 7.5%" ;
+   rdfs:label "CAPxxXXn01" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXn01 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> 0.075
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Die Höhe 4 der Kappe entspricht immer der Höhe des benachbarten Fahrbahnbelags.; EN: The height 4 of the cap always equals the height of the adjacent pavement." ;
+   rdfs:label "CAPxxXXh04" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXh00 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :ph
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXh04 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :ph
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Der Abstand des Referenzpunkts der linken Kappe von der Brückenachse berechnet sich aus CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, wobei PAV der angrenzende Fahrbahnbelag ist.; EN: The distance between the reference point of the left cap and the bridge axis is calculated as follows CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, where PAV represents the adjacent pavement." ;
+   rdfs:label "CAP01XXq00" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetLeft> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXq00 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :pq
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb04 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :cb04
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :pb02
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> ( :cq
+                                                                                                                                                                      :pq
+                                                                                                                                                                      :cb04
+                                                                                                                                                                      :pb02
+                                                                                                                                                                    )
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXq00 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cq
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "DE: Der Abstand des Referenzpunkts der rechten Kappe von der Brückenachse berechnet sich aus CAP99XXq00=PAV00XXq00-CAP99XXb04-PAV00XXb01, wobei PAV der angrenzende Fahrbahnbelag ist.; EN: The distance between the reference point of the right cap and the bridge axis is calculated as follows CAP99XXq00=PAV00XXq00-CAP99XXb04-PAV00XXb01, where PAV represents the adjacent pavement." ;
@@ -1841,135 +3673,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb04 ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :c ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> :b4
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "DE: Die Breite der Brücke berechnet sich aus der Summe der Breiten vom Fahrbahnbelag und den beiden Kappen.; EN: The width of the bridge is calculated as the sum of the widths of the pavement and the two caps." ;
-   rdfs:label "Bridge_Width" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cl
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cl
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> 1
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :bl2
-                                                                                                 ] ;
-                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :bl3
-                                                                                                            ] ;
-                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
-                                                                                                                       ] ;
-                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr
-                                                                                                                                  ] ;
-                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> 99
-                                                                                                                                             ] ;
-                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> :br2
-                                                                                                                                                        ] ;
-                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :br3
-                                                                                                                                                                   ] ;
-                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                                                                                                                                              ] ;
-                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
-                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :p
-                                                                                                                                                                                         ] ;
-                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb01 ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> :bp1
-                                                                                                                                                                                                    ] ;
-                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :bp2
-                                                                                                                                                                                                               ] ;
-                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
-                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( :bb
-                                                                                                                                                                                                                                                                         :br2
-                                                                                                                                                                                                                                                                         :br3
-                                                                                                                                                                                                                                                                         :bl2
-                                                                                                                                                                                                                                                                         :bl3
-                                                                                                                                                                                                                                                                         :bp1
-                                                                                                                                                                                                                                                                         :bp2
-                                                                                                                                                                                                                                                                       )
-                                                                                                                                                                                                                          ] ;
-                                                                                                                                                                                                                rdf:rest rdf:nil
-                                                                                                                                                                                                              ]
-                                                                                                                                                                                                   ]
-                                                                                                                                                                                        ]
-                                                                                                                                                                             ]
-                                                                                                                                                                  ]
-                                                                                                                                                       ]
-                                                                                                                                            ]
-                                                                                                                                 ]
-                                                                                                                      ]
-                                                                                                           ]
-                                                                                                ]
-                                                                                     ]
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :BridgeWidth ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :bb
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -3152,128 +4855,117 @@ xsd:date rdf:type rdfs:Datatype .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "DE: Die Neigung 1 der Kappe beträgt immer 7.5%; EN: The inclination 1 of the cap is always 7.5%" ;
-   rdfs:label "CAPxxXXn01" ;
+   rdfs:comment "DE: Die Breite der Brücke berechnet sich aus der Summe der Breiten vom Fahrbahnbelag und den beiden Kappen.; EN: The width of the bridge is calculated as the sum of the widths of the pavement and the two caps." ;
+   rdfs:label "Bridge_Width" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXn01 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> 0.075
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "DE: Die Höhe 4 der Kappe entspricht immer der Höhe des benachbarten Fahrbahnbelags.; EN: The height 4 of the cap always equals the height of the adjacent pavement." ;
-   rdfs:label "CAPxxXXh04" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfZone> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :b
-                                                                                                 ] ;
-                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXh00 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :ph
-                                                                                                            ] ;
-                                                                                                  rdf:rest rdf:nil
-                                                                                                ]
-                                                                                     ]
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXh04 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :ph
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "DE: Der Abstand des Referenzpunkts der linken Kappe von der Brückenachse berechnet sich aus CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, wobei PAV der angrenzende Fahrbahnbelag ist.; EN: The distance between the reference point of the left cap and the bridge axis is calculated as follows CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, where PAV represents the adjacent pavement." ;
-   rdfs:label "CAP01XXq00" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/reloc#meetLeft> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cl
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cl
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXq00 ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :pq
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> 1
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb04 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :cb04
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :bl2
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :pb02
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :bl3
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> ( :cq
-                                                                                                                                                                      :pq
-                                                                                                                                                                      :cb04
-                                                                                                                                                                      :pb02
-                                                                                                                                                                    )
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
                                                                                                                        ] ;
-                                                                                                             rdf:rest rdf:nil
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> :br2
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :br3
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb01 ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> :bp1
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :bp2
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( :bb
+                                                                                                                                                                                                                                                                         :br2
+                                                                                                                                                                                                                                                                         :br3
+                                                                                                                                                                                                                                                                         :bl2
+                                                                                                                                                                                                                                                                         :bl3
+                                                                                                                                                                                                                                                                         :bp1
+                                                                                                                                                                                                                                                                         :bp2
+                                                                                                                                                                                                                                                                       )
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
                                                                                                            ]
                                                                                                 ]
                                                                                      ]
@@ -3283,9 +4975,9 @@ xsd:date rdf:type rdfs:Datatype .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXq00 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :cq
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :BridgeWidth ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :bb
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
