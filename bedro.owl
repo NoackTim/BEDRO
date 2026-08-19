@@ -41,7 +41,7 @@
         <terms:description xml:lang="de">Ontologie für die Implementierung von deutschen Brückenentwurfsregeln.</terms:description>
         <terms:description xml:lang="en">Ontology for the implementation of German design rules for bridges and bridge components.</terms:description>
         <terms:license>https://creativecommons.org/licenses/by/4.0/deed.en</terms:license>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-07</terms:modified>
+        <terms:modified>2026-08-19</terms:modified>
         <bibo:status xml:lang="en">Ontology Specification Draft</bibo:status>
         <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
         <rdfs:label>Bridge Element Design Rule Ontology</rdfs:label>
