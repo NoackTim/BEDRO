@@ -6,6 +6,7 @@
 @prefix bcorezones: <https://w3id.org/bcore/zones#> .
 @prefix brot: <https://w3id.org/brot#> .
 @prefix brcomp: <https://w3id.org/brcomp#> .
+@prefix bmat: <https://w3id.org/bmat#> .
 @prefix reloc: <https://w3id.org/reloc#> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix infraspatialot: <https://dtc-ontology.cms.ed.tum.de/infraspatialot#> .
@@ -31,11 +32,11 @@
                           <http://purl.org/dc/terms/description> "Ontologie für die Implementierung von deutschen Brückenentwurfsregeln."@de ,
                                                                  "Ontology for the implementation of German design rules for bridges and bridge components."@en ;
                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/deed.en" ;
-                          <http://purl.org/dc/terms/modified> "2026-08-19" ;
+                          <http://purl.org/dc/terms/modified> "2026-10-01"^^xsd:date ;
                           <http://purl.org/ontology/bibo/status> "Ontology Specification Draft"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "bedro" ;
                           rdfs:label "Bridge Element Design Rule Ontology" ;
-                          owl:versionInfo "0.1.5" ;
+                          owl:versionInfo "0.1.6" ;
                           <https://schema.org/codeRepository> "https://github.com/NoackTim/BEDRO" .
 
 #################################################################
@@ -94,15 +95,70 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/bcore#crossesRoute> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/bedro#equalsRoutePoint
-:equalsRoutePoint rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdf:type owl:SymmetricProperty ;
-                  rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
-                  rdfs:comment "Punkt gleicht anderem Punkt in X- und Y-Koordinaten, nicht unbeding in Z-Koordinaten"@de ,
-                               "route point equals other point in X- and Y-coordinates but not necessarily in Z-coordinate"@en ;
-                  rdfs:label "equals route point"@en ,
-                             "ist äquivalent zu Trassenpunkt"@de .
+###  https://w3id.org/bcore#hasWayPointAt
+<https://w3id.org/bcore#hasWayPointAt> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/bcore#isWayPointOf
+<https://w3id.org/bcore#isWayPointOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/bcore/lifecycle#hasVariant
+<https://w3id.org/bcore/lifecycle#hasVariant> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/bcore/lifecycle#isVariantOf> ;
+                                              rdfs:domain <https://w3id.org/brot#Bridge> ;
+                                              rdfs:range <https://w3id.org/bcore/lifecycle#BridgeVariant> ;
+                                              rdfs:comment "a bridge has at least one alternative design"@en ,
+                                                           "eine Brücke hat mindestens eine Entwurfsvariante"@de ;
+                                              rdfs:label "has variant"@en ,
+                                                         "hat Variante"@de .
+
+
+###  https://w3id.org/bcore/lifecycle#isCreatedInProject
+<https://w3id.org/bcore/lifecycle#isCreatedInProject> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdf:type owl:FunctionalProperty ;
+                                                      rdfs:domain <https://w3id.org/bot#Zone> ;
+                                                      rdfs:range <https://w3id.org/bcore/lifecycle#Project> ;
+                                                      rdfs:comment "Zone, especially Building, Site or Bridge is raised in one Project"@en ,
+                                                                   "Zone, vor allem Gebäude, Baustelle oder Brücke, wird in einem Projekt erstellt"@de ;
+                                                      rdfs:label "is created in project"@en ,
+                                                                 "wird in Projekt errichtet"@de .
+
+
+###  https://w3id.org/bcore/lifecycle#isUsedInProject
+<https://w3id.org/bcore/lifecycle#isUsedInProject> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                   rdfs:range <https://w3id.org/bcore/lifecycle#Project> ;
+                                                   rdfs:comment "InfrastructureRoute, is used and often edited/changed in one Project"@en ,
+                                                                "InfrastructureRoute, wird in einem Projekt genutzt und oft auch bearbeitet/geändert"@de ;
+                                                   rdfs:label "is used in project"@en ,
+                                                              "wird in Projekt verwendet"@de .
+
+
+###  https://w3id.org/bcore/lifecycle#isVariantOf
+<https://w3id.org/bcore/lifecycle#isVariantOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdf:type owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/bcore/lifecycle#BridgeVariant> ;
+                                               rdfs:range <https://w3id.org/brot#Bridge> ;
+                                               rdfs:comment "is an alternative design of one bridge"@en ,
+                                                            "ist eine Entwurfsvariante einer Brücke"@de ;
+                                               rdfs:label "is variant of"@en ,
+                                                          "ist Variante von"@de .
+
+
+###  https://w3id.org/bedro#equalsWayPoint
+:equalsWayPoint rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:domain <https://w3id.org/bcore#WayPoint> ;
+                rdfs:range <https://w3id.org/bcore#WayPoint> ;
+                rdfs:comment "Punkt gleicht anderem Punkt in X- und Y-Koordinaten, nicht unbeding in Z-Koordinaten"@de ,
+                             "way point equals other point in X- and Y-coordinates but not necessarily in Z-coordinate"@en ;
+                rdfs:label "equals way point"@en ,
+                           "ist äquivalent zu Wegpunkt"@de .
 
 
 ###  https://w3id.org/bedro#runsToTheLeftOf
@@ -168,6 +224,55 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bcore#LocalY
 <https://w3id.org/bcore#LocalY> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/bcore#WayPointEnvironmentZ
+<https://w3id.org/bcore#WayPointEnvironmentZ> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdf:type owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/bcore#WayPoint> ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:comment "Z-Koordinate der Umgebung unter oder über dem Wegpunkt"@de ,
+                                                           "Z-coordinate of the environment under or above the waypoint"@en ;
+                                              rdfs:label "Wegpunkt Umgebung Z"@de ,
+                                                         "waypoint environment Z"@en ;
+                                              <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore#WayPointStation
+<https://w3id.org/bcore#WayPointStation> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdf:type owl:FunctionalProperty ;
+                                         rdfs:domain <https://w3id.org/bcore#WayPoint> ;
+                                         rdfs:range xsd:decimal ;
+                                         rdfs:comment "Kilometrierung des Wegpunktes auf der Trasse"@de ,
+                                                      "kilometer marking of the waypoint on the route"@en ;
+                                         rdfs:label "Wegpunkt Stationierung"@de ,
+                                                    "waypoint station"@en ;
+                                         <https://schema.org/unitText> "m" .
+
+
+###  https://w3id.org/bcore/lifecycle#BridgeVariantName
+<https://w3id.org/bcore/lifecycle#BridgeVariantName> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdf:type owl:FunctionalProperty ;
+                                                     rdfs:domain <https://w3id.org/bcore/lifecycle#BridgeVariant> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "Name des alternativen Brückenentwurfs"@de ,
+                                                                  "name of the alternative bridge design"@en ;
+                                                     rdfs:label "Name der Brückenvariante"@de ,
+                                                                "bridge variant name"@en .
+
+
+###  https://w3id.org/bcore/lifecycle#ProjectName
+<https://w3id.org/bcore/lifecycle#ProjectName> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/bcore/lifecycle#Project> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Name of the project"@en ,
+                                                            "Name/Bezeichnung des Projekts"@de ;
+                                               rdfs:label "Projektname"@de ,
+                                                          "project name"@en .
 
 
 ###  https://w3id.org/bedro#BridgeOntologyParameter
@@ -735,7 +840,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb01 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 1 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 1 of the deck of the concrete T-Beam bridge"@en ;
@@ -748,7 +853,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb02 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 2 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 2 of the deck of the concrete T-Beam bridge"@en ;
@@ -761,7 +866,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb03 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 3 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 3 of the deck of the concrete T-Beam bridge"@en ;
@@ -774,7 +879,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb04 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 4 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 4 of the deck of the concrete T-Beam bridge"@en ;
@@ -787,7 +892,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb05 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 5 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 5 of the deck of the concrete T-Beam bridge"@en ;
@@ -800,7 +905,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb06 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 6 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 6 of the deck of the concrete T-Beam bridge"@en ;
@@ -813,7 +918,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBb07 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Breite 7 der Platte der Beton-Plattenbalkenbrücke"@de ,
                          "Width 7 of the deck of the concrete T-Beam bridge"@en ;
@@ -826,7 +931,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBh01 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Height 1 of the deck of the concrete T-Beam bridge"@en ,
                          "Höhe 1 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -839,7 +944,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBh02 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Height 2 of the deck of the concrete T-Beam bridge"@en ,
                          "Höhe 2 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -852,7 +957,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBh03 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Height 3 of the deck of the concrete T-Beam bridge"@en ,
                          "Höhe 3 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -865,7 +970,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBh04 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Height 4 of the deck of the concrete T-Beam bridge"@en ,
                          "Höhe 4 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -878,7 +983,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBn01 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Inclination 1 of the deck of the concrete T-Beam bridge"@en ,
                          "Neigung 1 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -891,7 +996,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBn02 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Inclination 2 of the deck of the concrete T-Beam bridge"@en ,
                          "Neigung 2 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -904,7 +1009,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBn03 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Inclination 3 of the deck of the concrete T-Beam bridge"@en ,
                          "Neigung 3 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -917,7 +1022,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SUP00TBn04 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BridgeOntologyParameter ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain <https://w3id.org/brcomp#GirderDeck> ;
+            rdfs:domain <https://w3id.org/bcore/comp#Deck> ;
             rdfs:range xsd:decimal ;
             rdfs:comment "Inclination 4 of the deck of the concrete T-Beam bridge"@en ,
                          "Neigung 4 der Platte der Beton-Plattenbalkenbrücke"@de ;
@@ -1073,7 +1178,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SupportNotPossible rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdf:type owl:FunctionalProperty ;
-                    rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                    rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
                     rdfs:range xsd:boolean ;
                     rdfs:comment "Is the construction of a bridge superstructure not possible at this location?"@en ,
                                  "Lässt sich hier keine Stütze errichten?"@de ;
@@ -1085,7 +1190,7 @@ xsd:date rdf:type rdfs:Datatype .
 :SupportNotRecommended rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdf:type owl:FunctionalProperty ;
-                       rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation> ;
+                       rdfs:domain <https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point> ;
                        rdfs:range xsd:boolean ;
                        rdfs:comment "Is the construction of a bridge superstructure not recommended at this location?"@en ,
                                     "Ist hier die Errichtung einer Stütze nicht empfohlen?"@de ;
@@ -1204,8 +1309,35 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/bcore#InfrastructureRoute> rdf:type owl:Class .
 
 
-###  https://w3id.org/bcore/comp#EquipmentComponent
-<https://w3id.org/bcore/comp#EquipmentComponent> rdf:type owl:Class .
+###  https://w3id.org/bcore#WayPoint
+<https://w3id.org/bcore#WayPoint> rdf:type owl:Class .
+
+
+###  https://w3id.org/bcore/lifecycle#BridgeVariant
+<https://w3id.org/bcore/lifecycle#BridgeVariant> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/brot#Bridge> ;
+                                                 rdfs:comment "alternative Option für die Gestaltung derselben Brücke"@de ,
+                                                              "alternative option for the design of the same bridge"@en ;
+                                                 rdfs:label "Brückenvariante"@de ,
+                                                            "bridge variant"@en .
+
+
+###  https://w3id.org/bcore/lifecycle#ConstructionProject
+<https://w3id.org/bcore/lifecycle#ConstructionProject> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/bcore/lifecycle#Project> ;
+                                                       rdfs:comment "Project with the aim to raise or adapt a building or structure"@en ,
+                                                                    "Projekt mit dem Ziel der Errichtung oder Anpassung eines Bauwerks"@de ;
+                                                       rdfs:label "Bauprojekt"@de ,
+                                                                  "construction project"@en .
+
+
+###  https://w3id.org/bcore/lifecycle#Project
+<https://w3id.org/bcore/lifecycle#Project> rdf:type owl:Class ;
+                                           rdfs:subClassOf owl:Thing ;
+                                           rdfs:comment "A project is a type of assignment, typically involving research or design, that is carefully planned to achieve a specific objective. (https://en.wikipedia.org/wiki/Project)"@en ,
+                                                        "Ein Projekt ist ein zielgerichtetes, einmaliges Vorhaben, das aus einem Satz von abgestimmten, gesteuerten Tätigkeiten besteht und durchgeführt werden kann, um unter Berücksichtigung von Vorgaben wie etwa Zeit, Ressourcen und Qualität ein Ziel zu erreichen. (Quelle: https://de.wikipedia.org/wiki/Projekt)"@de ;
+                                           rdfs:label "Projekt"@de ,
+                                                      "project"@en .
 
 
 ###  https://w3id.org/bedro#Asphalt
@@ -1245,6 +1377,15 @@ xsd:date rdf:type rdfs:Datatype .
                       "elastomer"@en .
 
 
+###  https://w3id.org/bedro#EndCrossGirder
+:EndCrossGirder rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/bcore/comp#CrossGirder> ;
+                rdfs:comment "transversaler Träger zur Übertragung von Kräften von den Hauptträgern zum Widerlager"@de ,
+                             "transverse girder for transmitting forces from the main girders to the abutment"@en ;
+                rdfs:label "Endquerträger"@de ,
+                           "end cross girder"@en .
+
+
 ###  https://w3id.org/bedro#MasticAsphalt
 :MasticAsphalt rdf:type owl:Class ;
                rdfs:subClassOf :Asphalt ;
@@ -1265,7 +1406,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/bedro#PavementComponent
 :PavementComponent rdf:type owl:Class ;
-                   rdfs:subClassOf <https://w3id.org/bcore/comp#EquipmentComponent> .
+                   rdfs:subClassOf <https://w3id.org/bcore/comp#EquipmentComponent> ;
+                   rdfs:comment "Teil des Fahrbahnbelags, zumeist Belagsschicht"@de ,
+                                "component (mostly layer) of the bridge pavement"@en ;
+                   rdfs:label "Fahrbahnbestandteil"@de ,
+                              "pavement component"@en .
 
 
 ###  https://w3id.org/bedro#PavementCoverLayer
@@ -1304,6 +1449,15 @@ xsd:date rdf:type rdfs:Datatype .
                     "plastic"@en .
 
 
+###  https://w3id.org/bedro#PrefabricatedConcreteCrossGirder
+:PrefabricatedConcreteCrossGirder rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/bcore/comp#CrossGirder> ;
+                                  rdfs:comment "transversaler vorgefertigter Betonträger zur Übertragung von Kräften von der Ortbeton-Fahrbahnplatte zu den Längsträgern"@de ,
+                                               "transverse precast concrete girder for transferring forces from the cast-in-place concrete deck to the main longitudinal girders"@en ;
+                                  rdfs:label "Betonfertigteilquerträger"@de ,
+                                             "prefabricated concrete cross girder"@en .
+
+
 ###  https://w3id.org/bedro#SoilMaterial
 :SoilMaterial rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/bmat#BuildingMaterial> ;
@@ -1326,10 +1480,6 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/bmat#BuildingMaterial> rdf:type owl:Class .
 
 
-###  https://w3id.org/bot#Building
-<https://w3id.org/bot#Building> rdf:type owl:Class .
-
-
 ###  https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> rdf:type owl:Class .
 
@@ -1341,6 +1491,15 @@ xsd:date rdf:type rdfs:Datatype .
                                            "cap/ bridge cap/ edge beam/ rim beam"@en ;
                               rdfs:label "Kappe"@de ,
                                          "cap"@en .
+
+
+###  https://w3id.org/brcomp#Illumination
+<https://w3id.org/brcomp#Illumination> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/bcore/comp#EquipmentComponent> ;
+                                       rdfs:comment "System, um die Brücke nachts zu beleuchten"@de ,
+                                                    "Technical system for illuminating the bridge mainly for traffic but could also be installed for decorative effects."@en ;
+                                       rdfs:label "Beleuchtung"@de ,
+                                                  "illumination"@en .
 
 
 ###  https://w3id.org/brcomp#NoiseBarrier
@@ -1392,6 +1551,18 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/bcore/mat#CompositeMaterial>
+                <https://w3id.org/bcore/mat#Metal>
+                :Asphalt
+                :Bitumen
+                :Plastic
+                :SoilMaterial
+                <https://w3id.org/bmat#Concrete>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :AsphaltConcrete
                 :MasticAsphalt
                 :StoneMasticAsphalt
@@ -1402,6 +1573,7 @@ xsd:date rdf:type rdfs:Datatype .
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :PavementComponent
                 <https://w3id.org/brcomp#Cap>
+                <https://w3id.org/brcomp#Illumination>
                 <https://w3id.org/brcomp#NoiseBarrier>
                 <https://w3id.org/brcomp#Pavement>
                 <https://w3id.org/brcomp#Railing>
@@ -1518,6 +1690,50 @@ xsd:date rdf:type rdfs:Datatype .
 
 :wlh rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:railingDistance rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:w rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:LL1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:wp1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:LL2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:wp2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:wp3 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s3 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:diff rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:abs rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:bhalf rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:bhalfTolerance rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :q rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
@@ -1538,9 +1754,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 :bdouble rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:wp rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:z rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
@@ -1847,135 +2063,6 @@ xsd:date rdf:type rdfs:Datatype .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "DE: Die Breite der Brücke berechnet sich aus der Summe der Breiten vom Fahrbahnbelag und den beiden Kappen.; EN: The width of the bridge is calculated as the sum of the widths of the pavement and the two caps." ;
-   rdfs:label "Bridge_Width" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cl
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cl
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> 1
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :bl2
-                                                                                                 ] ;
-                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :cl ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :bl3
-                                                                                                            ] ;
-                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
-                                                                                                                       ] ;
-                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr
-                                                                                                                                  ] ;
-                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> 99
-                                                                                                                                             ] ;
-                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> :br2
-                                                                                                                                                        ] ;
-                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :cr ;
-                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :br3
-                                                                                                                                                                   ] ;
-                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> :p
-                                                                                                                                                                              ] ;
-                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
-                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :p
-                                                                                                                                                                                         ] ;
-                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb01 ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> :bp1
-                                                                                                                                                                                                    ] ;
-                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :bp2
-                                                                                                                                                                                                               ] ;
-                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
-                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( :bb
-                                                                                                                                                                                                                                                                         :br2
-                                                                                                                                                                                                                                                                         :br3
-                                                                                                                                                                                                                                                                         :bl2
-                                                                                                                                                                                                                                                                         :bl3
-                                                                                                                                                                                                                                                                         :bp1
-                                                                                                                                                                                                                                                                         :bp2
-                                                                                                                                                                                                                                                                       )
-                                                                                                                                                                                                                          ] ;
-                                                                                                                                                                                                                rdf:rest rdf:nil
-                                                                                                                                                                                                              ]
-                                                                                                                                                                                                   ]
-                                                                                                                                                                                        ]
-                                                                                                                                                                             ]
-                                                                                                                                                                  ]
-                                                                                                                                                       ]
-                                                                                                                                            ]
-                                                                                                                                 ]
-                                                                                                                      ]
-                                                                                                           ]
-                                                                                                ]
-                                                                                     ]
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :BridgeWidth ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :bb
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "DE: Die Breite 3 der Kappe beträgt immer 1/5 der Höhe 3; EN: The width 3 of the cap is always 1/5 times height 3." ;
    rdfs:label "CAPxxXXb03" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
@@ -2134,6 +2221,637 @@ xsd:date rdf:type rdfs:Datatype .
                                                        <http://www.w3.org/2003/11/swrl#argument2> :ph
                                                      ] ;
                                            rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Ist die Maximalgeschwindigkeit der Eisenbahnstrecke größer als 160 km/h, dann berechnet sich die lichte Breite der Strecke zu 4m*(Anzahl Gleise-1) + 8m (RE-ING Teil 2-1 Anhang A und Ril 800.0130); EN: If the maximum velocity of the RailwayRoute is greate than 160km/h, the width of the route is 4m*(Number of Tracks-1) + 8m (RE-ING Teil 2-1 Anhang A and Ril 800.0130)" ;
+   rdfs:label "BC_WidthOfRail_VGreater160" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore/infra#RailwayRoute> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :v ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 160 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#subtract> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :n1 ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :n ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 1 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :railingDistance ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :n1 ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 4 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :w ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first :railingDistance ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 8.0 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#InfrastructureRouteWidth> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :w
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Ist die Maximalgeschwindigkeit der Eisenbahnstrecke geringer oder gleich 160 km/h, dann berechnet sich die lichte Breite der Strecke zu 4m*(Anzahl Gleise-1) + 7m (RE-ING Teil 2-1 Anhang A und Ril 800.0130); EN: If the maximum velocity of the RailwayRoute is <= 160km/h, the width of the route is 4m*(Number of Tracks-1) + 7m (RE-ING Teil 2-1 Anhang A and Ril 800.0130)" ;
+   rdfs:label "BC_WidthOfRail_VSmaller160" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore/infra#RailwayRoute> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :v ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 160 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#subtract> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first :n1 ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :n ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 1 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first :railingDistance ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :n1 ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 4 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first :w ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first :railingDistance ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 7.0 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#InfrastructureRouteWidth> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :w
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Die Breite der Brücke berechnet sich aus der Summe der Breiten vom Fahrbahnbelag und den beiden Kappen.; EN: The width of the bridge is calculated as the sum of the widths of the pavement and the two caps." ;
+   rdfs:label "Bridge_Width" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brot#Bridge> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cl
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cl
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> 1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :bl2
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :cl ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :bl3
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :cr
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Cap> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :cr
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> :XXXxxXXp00 ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> 99
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb02 ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> :br2
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> :CAPxxXXb03 ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :cr ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :br3
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/brot#containsComponent> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/brcomp#Pavement> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb01 ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> :bp1
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :PAV00XXb02 ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :bp2
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( :bb
+                                                                                                                                                                                                                                                                         :br2
+                                                                                                                                                                                                                                                                         :br3
+                                                                                                                                                                                                                                                                         :bl2
+                                                                                                                                                                                                                                                                         :bl3
+                                                                                                                                                                                                                                                                         :bp1
+                                                                                                                                                                                                                                                                         :bp2
+                                                                                                                                                                                                                                                                       )
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :BridgeWidth ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :bb
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Liegt ein Trassenpunkt im Bereich einer anderen Trasse +- eine Toleranz von 2m, ist hier eine Stützung nicht möglich; EN: If a WayPoint is located above or below another route +- a tolerance of 2m, a bridge support is not possible here." ;
+   rdfs:label "BC_RouteCrossingSupportNotPossible" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r2
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#crossesRoute> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r1 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :r2
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :LL1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfRoute> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :LL1 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :r1
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#hasWayPointAt> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :LL1 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :wp1
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :wp1
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#WayPointStation> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :wp1 ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :s1
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :LL2
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfRoute> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :LL2 ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> :r2
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#hasWayPointAt> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :LL2 ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :wp2
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :wp2
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#hasWayPointAt> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :LL1 ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument2> :wp3
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :wp3
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#WayPointStation> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :wp3 ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :s3
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> :equalsWayPoint ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#argument1> :wp1 ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#argument2> :wp2
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#subtract> ;
+                                                                                                                                                                                                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :diff
+                                                                                                                                                                                                                                                                                    :s1
+                                                                                                                                                                                                                                                                                    :s3
+                                                                                                                                                                                                                                                                                  )
+                                                                                                                                                                                                                                     ] ;
+                                                                                                                                                                                                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#abs> ;
+                                                                                                                                                                                                                                                  <http://www.w3.org/2003/11/swrl#arguments> ( :abs
+                                                                                                                                                                                                                                                                                               :diff
+                                                                                                                                                                                                                                                                                             )
+                                                                                                                                                                                                                                                ] ;
+                                                                                                                                                                                                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#InfrastructureRouteWidth> ;
+                                                                                                                                                                                                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r2 ;
+                                                                                                                                                                                                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                                                                                                                                                                                                                           ] ;
+                                                                                                                                                                                                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#divide> ;
+                                                                                                                                                                                                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                     rdf:first :bhalf ;
+                                                                                                                                                                                                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                rdf:first :b ;
+                                                                                                                                                                                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                           rdf:first 2 ;
+                                                                                                                                                                                                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                                                                                                   ]
+                                                                                                                                                                                                                                                                      ] ;
+                                                                                                                                                                                                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                                                                                                                                                                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                rdf:first :bhalfTolerance ;
+                                                                                                                                                                                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                           rdf:first :bhalf ;
+                                                                                                                                                                                                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                      rdf:first 2.0 ;
+                                                                                                                                                                                                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                                                                                                                                                                                                    ]
+                                                                                                                                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                                                                 ] ;
+                                                                                                                                                                                                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                                                                                                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> ( :bhalfTolerance
+                                                                                                                                                                                                                                                                                                                                           :abs
+                                                                                                                                                                                                                                                                                                                                         )
+                                                                                                                                                                                                                                                                                            ] ;
+                                                                                                                                                                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                                               ]
+                                                                                                                                                                                                                                    ]
+                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :SupportNotPossible ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :wp3 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Wenn zwei Punkte aus unterschiedlichen Trassen an derselben Stelle liegen (unabhängig von ihrer Höhe), dann sind sie \"gleich\" und die Trassen kreuzen sich; EN: If two points on different routes lie at the same location (regardless of their elevation), then they are “equal” and the routes cross." ;
+   rdfs:label "BC_RouteCrossing" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#InfrastructureRoute> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r2
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#InfrastructureRouteName> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r1 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :n1
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#notEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> ( :n1
+                                                                                                                                     :n2
+                                                                                                                                   )
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#InfrastructureRouteName> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :r2 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :n2
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :LL1
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfRoute> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :LL1 ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :r1
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#hasWayPointAt> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :LL1 ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :wp1
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :wp1
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#classPredicate> <https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> :LL2
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isPartOfRoute> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :LL2 ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :r2
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#hasWayPointAt> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> :LL2 ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> :wp2
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> :wp2
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#LocalX> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> :wp1 ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> :x
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#LocalY> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> :wp1 ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#LocalX> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#argument1> :wp2 ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#argument2> :x
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#LocalY> ;
+                                                                                                                                                                                                                                       <http://www.w3.org/2003/11/swrl#argument1> :wp2 ;
+                                                                                                                                                                                                                                       <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                                                                                                                                                                                     ] ;
+                                                                                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :equalsWayPoint ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :wp1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :wp2
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#crossesRoute> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r1 ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :r2
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
                                          ]
  ] .
 
@@ -2526,6 +3244,40 @@ xsd:date rdf:type rdfs:Datatype .
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "DE: Liegt der Trassenpunkt in einem Gewässer, ist hier eine Stützung nicht empfohlen; EN: If the point is located in a waterbody, a bridge support is not recommended there." ;
+   rdfs:label "BC_SupportInWaterBody" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore#WayPoint> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :wp
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/bcore#isLocatedInZone> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :wp ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :z
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://w3id.org/bcore/zones#WaterBody> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :z
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :SupportNotRecommended ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :wp ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
                                          ]
  ] .
 

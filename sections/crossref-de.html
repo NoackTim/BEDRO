@@ -5,20 +5,26 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
  <ul class="hlist">
   <li><a href="#Asphalt" title="https://w3id.org/bedro#Asphalt">Asphalt</a></li>
   <li><a href="#AsphaltConcrete" title="https://w3id.org/bedro#AsphaltConcrete">Asphaltbeton</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#ConstructionProject" title="https://w3id.org/bcore/lifecycle#ConstructionProject">Bauprojekt</a></li>
+  <li><a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a></li>
+  <li><a href="#PrefabricatedConcreteCrossGirder" title="https://w3id.org/bedro#PrefabricatedConcreteCrossGirder">Betonfertigteilquerträger</a></li>
   <li><a href="#Bitumen" title="https://w3id.org/bedro#Bitumen">Bitumen</a></li>
   <li><a href="#SoilMaterial" title="https://w3id.org/bedro#SoilMaterial">Bodenmaterial</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#BridgeVariant" title="https://w3id.org/bcore/lifecycle#BridgeVariant">Brückenvariante</a></li>
   <li><a href="#Elastomer" title="https://w3id.org/bedro#Elastomer">Elastomer</a></li>
+  <li><a href="#EndCrossGirder" title="https://w3id.org/bedro#EndCrossGirder">Endquerträger</a></li>
   <li><a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">Fahrbahn Deckschicht</a></li>
   <li><a href="#PavementWaterproofLayer" title="https://w3id.org/bedro#PavementWaterproofLayer">Fahrbahn Dichtungsschicht</a></li>
   <li><a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">Fahrbahn Schutzschicht</a></li>
   <li><a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a></li>
+  <li><a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a></li>
   <li><a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a></li>
   <li><a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a></li>
   <li><a href="#MasticAsphalt" title="https://w3id.org/bedro#MasticAsphalt">Gussasphalt</a></li>
   <li><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a></li>
   <li><a href="#Plastic" title="https://w3id.org/bedro#Plastic">Kunststoff</a></li>
   <li><a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a></li>
-  <li><a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent"> <span>Pavement Component</span> </a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">Projekt</a></li>
   <li><a href="#PTFE" title="https://w3id.org/bedro#PTFE">PTFE</a></li>
   <li><a href="#StoneMasticAsphalt" title="https://w3id.org/bedro#StoneMasticAsphalt">Steinmastixasphalt</a></li>
  </ul>
@@ -40,6 +46,12 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dt>
    <dd>
     <a href="#AsphaltConcrete" title="https://w3id.org/bedro#AsphaltConcrete">Asphaltbeton</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#MasticAsphalt" title="https://w3id.org/bedro#MasticAsphalt">Gussasphalt</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#StoneMasticAsphalt" title="https://w3id.org/bedro#StoneMasticAsphalt">Steinmastixasphalt</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/mat#CompositeMaterial" target="_blank" title="https://w3id.org/bcore/mat#CompositeMaterial">Verbundmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bcore/mat#Metal" target="_blank" title="https://w3id.org/bcore/mat#Metal">Metall</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Bitumen" title="https://w3id.org/bedro#Bitumen">Bitumen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Plastic" title="https://w3id.org/bedro#Plastic">Kunststoff</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#SoilMaterial" title="https://w3id.org/bedro#SoilMaterial">Bodenmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bmat#Concrete" target="_blank" title="https://w3id.org/bmat#Concrete">Concrete</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -64,6 +76,57 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dd>
   </dl>
  </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#ConstructionProject">
+  <h3>Bauprojekt<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#ConstructionProject</p>
+  <div class="comment">
+   <span class="markdown">Projekt mit dem Ziel der Errichtung oder Anpassung eines Bauwerks</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">Projekt</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/brcomp#Illumination">
+  <h3>Beleuchtung<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/brcomp#Illumination</p>
+  <div class="comment">
+   <span class="markdown">System, um die Brücke nachts zu beleuchten</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PrefabricatedConcreteCrossGirder">
+  <h3>Betonfertigteilquerträger<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bedro#PrefabricatedConcreteCrossGirder</p>
+  <div class="comment">
+   <span class="markdown">transversaler vorgefertigter Betonträger zur Übertragung von Kräften von der Ortbeton-Fahrbahnplatte zu den Längsträgern</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/comp#CrossGirder" target="_blank" title="https://w3id.org/bcore/comp#CrossGirder">Querträger</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Bitumen">
   <h3>Bitumen<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/bedro#Bitumen</p>
@@ -76,6 +139,12 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dt>
    <dd>
     <a href="https://w3id.org/bmat#BuildingMaterial" target="_blank" title="https://w3id.org/bmat#BuildingMaterial">Building Material</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/mat#CompositeMaterial" target="_blank" title="https://w3id.org/bcore/mat#CompositeMaterial">Verbundmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bcore/mat#Metal" target="_blank" title="https://w3id.org/bcore/mat#Metal">Metall</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Asphalt" title="https://w3id.org/bedro#Asphalt">Asphalt</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Plastic" title="https://w3id.org/bedro#Plastic">Kunststoff</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#SoilMaterial" title="https://w3id.org/bedro#SoilMaterial">Bodenmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bmat#Concrete" target="_blank" title="https://w3id.org/bmat#Concrete">Concrete</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -91,6 +160,39 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dt>
    <dd>
     <a href="https://w3id.org/bmat#BuildingMaterial" target="_blank" title="https://w3id.org/bmat#BuildingMaterial">Building Material</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/mat#CompositeMaterial" target="_blank" title="https://w3id.org/bcore/mat#CompositeMaterial">Verbundmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bcore/mat#Metal" target="_blank" title="https://w3id.org/bcore/mat#Metal">Metall</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Asphalt" title="https://w3id.org/bedro#Asphalt">Asphalt</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Bitumen" title="https://w3id.org/bedro#Bitumen">Bitumen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Plastic" title="https://w3id.org/bedro#Plastic">Kunststoff</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bmat#Concrete" target="_blank" title="https://w3id.org/bmat#Concrete">Concrete</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#BridgeVariant">
+  <h3>Brückenvariante<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#BridgeVariant</p>
+  <div class="comment">
+   <span class="markdown">alternative Option für die Gestaltung derselben Brücke</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/bcore/lifecycle#BridgeVariantName" title="https://w3id.org/bcore/lifecycle#BridgeVariantName">Name der Brückenvariante</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/bcore/lifecycle#isVariantOf" title="https://w3id.org/bcore/lifecycle#isVariantOf">ist Variante von</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/bcore/lifecycle#hasVariant" title="https://w3id.org/bcore/lifecycle#hasVariant">hat Variante</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
    </dd>
   </dl>
  </div>
@@ -115,6 +217,21 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dd>
   </dl>
  </div>
+ <div class="entity" id="EndCrossGirder">
+  <h3>Endquerträger<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bedro#EndCrossGirder</p>
+  <div class="comment">
+   <span class="markdown">transversaler Träger zur Übertragung von Kräften von den Hauptträgern zum Widerlager</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/comp#CrossGirder" target="_blank" title="https://w3id.org/bcore/comp#CrossGirder">Querträger</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="PavementCoverLayer">
   <h3>Fahrbahn Deckschicht<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/bedro#PavementCoverLayer</p>
@@ -126,7 +243,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -153,7 +270,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -180,7 +297,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -207,7 +324,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -219,7 +336,34 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     ist disjunkt zu
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PavementComponent">
+  <h3>Fahrbahnbestandteil<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bedro#PavementComponent</p>
+  <div class="comment">
+   <span class="markdown">Teil des Fahrbahnbelags, zumeist Belagsschicht</span>
+  </div>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">Fahrbahn Deckschicht</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#PavementWaterproofLayer" title="https://w3id.org/bedro#PavementWaterproofLayer">Fahrbahn Dichtungsschicht</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">Fahrbahn Schutzschicht</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -234,7 +378,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -246,7 +390,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     ist disjunkt zu
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -261,13 +405,13 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist disjunkt zu
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -303,7 +447,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist in der Domäne von
@@ -315,7 +459,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     ist disjunkt zu
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
@@ -338,6 +482,12 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    <dd>
     <a href="#Elastomer" title="https://w3id.org/bedro#Elastomer">Elastomer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#PTFE" title="https://w3id.org/bedro#PTFE">PTFE</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="https://w3id.org/bcore/mat#CompositeMaterial" target="_blank" title="https://w3id.org/bcore/mat#CompositeMaterial">Verbundmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bcore/mat#Metal" target="_blank" title="https://w3id.org/bcore/mat#Metal">Metall</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Asphalt" title="https://w3id.org/bedro#Asphalt">Asphalt</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#Bitumen" title="https://w3id.org/bedro#Bitumen">Bitumen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#SoilMaterial" title="https://w3id.org/bedro#SoilMaterial">Bodenmaterial</a> <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/bmat#Concrete" target="_blank" title="https://w3id.org/bmat#Concrete">Concrete</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/brcomp#NoiseBarrier">
@@ -351,37 +501,46 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Bauteil der Brückenausstattung</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     ist disjunkt zu
    </dt>
    <dd>
-    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Pavement Component</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">Fahrbahnbestandteil</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">Beleuchtung</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="PavementComponent">
-  <h3>Pavement Component<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/bedro#PavementComponent</p>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#Project">
+  <h3>Projekt<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#Project</p>
+  <div class="comment">
+   <span class="markdown">Ein Projekt ist ein zielgerichtetes, einmaliges Vorhaben, das aus einem Satz von abgestimmten, gesteuerten Tätigkeiten besteht und durchgeführt werden kann, um unter Berücksichtigung von Vorgaben wie etwa Zeit, Ressourcen und Qualität ein Ziel zu erreichen. (Quelle: https://de.wikipedia.org/wiki/Projekt)</span>
+  </div>
   <dl class="description">
    <dt>
     hat Super-Klassen
    </dt>
    <dd>
-    <a href="https://w3id.org/bcore/comp#EquipmentComponent" target="_blank" title="https://w3id.org/bcore/comp#EquipmentComponent">Equipment Component</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
     hat Sub-Klassen
    </dt>
    <dd>
-    <a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">Fahrbahn Deckschicht</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#PavementWaterproofLayer" title="https://w3id.org/bedro#PavementWaterproofLayer">Fahrbahn Dichtungsschicht</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">Fahrbahn Schutzschicht</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#https://w3id.org/bcore/lifecycle#ConstructionProject" title="https://w3id.org/bcore/lifecycle#ConstructionProject">Bauprojekt</a> <sup class="type-c" title="Klasse">c</sup>
    </dd>
    <dt>
-    ist disjunkt zu
+    ist in der Domäne von
    </dt>
    <dd>
-    <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>
+    <a href="#https://w3id.org/bcore/lifecycle#ProjectName" title="https://w3id.org/bcore/lifecycle#ProjectName">Projektname</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/bcore/lifecycle#isCreatedInProject" title="https://w3id.org/bcore/lifecycle#isCreatedInProject">wird in Projekt errichtet</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/bcore/lifecycle#isUsedInProject" title="https://w3id.org/bcore/lifecycle#isUsedInProject">wird in Projekt verwendet</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
    </dd>
   </dl>
  </div>
@@ -430,13 +589,88 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h2>Objekt Eigenschaften</h2>
  <ul class="hlist">
-  <li><a href="#equalsRoutePoint" title="https://w3id.org/bedro#equalsRoutePoint">ist äquivalent zu Trassenpunkt</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#hasVariant" title="https://w3id.org/bcore/lifecycle#hasVariant">hat Variante</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#isVariantOf" title="https://w3id.org/bcore/lifecycle#isVariantOf">ist Variante von</a></li>
+  <li><a href="#equalsWayPoint" title="https://w3id.org/bedro#equalsWayPoint">ist äquivalent zu Wegpunkt</a></li>
   <li><a href="#runsToTheLeftOf" title="https://w3id.org/bedro#runsToTheLeftOf">verläuft links von</a></li>
   <li><a href="#runsToTheRightOf" title="https://w3id.org/bedro#runsToTheRightOf">verläuft rechts von</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#isCreatedInProject" title="https://w3id.org/bcore/lifecycle#isCreatedInProject">wird in Projekt errichtet</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#isUsedInProject" title="https://w3id.org/bcore/lifecycle#isUsedInProject">wird in Projekt verwendet</a></li>
  </ul>
- <div class="entity" id="equalsRoutePoint">
-  <h3>ist äquivalent zu Trassenpunkt<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/bedro#equalsRoutePoint</p>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#hasVariant">
+  <h3>hat Variante<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#hasVariant</p>
+  <div class="comment">
+   <span class="markdown">eine Brücke hat mindestens eine Entwurfsvariante</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#BridgeVariant" title="https://w3id.org/bcore/lifecycle#BridgeVariant">Brückenvariante</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#isVariantOf" title="https://w3id.org/bcore/lifecycle#isVariantOf">ist Variante von</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#isVariantOf">
+  <h3>ist Variante von<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#isVariantOf</p>
+  <div class="comment">
+   <span class="markdown">ist eine Entwurfsvariante einer Brücke</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#BridgeVariant" title="https://w3id.org/bcore/lifecycle#BridgeVariant">Brückenvariante</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#hasVariant" title="https://w3id.org/bcore/lifecycle#hasVariant">hat Variante</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="equalsWayPoint">
+  <h3>ist äquivalent zu Wegpunkt<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bedro#equalsWayPoint</p>
   <div class="comment">
    <span class="markdown">Punkt gleicht anderem Punkt in X- und Y-Koordinaten, nicht unbeding in Z-Koordinaten</span>
   </div>
@@ -453,7 +687,13 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation">Localisation</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
    </dl>
   </div>
@@ -530,6 +770,59 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#isCreatedInProject">
+  <h3>wird in Projekt errichtet<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#isCreatedInProject</p>
+  <div class="comment">
+   <span class="markdown">Zone, vor allem Gebäude, Baustelle oder Brücke, wird in einem Projekt erstellt</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="https://w3id.org/bot#Zone" target="_blank" title="https://w3id.org/bot#Zone">Zone</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">Projekt</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#isUsedInProject">
+  <h3>wird in Projekt verwendet<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#isUsedInProject</p>
+  <div class="comment">
+   <span class="markdown">InfrastructureRoute, wird in einem Projekt genutzt und oft auch bearbeitet/geändert</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="https://w3id.org/bcore#InfrastructureRoute" target="_blank" title="https://w3id.org/bcore#InfrastructureRoute">Infrastructure Route</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">Projekt</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h2>Daten Eigenschaften</h2>
  <ul class="hlist">
@@ -563,6 +856,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
   <li><a href="#CAPxxXXn02" title="https://w3id.org/bedro#CAPxxXXn02">Kappe Neigung 2</a></li>
   <li><a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a></li>
   <li><a href="#CAPxxXXg00" title="https://w3id.org/bedro#CAPxxXXg00">Kappe Typologie</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#BridgeVariantName" title="https://w3id.org/bcore/lifecycle#BridgeVariantName">Name der Brückenvariante</a></li>
   <li><a href="#SUP00SLb01" title="https://w3id.org/bedro#SUP00SLb01">Platte Breite 1</a></li>
   <li><a href="#SUP00SLb02" title="https://w3id.org/bedro#SUP00SLb02">Platte Breite 2</a></li>
   <li><a href="#SUP00SLb03" title="https://w3id.org/bedro#SUP00SLb03">Platte Breite 3</a></li>
@@ -609,9 +903,12 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
   <li><a href="#SUP00TBn02" title="https://w3id.org/bedro#SUP00TBn02">Plattenbalkenplatte Neigung 2</a></li>
   <li><a href="#SUP00TBn03" title="https://w3id.org/bedro#SUP00TBn03">Plattenbalkenplatte Neigung 3</a></li>
   <li><a href="#SUP00TBn04" title="https://w3id.org/bedro#SUP00TBn04">Plattenbalkenplatte Neigung 4</a></li>
+  <li><a href="#https://w3id.org/bcore/lifecycle#ProjectName" title="https://w3id.org/bcore/lifecycle#ProjectName">Projektname</a></li>
   <li><a href="#CAPxxCUe00" title="https://w3id.org/bedro#CAPxxCUe00">Schrammbord Existenz</a></li>
   <li><a href="#SupportNotRecommended" title="https://w3id.org/bedro#SupportNotRecommended">Stützung nicht empfohlen</a></li>
   <li><a href="#SupportNotPossible" title="https://w3id.org/bedro#SupportNotPossible">Stützung nicht möglich</a></li>
+  <li><a href="#https://w3id.org/bcore#WayPointStation" title="https://w3id.org/bcore#WayPointStation">Wegpunkt Stationierung</a></li>
+  <li><a href="#https://w3id.org/bcore#WayPointEnvironmentZ" title="https://w3id.org/bcore#WayPointEnvironmentZ">Wegpunkt Umgebung Z</a></li>
  </ul>
  <div class="entity" id="XXXxxXXp00">
   <h3>Bauteil transversale Position<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
@@ -1518,6 +1815,36 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#BridgeVariantName">
+  <h3>Name der Brückenvariante<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#BridgeVariantName</p>
+  <div class="comment">
+   <span class="markdown">Name des alternativen Brückenentwurfs</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#BridgeVariant" title="https://w3id.org/bcore/lifecycle#BridgeVariant">Brückenvariante</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="SUP00SLb01">
   <h3>Platte Breite 1<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/bedro#SUP00SLb01</p>
@@ -1537,7 +1864,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1567,7 +1894,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1597,7 +1924,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1627,7 +1954,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1657,7 +1984,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1687,7 +2014,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1717,7 +2044,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1747,7 +2074,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1777,7 +2104,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1807,7 +2134,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1837,7 +2164,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1867,7 +2194,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1897,7 +2224,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1927,7 +2254,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1957,7 +2284,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -1987,7 +2314,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2017,7 +2344,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2047,7 +2374,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2077,7 +2404,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2107,7 +2434,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2137,7 +2464,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2167,7 +2494,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2197,7 +2524,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2227,7 +2554,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2257,7 +2584,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2287,7 +2614,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2317,7 +2644,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2347,7 +2674,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2377,7 +2704,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2407,7 +2734,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2437,7 +2764,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-beam</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#TBeam" target="_blank" title="https://w3id.org/bcore/comp#TBeam">T-Träger</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2467,7 +2794,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2497,7 +2824,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2527,7 +2854,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2557,7 +2884,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2587,7 +2914,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2617,7 +2944,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2647,7 +2974,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2677,7 +3004,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2707,7 +3034,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2737,7 +3064,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2767,7 +3094,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2797,7 +3124,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2827,7 +3154,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2857,7 +3184,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2887,13 +3214,37 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://w3id.org/brcomp#GirderDeck" target="_blank" title="https://w3id.org/brcomp#GirderDeck">Girder Deck</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://w3id.org/bcore/comp#Deck" target="_blank" title="https://w3id.org/bcore/comp#Deck">Fahrbahnplatte</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore/lifecycle#ProjectName">
+  <h3>Projektname<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore/lifecycle#ProjectName</p>
+  <div class="comment">
+   <span class="markdown">Name/Bezeichnung des Projekts</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">Projekt</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -2947,7 +3298,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation">Localisation</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point">Point</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
@@ -2977,13 +3328,73 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
      hat Domäne
     </dt>
     <dd>
-     <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Localisation">Localisation</a> <sup class="type-c" title="Klasse">c</sup>
+     <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#Point">Point</a> <sup class="type-c" title="Klasse">c</sup>
     </dd>
     <dt>
      hat Range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore#WayPointStation">
+  <h3>Wegpunkt Stationierung<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore#WayPointStation</p>
+  <div class="comment">
+   <span class="markdown">Kilometrierung des Wegpunktes auf der Trasse</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/bcore#WayPointEnvironmentZ">
+  <h3>Wegpunkt Umgebung Z<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/bcore#WayPointEnvironmentZ</p>
+  <div class="comment">
+   <span class="markdown">Z-Koordinate der Umgebung unter oder über dem Wegpunkt</span>
+  </div>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> funktional</p>
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
@@ -3035,141 +3446,166 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
-  <li><a href="#d4e4225">Bridge_Width</a></li>
-  <li><a href="#d4e7131">CAP01meetNOB01</a></li>
-  <li><a href="#d4e6504">CAP01meetPAV</a></li>
-  <li><a href="#d4e7513">CAP01meetRAI01</a></li>
-  <li><a href="#d4e7895">CAP01meetTRB01</a></li>
-  <li><a href="#d4e8507">CAP01XXq00</a></li>
-  <li><a href="#d4e7322">CAP99meetNOB99</a></li>
-  <li><a href="#d4e6672">CAP99meetPAV</a></li>
-  <li><a href="#d4e7704">CAP99meetRAI99</a></li>
-  <li><a href="#d4e8087">CAP99meetTRB99</a></li>
-  <li><a href="#d4e3291">CAP99XXq00</a></li>
-  <li><a href="#d4e4626">CAPxxXXb03</a></li>
-  <li><a href="#d4e4044">CAPxxXXb04</a></li>
-  <li><a href="#d4e6335">CAPxxXXg00_Kap6</a></li>
-  <li><a href="#d4e3514">CAPxxXXh02</a></li>
-  <li><a href="#d4e4761">CAPxxXXh03</a></li>
-  <li><a href="#d4e8340">CAPxxXXh04</a></li>
-  <li><a href="#d4e8278">CAPxxXXn01</a></li>
-  <li><a href="#d4e4846">PAV00XXh00</a></li>
-  <li><a href="#d4e5252">SUP00SL_CAP01</a></li>
-  <li><a href="#d4e5444">SUP00SL_CAP99</a></li>
-  <li><a href="#d4e5637">SUP00SL_PAV</a></li>
-  <li><a href="#d4e5960">SUP00SLb04_b06</a></li>
-  <li><a href="#d4e5128">SUP00SLh01</a></li>
-  <li><a href="#d4e5190">SUP00SLh06</a></li>
-  <li><a href="#d4e6840">SUP00SLmeetCAPXX</a></li>
-  <li><a href="#d4e6986">SUP00SLmeetPAV</a></li>
+  <li><a href="#d4e6791">BC_RouteCrossing</a></li>
+  <li><a href="#d4e6210">BC_RouteCrossingSupportNotPossible</a></li>
+  <li><a href="#d4e8426">BC_SupportInWaterBody</a></li>
+  <li><a href="#d4e5210">BC_WidthOfRail_VGreater160</a></li>
+  <li><a href="#d4e5510">BC_WidthOfRail_VSmaller160</a></li>
+  <li><a href="#d4e5809">Bridge_Width</a></li>
+  <li><a href="#d4e9326">CAP01meetNOB01</a></li>
+  <li><a href="#d4e8700">CAP01meetPAV</a></li>
+  <li><a href="#d4e9709">CAP01meetRAI01</a></li>
+  <li><a href="#d4e10091">CAP01meetTRB01</a></li>
+  <li><a href="#d4e10703">CAP01XXq00</a></li>
+  <li><a href="#d4e9517">CAP99meetNOB99</a></li>
+  <li><a href="#d4e8868">CAP99meetPAV</a></li>
+  <li><a href="#d4e9900">CAP99meetRAI99</a></li>
+  <li><a href="#d4e10282">CAP99meetTRB99</a></li>
+  <li><a href="#d4e3774">CAP99XXq00</a></li>
+  <li><a href="#d4e4709">CAPxxXXb03</a></li>
+  <li><a href="#d4e4528">CAPxxXXb04</a></li>
+  <li><a href="#d4e8530">CAPxxXXg00_Kap6</a></li>
+  <li><a href="#d4e3998">CAPxxXXh02</a></li>
+  <li><a href="#d4e4843">CAPxxXXh03</a></li>
+  <li><a href="#d4e10535">CAPxxXXh04</a></li>
+  <li><a href="#d4e10473">CAPxxXXn01</a></li>
+  <li><a href="#d4e4928">PAV00XXh00</a></li>
+  <li><a href="#d4e7344">SUP00SL_CAP01</a></li>
+  <li><a href="#d4e7536">SUP00SL_CAP99</a></li>
+  <li><a href="#d4e7728">SUP00SL_PAV</a></li>
+  <li><a href="#d4e8051">SUP00SLb04_b06</a></li>
+  <li><a href="#d4e7219">SUP00SLh01</a></li>
+  <li><a href="#d4e7281">SUP00SLh06</a></li>
+  <li><a href="#d4e9036">SUP00SLmeetCAPXX</a></li>
+  <li><a href="#d4e9181">SUP00SLmeetPAV</a></li>
  </ul>
- <div class="entity" id="d4e4225">
+ <div class="entity" id="d4e6791">
+  <h3>BC_RouteCrossing<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
+  <p>DE: Wenn zwei Punkte aus unterschiedlichen Trassen an derselben Stelle liegen (unabhängig von ihrer Höhe), dann sind sie "gleich" und die Trassen kreuzen sich; EN: If two points on different routes lie at the same location (regardless of their elevation), then they are “equal” and the routes cross.<br><br><a href="https://w3id.org/bcore#InfrastructureRoute" target="_blank" title="https://w3id.org/bcore#InfrastructureRoute">Infrastructure Route</a> <sup class="type-c" title="Klasse">c</sup>(?r1) , <a href="https://w3id.org/bcore#InfrastructureRoute" target="_blank" title="https://w3id.org/bcore#InfrastructureRoute">Infrastructure Route</a> <sup class="type-c" title="Klasse">c</sup>(?r2) , <a href="https://w3id.org/bcore#InfrastructureRouteName" target="_blank" title="https://w3id.org/bcore#InfrastructureRouteName">Infrastructure Route Name</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r1,?n1) , <a href="http://www.w3.org/2003/11/swrlb#notEqual" title="notEqual">notEqual</a>(?n1,?n2) , <a href="https://w3id.org/bcore#InfrastructureRouteName" target="_blank" title="https://w3id.org/bcore#InfrastructureRouteName">Infrastructure Route Name</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r2,?n2) , <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation">Line Localisation</a> <sup class="type-c" title="Klasse">c</sup>(?LL1) , <a href="https://w3id.org/bcore#isPartOfRoute" target="_blank" title="https://w3id.org/bcore#isPartOfRoute">ist Teil von Trasse</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL1,?r1) , <a href="https://w3id.org/bcore#hasWayPointAt" target="_blank" title="https://w3id.org/bcore#hasWayPointAt">has Way Point At</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL1,?wp1) , <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp1) , <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation">Line Localisation</a> <sup class="type-c" title="Klasse">c</sup>(?LL2) , <a href="https://w3id.org/bcore#isPartOfRoute" target="_blank" title="https://w3id.org/bcore#isPartOfRoute">ist Teil von Trasse</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL2,?r2) , <a href="https://w3id.org/bcore#hasWayPointAt" target="_blank" title="https://w3id.org/bcore#hasWayPointAt">has Way Point At</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL2,?wp2) , <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp2) , <a href="https://w3id.org/bcore#LocalX" target="_blank" title="https://w3id.org/bcore#LocalX">Local X</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp1,?x) , <a href="https://w3id.org/bcore#LocalY" target="_blank" title="https://w3id.org/bcore#LocalY">Local Y</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp1,?y) , <a href="https://w3id.org/bcore#LocalX" target="_blank" title="https://w3id.org/bcore#LocalX">Local X</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp2,?x) , <a href="https://w3id.org/bcore#LocalY" target="_blank" title="https://w3id.org/bcore#LocalY">Local Y</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp2,?y) -&gt; <a href="#equalsWayPoint" title="https://w3id.org/bedro#equalsWayPoint">ist äquivalent zu Wegpunkt</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?wp1,?wp2) , <a href="https://w3id.org/bcore#crossesRoute" target="_blank" title="https://w3id.org/bcore#crossesRoute">crosses Route</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r1,?r2)</p>
+ </div>
+ <div class="entity" id="d4e6210">
+  <h3>BC_RouteCrossingSupportNotPossible<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
+  <p>DE: Liegt ein Trassenpunkt im Bereich einer anderen Trasse +- eine Toleranz von 2m, ist hier eine Stützung nicht möglich; EN: If a WayPoint is located above or below another route +- a tolerance of 2m, a bridge support is not possible here.<br><br><a href="https://w3id.org/bcore#InfrastructureRoute" target="_blank" title="https://w3id.org/bcore#InfrastructureRoute">Infrastructure Route</a> <sup class="type-c" title="Klasse">c</sup>(?r1) , <a href="https://w3id.org/bcore#InfrastructureRoute" target="_blank" title="https://w3id.org/bcore#InfrastructureRoute">Infrastructure Route</a> <sup class="type-c" title="Klasse">c</sup>(?r2) , <a href="https://w3id.org/bcore#crossesRoute" target="_blank" title="https://w3id.org/bcore#crossesRoute">crosses Route</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r1,?r2) , <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation">Line Localisation</a> <sup class="type-c" title="Klasse">c</sup>(?LL1) , <a href="https://w3id.org/bcore#isPartOfRoute" target="_blank" title="https://w3id.org/bcore#isPartOfRoute">ist Teil von Trasse</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL1,?r1) , <a href="https://w3id.org/bcore#hasWayPointAt" target="_blank" title="https://w3id.org/bcore#hasWayPointAt">has Way Point At</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL1,?wp1) , <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp1) , <a href="#https://w3id.org/bcore#WayPointStation" title="https://w3id.org/bcore#WayPointStation">Wegpunkt Stationierung</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp1,?s1) , <a href="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/infraspatialot#LineLocalisation">Line Localisation</a> <sup class="type-c" title="Klasse">c</sup>(?LL2) , <a href="https://w3id.org/bcore#isPartOfRoute" target="_blank" title="https://w3id.org/bcore#isPartOfRoute">ist Teil von Trasse</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL2,?r2) , <a href="https://w3id.org/bcore#hasWayPointAt" target="_blank" title="https://w3id.org/bcore#hasWayPointAt">has Way Point At</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL2,?wp2) , <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp2) , <a href="https://w3id.org/bcore#hasWayPointAt" target="_blank" title="https://w3id.org/bcore#hasWayPointAt">has Way Point At</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?LL1,?wp3) , <a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp3) , <a href="#https://w3id.org/bcore#WayPointStation" title="https://w3id.org/bcore#WayPointStation">Wegpunkt Stationierung</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp3,?s3) , <a href="#equalsWayPoint" title="https://w3id.org/bedro#equalsWayPoint">ist äquivalent zu Wegpunkt</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?wp1,?wp2) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?diff,?s1,?s3) , <a href="http://www.w3.org/2003/11/swrlb#abs" title="abs">abs</a>(?abs,?diff) , <a href="https://w3id.org/bcore#InfrastructureRouteWidth" target="_blank" title="https://w3id.org/bcore#InfrastructureRouteWidth">Infrastructure Route Width</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r2,?b) , <a href="http://www.w3.org/2003/11/swrlb#divide" title="divide">divide</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?bhalfTolerance,?abs) -&gt; <a href="#SupportNotPossible" title="https://w3id.org/bedro#SupportNotPossible">Stützung nicht möglich</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp3,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e8426">
+  <h3>BC_SupportInWaterBody<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
+  <p>DE: Liegt der Trassenpunkt in einem Gewässer, ist hier eine Stützung nicht empfohlen; EN: If the point is located in a waterbody, a bridge support is not recommended there.<br><br><a href="https://w3id.org/bcore#WayPoint" target="_blank" title="https://w3id.org/bcore#WayPoint">Way Point</a> <sup class="type-c" title="Klasse">c</sup>(?wp) , <a href="https://w3id.org/bcore#isLocatedInZone" target="_blank" title="https://w3id.org/bcore#isLocatedInZone">befindet sich in Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?wp,?z) , <a href="https://w3id.org/bcore/zones#WaterBody" target="_blank" title="https://w3id.org/bcore/zones#WaterBody">Gewässer</a> <sup class="type-c" title="Klasse">c</sup>(?z) -&gt; <a href="#SupportNotRecommended" title="https://w3id.org/bedro#SupportNotRecommended">Stützung nicht empfohlen</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wp,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e5210">
+  <h3>BC_WidthOfRail_VGreater160<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
+  <p>DE: Ist die Maximalgeschwindigkeit der Eisenbahnstrecke größer als 160 km/h, dann berechnet sich die lichte Breite der Strecke zu 4m*(Anzahl Gleise-1) + 8m (RE-ING Teil 2-1 Anhang A und Ril 800.0130); EN: If the maximum velocity of the RailwayRoute is greate than 160km/h, the width of the route is 4m*(Number of Tracks-1) + 8m (RE-ING Teil 2-1 Anhang A and Ril 800.0130)<br><br><a href="https://w3id.org/bcore/infra#RailwayRoute" target="_blank" title="https://w3id.org/bcore/infra#RailwayRoute">Eisenbahntrasse</a> <sup class="type-c" title="Klasse">c</sup>(?r) , <a href="https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity" target="_blank" title="https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity">Eisenbahntrasse maximale Geschwindigkeit</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?v) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) , <a href="https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks" target="_blank" title="https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks">Eisenbahntrasse Gleisanzahl</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?n) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?) -&gt; <a href="https://w3id.org/bcore#InfrastructureRouteWidth" target="_blank" title="https://w3id.org/bcore#InfrastructureRouteWidth">Infrastructure Route Width</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?w)</p>
+ </div>
+ <div class="entity" id="d4e5510">
+  <h3>BC_WidthOfRail_VSmaller160<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
+  <p>DE: Ist die Maximalgeschwindigkeit der Eisenbahnstrecke geringer oder gleich 160 km/h, dann berechnet sich die lichte Breite der Strecke zu 4m*(Anzahl Gleise-1) + 7m (RE-ING Teil 2-1 Anhang A und Ril 800.0130); EN: If the maximum velocity of the RailwayRoute is &lt;= 160km/h, the width of the route is 4m*(Number of Tracks-1) + 7m (RE-ING Teil 2-1 Anhang A and Ril 800.0130)<br><br><a href="https://w3id.org/bcore/infra#RailwayRoute" target="_blank" title="https://w3id.org/bcore/infra#RailwayRoute">Eisenbahntrasse</a> <sup class="type-c" title="Klasse">c</sup>(?r) , <a href="https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity" target="_blank" title="https://w3id.org/bcore/infra#RailwayRouteMaximumVelocity">Eisenbahntrasse maximale Geschwindigkeit</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?v) , <a href="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" title="lessThanOrEqual">lessThanOrEqual</a>(?) , <a href="https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks" target="_blank" title="https://w3id.org/bcore/infra#RailwayRouteNumberOfTracks">Eisenbahntrasse Gleisanzahl</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?n) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?) -&gt; <a href="https://w3id.org/bcore#InfrastructureRouteWidth" target="_blank" title="https://w3id.org/bcore#InfrastructureRouteWidth">Infrastructure Route Width</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,?w)</p>
+ </div>
+ <div class="entity" id="d4e5809">
   <h3>Bridge_Width<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Breite der Brücke berechnet sich aus der Summe der Breiten vom Fahrbahnbelag und den beiden Kappen.; EN: The width of the bridge is calculated as the sum of the widths of the pavement and the two caps.<br><br><a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) , <a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?cl) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?cl) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cl,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXb02" title="https://w3id.org/bedro#CAPxxXXb02">Kappe Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cl,?bl2) , <a href="#CAPxxXXb03" title="https://w3id.org/bedro#CAPxxXXb03">Kappe Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cl,?bl3) , <a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?cr) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?cr) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cr,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXb02" title="https://w3id.org/bedro#CAPxxXXb02">Kappe Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cr,?br2) , <a href="#CAPxxXXb03" title="https://w3id.org/bedro#CAPxxXXb03">Kappe Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?cr,?br3) , <a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?p) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="#PAV00XXb01" title="https://w3id.org/bedro#PAV00XXb01">Fahrbahnbreite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?bp1) , <a href="#PAV00XXb02" title="https://w3id.org/bedro#PAV00XXb02">Fahrbahnbreite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?bp2) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bb,?br2,?br3,?bl2,?bl3,?bp1,?bp2) -&gt; <a href="#BridgeWidth" title="https://w3id.org/bedro#BridgeWidth">Brückenbreite</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?b,?bb)</p>
  </div>
- <div class="entity" id="d4e7131">
+ <div class="entity" id="d4e9326">
   <h3>CAP01meetNOB01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Lärmschutzwand links auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the left side of a bridge, the barrier is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?n,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?n,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>(?n) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?n,?c)</p>
  </div>
- <div class="entity" id="d4e6504">
+ <div class="entity" id="d4e8700">
   <h3>CAP01meetPAV<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Kappe liegt links des Fahrbahnbelags; EN: Cap is left of pavement.<br><br><a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?c) , <a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?p) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) -&gt; <a href="https://w3id.org/reloc#meetLeft" target="_blank" title="https://w3id.org/reloc#meetLeft">meet Left</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?p)</p>
  </div>
- <div class="entity" id="d4e7513">
+ <div class="entity" id="d4e9709">
   <h3>CAP01meetRAI01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Geländer links auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the left side of a bridge, the railing is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>(?r) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r,?c)</p>
  </div>
- <div class="entity" id="d4e7895">
+ <div class="entity" id="d4e10091">
   <h3>CAP01meetTRB01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Schutzeinrichtung links auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the left side of a bridge, the traffic barrier is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?t,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?t,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>(?t) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?t,?c)</p>
  </div>
- <div class="entity" id="d4e8507">
+ <div class="entity" id="d4e10703">
   <h3>CAP01XXq00<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Der Abstand des Referenzpunkts der linken Kappe von der Brückenachse berechnet sich aus CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, wobei PAV der angrenzende Fahrbahnbelag ist.; EN: The distance between the reference point of the left cap and the bridge axis is calculated as follows CAP01XXq00=CAP01XXb04+PAV00XXb02+PAV00XXq00, where PAV represents the adjacent pavement.<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/reloc#meetLeft" target="_blank" title="https://w3id.org/reloc#meetLeft">meet Left</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?p) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?pq) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?cb04) , <a href="#PAV00XXb02" title="https://w3id.org/bedro#PAV00XXb02">Fahrbahnbreite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?pb02) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?cq,?pq,?cb04,?pb02) -&gt; <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?cq)</p>
  </div>
- <div class="entity" id="d4e7322">
+ <div class="entity" id="d4e9517">
   <h3>CAP99meetNOB99<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Lärmschutzwand rechts auf einer Brücke liegen, ist die Wand direkt über der Kappe positioniert.; EN: If the cap and the noise barrier on the right side of a bridge, the barrier is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?n,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?n,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#NoiseBarrier" title="https://w3id.org/brcomp#NoiseBarrier">Lärmschutzwand</a> <sup class="type-c" title="Klasse">c</sup>(?n) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?n,?c)</p>
  </div>
- <div class="entity" id="d4e6672">
+ <div class="entity" id="d4e8868">
   <h3>CAP99meetPAV<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Kappe liegt rechts des Fahrbahnbelags; EN: Cap is right of pavement.<br><br><a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?c) , <a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?p) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) -&gt; <a href="https://w3id.org/reloc#meetRight" target="_blank" title="https://w3id.org/reloc#meetRight">meet Right</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?p)</p>
  </div>
- <div class="entity" id="d4e7704">
+ <div class="entity" id="d4e9900">
   <h3>CAP99meetRAI99<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Geländer rechts auf einer Brücke liegen, ist das Geländer direkt über der Kappe positioniert.; EN: If the cap and the railing are on the right side of a bridge, the railing is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#Railing" title="https://w3id.org/brcomp#Railing">Geländer</a> <sup class="type-c" title="Klasse">c</sup>(?r) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?r,?c)</p>
  </div>
- <div class="entity" id="d4e8087">
+ <div class="entity" id="d4e10282">
   <h3>CAP99meetTRB99<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Wenn Kappe und Schutzeinrichtung rechts auf einer Brücke liegen, ist die Schutzeinrichtung direkt über der Kappe positioniert.; EN: If the cap and the traffic barrier are on the right side of a bridge, the traffic barrier is positioned directly above the cap.<br><br><a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?t,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?t,?b) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">Fahrzeugrückhaltesystem</a> <sup class="type-c" title="Klasse">c</sup>(?t) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?t,?c)</p>
  </div>
- <div class="entity" id="d4e3291">
+ <div class="entity" id="d4e3774">
   <h3>CAP99XXq00<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Der Abstand des Referenzpunkts der rechten Kappe von der Brückenachse berechnet sich aus CAP99XXq00=PAV00XXq00-CAP99XXb04-PAV00XXb01, wobei PAV der angrenzende Fahrbahnbelag ist.; EN: The distance between the reference point of the right cap and the bridge axis is calculated as follows CAP99XXq00=PAV00XXq00-CAP99XXb04-PAV00XXb01, where PAV represents the adjacent pavement.<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/reloc#meetRight" target="_blank" title="https://w3id.org/reloc#meetRight">meet Right</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?p) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?pq) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?cb04) , <a href="#PAV00XXb01" title="https://w3id.org/bedro#PAV00XXb01">Fahrbahnbreite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?pb01) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?q1,?cb04,?pb01) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?cq,?pq,?q1) -&gt; <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?cq)</p>
  </div>
- <div class="entity" id="d4e4626">
+ <div class="entity" id="d4e4709">
   <h3>CAPxxXXb03<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Breite 3 der Kappe beträgt immer 1/5 der Höhe 3; EN: The width 3 of the cap is always 1/5 times height 3.<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#CAPxxXXh03" title="https://w3id.org/bedro#CAPxxXXh03">Kappe Höhe 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?h3) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?) -&gt; <a href="#CAPxxXXb03" title="https://w3id.org/bedro#CAPxxXXb03">Kappe Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b3)</p>
  </div>
- <div class="entity" id="d4e4044">
+ <div class="entity" id="d4e4528">
   <h3>CAPxxXXb04<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Breite 4 der Kappe beträgt b04=b02+b03-b01; EN: The width 4 of the cap b04=b02+b03-b01<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#CAPxxXXb01" title="https://w3id.org/bedro#CAPxxXXb01">Kappe Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b1) , <a href="#CAPxxXXb02" title="https://w3id.org/bedro#CAPxxXXb02">Kappe Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b2) , <a href="#CAPxxXXb03" title="https://w3id.org/bedro#CAPxxXXb03">Kappe Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b3) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bges,?b2,?b3) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?b4,?bges,?b1) -&gt; <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b4)</p>
  </div>
- <div class="entity" id="d4e6335">
+ <div class="entity" id="d4e8530">
   <h3>CAPxxXXg00_Kap6<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Ist die Brücke eine Wirtschaftswegbrücke, dann ist auch der Typ der Kappen dementsprechend (RiZ-ING Kap 6); EN: If an agricultural road traverses the bridge, the bridge cap is an agricultural road cap (RiZ-ING Kap 6)<br><br><a href="https://w3id.org/brot#containsComponent" target="_blank" title="https://w3id.org/brot#containsComponent">contains Component</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?c) , <a href="https://w3id.org/bcore/infra#RoadRoute" target="_blank" title="https://w3id.org/bcore/infra#RoadRoute">Straßentrasse</a> <sup class="type-c" title="Klasse">c</sup>(?r) , <a href="https://w3id.org/bcore#carriesRoute" target="_blank" title="https://w3id.org/bcore#carriesRoute">carries Route</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?b,?r) , <a href="https://w3id.org/bcore/infra#RoadRouteClass" target="_blank" title="https://w3id.org/bcore/infra#RoadRouteClass">Straßentrasse Klasse</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?r,"agricultural road") , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="#CAPxxXXg00" title="https://w3id.org/bedro#CAPxxXXg00">Kappe Typologie</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"Kap6")</p>
  </div>
- <div class="entity" id="d4e3514">
+ <div class="entity" id="d4e3998">
   <h3>CAPxxXXh02<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Berechnung der Kappenhöhe 2; EN: Calculation of cap height 2; h2=round(h1+h3+h4+b1*n1+b2*n2-b4*n3)<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#CAPxxXXb01" title="https://w3id.org/bedro#CAPxxXXb01">Kappe Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b01) , <a href="#CAPxxXXn01" title="https://w3id.org/bedro#CAPxxXXn01">Kappe Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n01) , <a href="#CAPxxXXh01" title="https://w3id.org/bedro#CAPxxXXh01">Kappe Höhe 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?h01) , <a href="#CAPxxXXb02" title="https://w3id.org/bedro#CAPxxXXb02">Kappe Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b02) , <a href="#CAPxxXXn02" title="https://w3id.org/bedro#CAPxxXXn02">Kappe Neigung 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n02) , <a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n03) , <a href="#CAPxxXXh03" title="https://w3id.org/bedro#CAPxxXXh03">Kappe Höhe 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?h03) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b04) , <a href="#CAPxxXXh04" title="https://w3id.org/bedro#CAPxxXXh04">Kappe Höhe 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?h04) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?h5,?n01,?b01) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?h6,?b02,?n02) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?h2notround,?h01,?h03,?h04,?h5,?h6,?h7) , <a href="http://www.w3.org/2003/11/swrlb#multiply" title="multiply">multiply</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#round" title="round">round</a>(?v2,?v1) , <a href="http://www.w3.org/2003/11/swrlb#divide" title="divide">divide</a>(?) -&gt; <a href="#CAPxxXXh02" title="https://w3id.org/bedro#CAPxxXXh02">Kappe Höhe 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?h02)</p>
  </div>
- <div class="entity" id="d4e4761">
+ <div class="entity" id="d4e4843">
   <h3>CAPxxXXh03<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Kappe ohne Schrammbord: Höhe 3 beträgt immer 7.5cm; EN: Cap without curb: height 3 is always 7.5cm<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#CAPxxCUe00" title="https://w3id.org/bedro#CAPxxCUe00">Schrammbord Existenz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>) -&gt; <a href="#CAPxxXXh03" title="https://w3id.org/bedro#CAPxxXXh03">Kappe Höhe 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"0.075"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
  </div>
- <div class="entity" id="d4e8340">
+ <div class="entity" id="d4e10535">
   <h3>CAPxxXXh04<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Höhe 4 der Kappe entspricht immer der Höhe des benachbarten Fahrbahnbelags.; EN: The height 4 of the cap always equals the height of the adjacent pavement.<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?b) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) , <a href="#PAV00XXh00" title="https://w3id.org/bedro#PAV00XXh00">Fahrbahn Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?ph) -&gt; <a href="#CAPxxXXh04" title="https://w3id.org/bedro#CAPxxXXh04">Kappe Höhe 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?ph)</p>
  </div>
- <div class="entity" id="d4e8278">
+ <div class="entity" id="d4e10473">
   <h3>CAPxxXXn01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Neigung 1 der Kappe beträgt immer 7.5%; EN: The inclination 1 of the cap is always 7.5%<br><br><a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) -&gt; <a href="#CAPxxXXn01" title="https://w3id.org/bedro#CAPxxXXn01">Kappe Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"0.075"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
  </div>
- <div class="entity" id="d4e4846">
+ <div class="entity" id="d4e4928">
   <h3>PAV00XXh00<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
   <p>DE: Die Höhe des Fahrbahnbelags berechnet sich aus der summierten Höhe seiner Schichten. EN: The thickness of the pavement is calculated as the sum of the thicknesses of its layers.<br><br><a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="https://w3id.org/brot#aggregates" target="_blank" title="https://w3id.org/brot#aggregates">aggregates</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?pcl) , <a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">Fahrbahn Deckschicht</a> <sup class="type-c" title="Klasse">c</sup>(?pcl) , <a href="#PAV00CLh00" title="https://w3id.org/bedro#PAV00CLh00">Fahrbahn Deckschicht Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?pcl,?clh) , <a href="https://w3id.org/brot#aggregates" target="_blank" title="https://w3id.org/brot#aggregates">aggregates</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?ppl) , <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">Fahrbahn Schutzschicht</a> <sup class="type-c" title="Klasse">c</sup>(?ppl) , <a href="#PAV00PLh00" title="https://w3id.org/bedro#PAV00PLh00">Fahrbahn Schutzschicht Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?pcl,?plh) , <a href="https://w3id.org/brot#aggregates" target="_blank" title="https://w3id.org/brot#aggregates">aggregates</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?pwl) , <a href="#PavementProtectionLayer" title="https://w3id.org/bedro#PavementProtectionLayer">Fahrbahn Schutzschicht</a> <sup class="type-c" title="Klasse">c</sup>(?pwl) , <a href="#PAV00WLh00" title="https://w3id.org/bedro#PAV00WLh00">Fahrbahn Dichtungsschicht Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?wcl,?wlh) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?ph,?clh,?plh,?wlh) -&gt; <a href="#PAV00XXh00" title="https://w3id.org/bedro#PAV00XXh00">Fahrbahn Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?ph)</p>
  </div>
- <div class="entity" id="d4e5252">
+ <div class="entity" id="d4e7344">
   <h3>SUP00SL_CAP01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Neigung 4 der Plattenbrücke ist immer so groß wie Neigung 3 der linken Kappe, gleiches gilt für SLb08=CAP01XXb04. EN: Inclination 4 of the slab is always equal to inclination 3 of the left cap, the same applies to SLb08=CAP01XXb04.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?c) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n03) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b04) -&gt; <a href="#SUP00SLn04" title="https://w3id.org/bedro#SUP00SLn04">Platte Neigung 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n03) , <a href="#SUP00SLb08" title="https://w3id.org/bedro#SUP00SLb08">Platte Breite 8</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b04)</p>
+  <p>DE: Neigung 4 der Plattenbrücke ist immer so groß wie Neigung 3 der linken Kappe, gleiches gilt für SLb08=CAP01XXb04. EN: Inclination 4 of the slab is always equal to inclination 3 of the left cap, the same applies to SLb08=CAP01XXb04.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?c) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n03) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b04) -&gt; <a href="#SUP00SLn04" title="https://w3id.org/bedro#SUP00SLn04">Platte Neigung 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n03) , <a href="#SUP00SLb08" title="https://w3id.org/bedro#SUP00SLb08">Platte Breite 8</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b04)</p>
  </div>
- <div class="entity" id="d4e5444">
+ <div class="entity" id="d4e7536">
   <h3>SUP00SL_CAP99<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Neigung 2 der Plattenbrücke ist immer so groß wie Neigung 3 der rechten Kappe, gleiches gilt für SLb02=CAP99XXb04. EN: Inclination 2 of the slab is always equal to inclination 3 of the right cap, the same applies to SLb02=CAP99XXb04.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?c) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n03) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b04) -&gt; <a href="#SUP00SLn02" title="https://w3id.org/bedro#SUP00SLn02">Platte Neigung 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n03) , <a href="#SUP00SLb02" title="https://w3id.org/bedro#SUP00SLb02">Platte Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b04)</p>
+  <p>DE: Neigung 2 der Plattenbrücke ist immer so groß wie Neigung 3 der rechten Kappe, gleiches gilt für SLb02=CAP99XXb04. EN: Inclination 2 of the slab is always equal to inclination 3 of the right cap, the same applies to SLb02=CAP99XXb04.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?c) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="#XXXxxXXp00" title="https://w3id.org/bedro#XXXxxXXp00">Bauteil transversale Position</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,"99"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) , <a href="#CAPxxXXn03" title="https://w3id.org/bedro#CAPxxXXn03">Kappe Neigung 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?n03) , <a href="#CAPxxXXb04" title="https://w3id.org/bedro#CAPxxXXb04">Kappe Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?c,?b04) -&gt; <a href="#SUP00SLn02" title="https://w3id.org/bedro#SUP00SLn02">Platte Neigung 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n03) , <a href="#SUP00SLb02" title="https://w3id.org/bedro#SUP00SLb02">Platte Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b04)</p>
  </div>
- <div class="entity" id="d4e5637">
+ <div class="entity" id="d4e7728">
   <h3>SUP00SL_PAV<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Neigung 5 der Plattenbrücke ist immer so groß wie Neigung 2 des Fahrbahnbelags, gleiches gilt für SLn01=PAV00XXn01, SLb09=PAV00XXb02, SLb01=PAV00XXb01 und SLq00=PAV00XXq00. EN: Inclination 5 of the slab is always equal to inclination 2 of the pavement, the same applies to SLn01=PAV00XXn01, SLb09=PAV00XXb02, SLb01=PAV00XXb01 and SLq00=PAV00XXq00.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?p) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="#PAV00XXb01" title="https://w3id.org/bedro#PAV00XXb01">Fahrbahnbreite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?b01) , <a href="#PAV00XXb02" title="https://w3id.org/bedro#PAV00XXb02">Fahrbahnbreite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?b02) , <a href="#PAV00XXn01" title="https://w3id.org/bedro#PAV00XXn01">Fahrbahn Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?n01) , <a href="#PAV00XXn02" title="https://w3id.org/bedro#PAV00XXn02">Fahrbahn Neigung 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?n02) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?q) , <a href="#PAV00XXh00" title="https://w3id.org/bedro#PAV00XXh00">Fahrbahn Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?h) -&gt; <a href="#SUP00SLn05" title="https://w3id.org/bedro#SUP00SLn05">Platte Neigung 5</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n02) , <a href="#SUP00SLn01" title="https://w3id.org/bedro#SUP00SLn01">Platte Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n01) , <a href="#SUP00SLb01" title="https://w3id.org/bedro#SUP00SLb01">Platte Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b01) , <a href="#SUP00SLb09" title="https://w3id.org/bedro#SUP00SLb09">Platte Breite 9</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b02) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?q)</p>
+  <p>DE: Neigung 5 der Plattenbrücke ist immer so groß wie Neigung 2 des Fahrbahnbelags, gleiches gilt für SLn01=PAV00XXn01, SLb09=PAV00XXb02, SLb01=PAV00XXb01 und SLq00=PAV00XXq00. EN: Inclination 5 of the slab is always equal to inclination 2 of the pavement, the same applies to SLn01=PAV00XXn01, SLb09=PAV00XXb02, SLb01=PAV00XXb01 and SLq00=PAV00XXq00.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/reloc#meetBottom" target="_blank" title="https://w3id.org/reloc#meetBottom">meet Bottom</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?p) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="#PAV00XXb01" title="https://w3id.org/bedro#PAV00XXb01">Fahrbahnbreite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?b01) , <a href="#PAV00XXb02" title="https://w3id.org/bedro#PAV00XXb02">Fahrbahnbreite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?b02) , <a href="#PAV00XXn01" title="https://w3id.org/bedro#PAV00XXn01">Fahrbahn Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?n01) , <a href="#PAV00XXn02" title="https://w3id.org/bedro#PAV00XXn02">Fahrbahn Neigung 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?n02) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?q) , <a href="#PAV00XXh00" title="https://w3id.org/bedro#PAV00XXh00">Fahrbahn Höhe</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?p,?h) -&gt; <a href="#SUP00SLn05" title="https://w3id.org/bedro#SUP00SLn05">Platte Neigung 5</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n02) , <a href="#SUP00SLn01" title="https://w3id.org/bedro#SUP00SLn01">Platte Neigung 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?n01) , <a href="#SUP00SLb01" title="https://w3id.org/bedro#SUP00SLb01">Platte Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b01) , <a href="#SUP00SLb09" title="https://w3id.org/bedro#SUP00SLb09">Platte Breite 9</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b02) , <a href="#XXXxxXXq00" title="https://w3id.org/bedro#XXXxxXXq00">Bauteil transversaler Versatz</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?q)</p>
  </div>
- <div class="entity" id="d4e5960">
+ <div class="entity" id="d4e8051">
   <h3>SUP00SLb04_b06<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Breiten 4 und 6 der Plattenbrücke berechnen sich aus b04=b06=(b01+b02+b08+b09-b07-b03-b05)/2. EN: Widths 4 and 6 of the slab are calculated as follows b04=b06=(b01+b02+b08+b09-b07-b03-b05)/2.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="#SUP00SLb01" title="https://w3id.org/bedro#SUP00SLb01">Platte Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b01) , <a href="#SUP00SLb02" title="https://w3id.org/bedro#SUP00SLb02">Platte Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b02) , <a href="#SUP00SLb03" title="https://w3id.org/bedro#SUP00SLb03">Platte Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b03) , <a href="#SUP00SLb05" title="https://w3id.org/bedro#SUP00SLb05">Platte Breite 5</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b05) , <a href="#SUP00SLb07" title="https://w3id.org/bedro#SUP00SLb07">Platte Breite 7</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b07) , <a href="#SUP00SLb08" title="https://w3id.org/bedro#SUP00SLb08">Platte Breite 8</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b08) , <a href="#SUP00SLb09" title="https://w3id.org/bedro#SUP00SLb09">Platte Breite 9</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b09) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bbottom,?b07,?b05,?b03) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bges,?b01,?b02,?b08,?b09) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?bdouble,?bges,?bbottom) , <a href="http://www.w3.org/2003/11/swrlb#divide" title="divide">divide</a>(?) -&gt; <a href="#SUP00SLb04" title="https://w3id.org/bedro#SUP00SLb04">Platte Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b) , <a href="#SUP00SLb06" title="https://w3id.org/bedro#SUP00SLb06">Platte Breite 6</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b)</p>
+  <p>DE: Breiten 4 und 6 der Plattenbrücke berechnen sich aus b04=b06=(b01+b02+b08+b09-b07-b03-b05)/2. EN: Widths 4 and 6 of the slab are calculated as follows b04=b06=(b01+b02+b08+b09-b07-b03-b05)/2.<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="#SUP00SLb01" title="https://w3id.org/bedro#SUP00SLb01">Platte Breite 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b01) , <a href="#SUP00SLb02" title="https://w3id.org/bedro#SUP00SLb02">Platte Breite 2</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b02) , <a href="#SUP00SLb03" title="https://w3id.org/bedro#SUP00SLb03">Platte Breite 3</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b03) , <a href="#SUP00SLb05" title="https://w3id.org/bedro#SUP00SLb05">Platte Breite 5</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b05) , <a href="#SUP00SLb07" title="https://w3id.org/bedro#SUP00SLb07">Platte Breite 7</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b07) , <a href="#SUP00SLb08" title="https://w3id.org/bedro#SUP00SLb08">Platte Breite 8</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b08) , <a href="#SUP00SLb09" title="https://w3id.org/bedro#SUP00SLb09">Platte Breite 9</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b09) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bbottom,?b07,?b05,?b03) , <a href="http://www.w3.org/2003/11/swrlb#add" title="add">add</a>(?bges,?b01,?b02,?b08,?b09) , <a href="http://www.w3.org/2003/11/swrlb#subtract" title="subtract">subtract</a>(?bdouble,?bges,?bbottom) , <a href="http://www.w3.org/2003/11/swrlb#divide" title="divide">divide</a>(?) -&gt; <a href="#SUP00SLb04" title="https://w3id.org/bedro#SUP00SLb04">Platte Breite 4</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b) , <a href="#SUP00SLb06" title="https://w3id.org/bedro#SUP00SLb06">Platte Breite 6</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,?b)</p>
  </div>
- <div class="entity" id="d4e5128">
+ <div class="entity" id="d4e7219">
   <h3>SUP00SLh01<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Höhe 1 der Plattenbrücke ist immer 25cm groß (RiZ-ING Kap). EN: Height 1 of the slab is always 25cm (RiZ-ING Kap).<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) -&gt; <a href="#SUP00SLh01" title="https://w3id.org/bedro#SUP00SLh01">Platte Höhe 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,"0.25"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
+  <p>DE: Höhe 1 der Plattenbrücke ist immer 25cm groß (RiZ-ING Kap). EN: Height 1 of the slab is always 25cm (RiZ-ING Kap).<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) -&gt; <a href="#SUP00SLh01" title="https://w3id.org/bedro#SUP00SLh01">Platte Höhe 1</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,"0.25"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
  </div>
- <div class="entity" id="d4e5190">
+ <div class="entity" id="d4e7281">
   <h3>SUP00SLh06<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Höhe 6 der Plattenbrücke ist immer 25cm groß (RiZ-ING Kap). EN: Height 6 of the slab is always 25cm (RiZ-ING Kap).<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) -&gt; <a href="#SUP00SLh06" title="https://w3id.org/bedro#SUP00SLh06">Platte Höhe 6</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,"0.25"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
+  <p>DE: Höhe 6 der Plattenbrücke ist immer 25cm groß (RiZ-ING Kap). EN: Height 6 of the slab is always 25cm (RiZ-ING Kap).<br><br><a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) -&gt; <a href="#SUP00SLh06" title="https://w3id.org/bedro#SUP00SLh06">Platte Höhe 6</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>(?s,"0.25"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>)</p>
  </div>
- <div class="entity" id="d4e6840">
+ <div class="entity" id="d4e9036">
   <h3>SUP00SLmeetCAPXX<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Wenn eine Kappe auf einer Plattenbrücke liegt, ist die Platte direkt unter der Kappe positioniert.; EN: If a cap is part of a slab bridge, the slab is directly below the cap.<br><br><a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?b) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?s)</p>
+  <p>DE: Wenn eine Kappe auf einer Plattenbrücke liegt, ist die Platte direkt unter der Kappe positioniert.; EN: If a cap is part of a slab bridge, the slab is directly below the cap.<br><br><a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?b) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?b) , <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">Kappe</a> <sup class="type-c" title="Klasse">c</sup>(?c) , <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?c,?s)</p>
  </div>
- <div class="entity" id="d4e6986">
+ <div class="entity" id="d4e9181">
   <h3>SUP00SLmeetPAV<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">Übersicht der SWRL</a> </span></h3>
-  <p>DE: Wenn ein Fahrbahnbelag auf einer Plattenbrücke liegt, ist die Platte direkt unter dem Belag positioniert.; EN: If a pavement is part of a slab bridge, the slab is directly below the pavement.<br><br><a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?b) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?b) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">slab</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?s)</p>
+  <p>DE: Wenn ein Fahrbahnbelag auf einer Plattenbrücke liegt, ist die Platte direkt unter dem Belag positioniert.; EN: If a pavement is part of a slab bridge, the slab is directly below the pavement.<br><br><a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?s,?b) , <a href="https://w3id.org/bcore#isPartOfZone" target="_blank" title="https://w3id.org/bcore#isPartOfZone">ist Teil einer Zone</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?b) , <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">Fahrbahnbelag</a> <sup class="type-c" title="Klasse">c</sup>(?p) , <a href="https://w3id.org/bcore/comp#Slab" target="_blank" title="https://w3id.org/bcore/comp#Slab">Platte</a> <sup class="type-c" title="Klasse">c</sup>(?s) , <a href="https://w3id.org/brot#Bridge" target="_blank" title="https://w3id.org/brot#Bridge">Bridge</a> <sup class="type-c" title="Klasse">c</sup>(?b) -&gt; <a href="https://w3id.org/reloc#meetTop" target="_blank" title="https://w3id.org/reloc#meetTop">meet Top</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>(?p,?s)</p>
  </div>
 </div><div id="legend">
 <h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>

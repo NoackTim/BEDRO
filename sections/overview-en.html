@@ -15,10 +15,23 @@ This ontology has the following classes and properties.</span>
       <a href="#Bitumen" title="https://w3id.org/bedro#Bitumen">bitumen</a>
    </li>
    <li>
+      <a href="#https://w3id.org/bcore/lifecycle#BridgeVariant" title="https://w3id.org/bcore/lifecycle#BridgeVariant">bridge variant</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">cap</a>
    </li>
    <li>
+      <a href="#https://w3id.org/bcore/lifecycle#ConstructionProject"
+         title="https://w3id.org/bcore/lifecycle#ConstructionProject">construction project</a>
+   </li>
+   <li>
       <a href="#Elastomer" title="https://w3id.org/bedro#Elastomer">elastomer</a>
+   </li>
+   <li>
+      <a href="#EndCrossGirder" title="https://w3id.org/bedro#EndCrossGirder">end cross girder</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/brcomp#Illumination" title="https://w3id.org/brcomp#Illumination">illumination</a>
    </li>
    <li>
       <a href="#MasticAsphalt" title="https://w3id.org/bedro#MasticAsphalt">mastic asphalt</a>
@@ -30,9 +43,7 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/brcomp#Pavement" title="https://w3id.org/brcomp#Pavement">pavement</a>
    </li>
    <li>
-      <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">
-         <span>Pavement Component</span>
-      </a>
+      <a href="#PavementComponent" title="https://w3id.org/bedro#PavementComponent">pavement component</a>
    </li>
    <li>
       <a href="#PavementCoverLayer" title="https://w3id.org/bedro#PavementCoverLayer">pavement cover layer</a>
@@ -45,6 +56,13 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Plastic" title="https://w3id.org/bedro#Plastic">plastic</a>
+   </li>
+   <li>
+      <a href="#PrefabricatedConcreteCrossGirder"
+         title="https://w3id.org/bedro#PrefabricatedConcreteCrossGirder">prefabricated concrete cross girder</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#Project" title="https://w3id.org/bcore/lifecycle#Project">project</a>
    </li>
    <li>
       <a href="#PTFE" title="https://w3id.org/bedro#PTFE">PTFE</a>
@@ -65,7 +83,20 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#equalsRoutePoint" title="https://w3id.org/bedro#equalsRoutePoint">equals route point</a>
+      <a href="#equalsWayPoint" title="https://w3id.org/bedro#equalsWayPoint">equals way point</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#hasVariant" title="https://w3id.org/bcore/lifecycle#hasVariant">has variant</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#isCreatedInProject"
+         title="https://w3id.org/bcore/lifecycle#isCreatedInProject">is created in project</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#isUsedInProject" title="https://w3id.org/bcore/lifecycle#isUsedInProject">is used in project</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#isVariantOf" title="https://w3id.org/bcore/lifecycle#isVariantOf">is variant of</a>
    </li>
    <li>
       <a href="#runsToTheLeftOf" title="https://w3id.org/bedro#runsToTheLeftOf">runs to the left of</a>
@@ -78,6 +109,10 @@ This ontology has the following classes and properties.</span>
     class="hlist">
    <li>
       <a href="#BridgeOntologyParameter" title="https://w3id.org/bedro#BridgeOntologyParameter">bridge ontology parameter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#BridgeVariantName"
+         title="https://w3id.org/bcore/lifecycle#BridgeVariantName">bridge variant name</a>
    </li>
    <li>
       <a href="#BridgeWidth" title="https://w3id.org/bedro#BridgeWidth">bridge width</a>
@@ -165,6 +200,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#PAV00XXb02" title="https://w3id.org/bedro#PAV00XXb02">pavement width 2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore/lifecycle#ProjectName" title="https://w3id.org/bcore/lifecycle#ProjectName">project name</a>
    </li>
    <li>
       <a href="#SUP00SLh01" title="https://w3id.org/bedro#SUP00SLh01">slab height 1</a>
@@ -313,6 +351,12 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#TRBxxXXb00" title="https://w3id.org/bedro#TRBxxXXb00">traffic barrier width</a>
    </li>
+   <li>
+      <a href="#https://w3id.org/bcore#WayPointEnvironmentZ" title="https://w3id.org/bcore#WayPointEnvironmentZ">waypoint environment Z</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/bcore#WayPointStation" title="https://w3id.org/bcore#WayPointStation">waypoint station</a>
+   </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -362,84 +406,99 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#d4e4225">Bridge_Width</a>
+      <a href="#d4e6791">BC_RouteCrossing</a>
    </li>
    <li>
-      <a href="#d4e7131">CAP01meetNOB01</a>
+      <a href="#d4e6210">BC_RouteCrossingSupportNotPossible</a>
    </li>
    <li>
-      <a href="#d4e6504">CAP01meetPAV</a>
+      <a href="#d4e8426">BC_SupportInWaterBody</a>
    </li>
    <li>
-      <a href="#d4e7513">CAP01meetRAI01</a>
+      <a href="#d4e5210">BC_WidthOfRail_VGreater160</a>
    </li>
    <li>
-      <a href="#d4e7895">CAP01meetTRB01</a>
+      <a href="#d4e5510">BC_WidthOfRail_VSmaller160</a>
    </li>
    <li>
-      <a href="#d4e8507">CAP01XXq00</a>
+      <a href="#d4e5809">Bridge_Width</a>
    </li>
    <li>
-      <a href="#d4e7322">CAP99meetNOB99</a>
+      <a href="#d4e9326">CAP01meetNOB01</a>
    </li>
    <li>
-      <a href="#d4e6672">CAP99meetPAV</a>
+      <a href="#d4e8700">CAP01meetPAV</a>
    </li>
    <li>
-      <a href="#d4e7704">CAP99meetRAI99</a>
+      <a href="#d4e9709">CAP01meetRAI01</a>
    </li>
    <li>
-      <a href="#d4e8087">CAP99meetTRB99</a>
+      <a href="#d4e10091">CAP01meetTRB01</a>
    </li>
    <li>
-      <a href="#d4e3291">CAP99XXq00</a>
+      <a href="#d4e10703">CAP01XXq00</a>
    </li>
    <li>
-      <a href="#d4e4626">CAPxxXXb03</a>
+      <a href="#d4e9517">CAP99meetNOB99</a>
    </li>
    <li>
-      <a href="#d4e4044">CAPxxXXb04</a>
+      <a href="#d4e8868">CAP99meetPAV</a>
    </li>
    <li>
-      <a href="#d4e6335">CAPxxXXg00_Kap6</a>
+      <a href="#d4e9900">CAP99meetRAI99</a>
    </li>
    <li>
-      <a href="#d4e3514">CAPxxXXh02</a>
+      <a href="#d4e10282">CAP99meetTRB99</a>
    </li>
    <li>
-      <a href="#d4e4761">CAPxxXXh03</a>
+      <a href="#d4e3774">CAP99XXq00</a>
    </li>
    <li>
-      <a href="#d4e8340">CAPxxXXh04</a>
+      <a href="#d4e4709">CAPxxXXb03</a>
    </li>
    <li>
-      <a href="#d4e8278">CAPxxXXn01</a>
+      <a href="#d4e4528">CAPxxXXb04</a>
    </li>
    <li>
-      <a href="#d4e4846">PAV00XXh00</a>
+      <a href="#d4e8530">CAPxxXXg00_Kap6</a>
    </li>
    <li>
-      <a href="#d4e5252">SUP00SL_CAP01</a>
+      <a href="#d4e3998">CAPxxXXh02</a>
    </li>
    <li>
-      <a href="#d4e5444">SUP00SL_CAP99</a>
+      <a href="#d4e4843">CAPxxXXh03</a>
    </li>
    <li>
-      <a href="#d4e5637">SUP00SL_PAV</a>
+      <a href="#d4e10535">CAPxxXXh04</a>
    </li>
    <li>
-      <a href="#d4e5960">SUP00SLb04_b06</a>
+      <a href="#d4e10473">CAPxxXXn01</a>
    </li>
    <li>
-      <a href="#d4e5128">SUP00SLh01</a>
+      <a href="#d4e4928">PAV00XXh00</a>
    </li>
    <li>
-      <a href="#d4e5190">SUP00SLh06</a>
+      <a href="#d4e7344">SUP00SL_CAP01</a>
    </li>
    <li>
-      <a href="#d4e6840">SUP00SLmeetCAPXX</a>
+      <a href="#d4e7536">SUP00SL_CAP99</a>
    </li>
    <li>
-      <a href="#d4e6986">SUP00SLmeetPAV</a>
+      <a href="#d4e7728">SUP00SL_PAV</a>
+   </li>
+   <li>
+      <a href="#d4e8051">SUP00SLb04_b06</a>
+   </li>
+   <li>
+      <a href="#d4e7219">SUP00SLh01</a>
+   </li>
+   <li>
+      <a href="#d4e7281">SUP00SLh06</a>
+   </li>
+   <li>
+      <a href="#d4e9036">SUP00SLmeetCAPXX</a>
+   </li>
+   <li>
+      <a href="#d4e9181">SUP00SLmeetPAV</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
