@@ -43,7 +43,7 @@
         <terms:description xml:lang="de">Ontologie für die Implementierung von deutschen Brückenentwurfsregeln.</terms:description>
         <terms:description xml:lang="en">Ontology for the implementation of German design rules for bridges and bridge components.</terms:description>
         <terms:license>https://creativecommons.org/licenses/by/4.0/deed.en</terms:license>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-29</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-05</terms:modified>
         <bibo:status xml:lang="en">Ontology Specification Draft</bibo:status>
         <vann:preferredNamespacePrefix>bedro</vann:preferredNamespacePrefix>
         <rdfs:label>Bridge Element Design Rule Ontology</rdfs:label>
@@ -1878,7 +1878,7 @@
 
     <owl:Class rdf:about="https://w3id.org/bedro#ConcreteTBeam">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bcore/comp#TBeam"/>
-        <rdfs:comment xml:lang="de">Betonlängsträger in mit T-förmigem Querschnitt</rdfs:comment>
+        <rdfs:comment xml:lang="de">Betonlängsträger mit T-förmigem Querschnitt</rdfs:comment>
         <rdfs:comment xml:lang="en">T-shaped girder made of concrete</rdfs:comment>
         <rdfs:label xml:lang="de">Plattenbalken</rdfs:label>
         <rdfs:label xml:lang="en">concrete T-beam</rdfs:label>
@@ -2015,6 +2015,30 @@
         <rdfs:comment xml:lang="en">soil material/ ground material</rdfs:comment>
         <rdfs:label xml:lang="de">Bodenmaterial</rdfs:label>
         <rdfs:label xml:lang="en">soil material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bedro#SteelBoxGirder -->
+
+    <owl:Class rdf:about="https://w3id.org/bedro#SteelBoxGirder">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bcore/comp#BoxGirder"/>
+        <rdfs:comment xml:lang="de">Stahllängsträger mit hohlem Querschnitt</rdfs:comment>
+        <rdfs:comment xml:lang="en">hollow beam made of steel</rdfs:comment>
+        <rdfs:label xml:lang="de">Stahlhohlkastenträger</rdfs:label>
+        <rdfs:label xml:lang="en">steel box girder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bedro#SteelIBeam -->
+
+    <owl:Class rdf:about="https://w3id.org/bedro#SteelIBeam">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bcore/comp#IBeam"/>
+        <rdfs:comment xml:lang="en">I-shaped girder made of steel</rdfs:comment>
+        <rdfs:comment xml:lang="de">Stahllängsträger mit I-förmigem Querschnitt</rdfs:comment>
+        <rdfs:label xml:lang="de">Stahl-I-Träger</rdfs:label>
+        <rdfs:label xml:lang="en">steel I-beam</rdfs:label>
     </owl:Class>
     
 

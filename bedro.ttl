@@ -33,7 +33,7 @@
                           <http://purl.org/dc/terms/description> "Ontologie für die Implementierung von deutschen Brückenentwurfsregeln."@de ,
                                                                  "Ontology for the implementation of German design rules for bridges and bridge components."@en ;
                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/deed.en" ;
-                          <http://purl.org/dc/terms/modified> "2026-10-29"^^xsd:date ;
+                          <http://purl.org/dc/terms/modified> "2026-11-05"^^xsd:date ;
                           <http://purl.org/ontology/bibo/status> "Ontology Specification Draft"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "bedro" ;
                           rdfs:label "Bridge Element Design Rule Ontology" ;
@@ -1469,7 +1469,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/bedro#ConcreteTBeam
 :ConcreteTBeam rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/bcore/comp#TBeam> ;
-               rdfs:comment "Betonlängsträger in mit T-förmigem Querschnitt"@de ,
+               rdfs:comment "Betonlängsträger mit T-förmigem Querschnitt"@de ,
                             "T-shaped girder made of concrete"@en ;
                rdfs:label "Plattenbalken"@de ,
                           "concrete T-beam"@en .
@@ -1573,6 +1573,24 @@ xsd:date rdf:type rdfs:Datatype .
                            "soil material/ ground material"@en ;
               rdfs:label "Bodenmaterial"@de ,
                          "soil material"@en .
+
+
+###  https://w3id.org/bedro#SteelBoxGirder
+:SteelBoxGirder rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/bcore/comp#BoxGirder> ;
+                rdfs:comment "Stahllängsträger mit hohlem Querschnitt"@de ,
+                             "hollow beam made of steel"@en ;
+                rdfs:label "Stahlhohlkastenträger"@de ,
+                           "steel box girder"@en .
+
+
+###  https://w3id.org/bedro#SteelIBeam
+:SteelIBeam rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/bcore/comp#IBeam> ;
+            rdfs:comment "I-shaped girder made of steel"@en ,
+                         "Stahllängsträger mit I-förmigem Querschnitt"@de ;
+            rdfs:label "Stahl-I-Träger"@de ,
+                       "steel I-beam"@en .
 
 
 ###  https://w3id.org/bedro#StoneMasticAsphalt

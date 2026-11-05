@@ -13,7 +13,7 @@
 <https://w3id.org/bedro> <http://purl.org/dc/terms/description> "Ontologie für die Implementierung von deutschen Brückenentwurfsregeln."@de .
 <https://w3id.org/bedro> <http://purl.org/dc/terms/description> "Ontology for the implementation of German design rules for bridges and bridge components."@en .
 <https://w3id.org/bedro> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/deed.en" .
-<https://w3id.org/bedro> <http://purl.org/dc/terms/modified> "2026-10-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bedro> <http://purl.org/dc/terms/modified> "2026-11-05"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bedro> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft"@en .
 <https://w3id.org/bedro> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bedro" .
 <https://w3id.org/bedro> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Element Design Rule Ontology" .
@@ -1336,7 +1336,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/bedro#ConcreteTBeam
 <https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bcore/comp#TBeam> .
-<https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Betonlängsträger in mit T-förmigem Querschnitt"@de .
+<https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Betonlängsträger mit T-förmigem Querschnitt"@de .
 <https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#comment> "T-shaped girder made of concrete"@en .
 <https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#label> "Plattenbalken"@de .
 <https://w3id.org/bedro#ConcreteTBeam> <http://www.w3.org/2000/01/rdf-schema#label> "concrete T-beam"@en .
@@ -1429,6 +1429,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/bedro#SoilMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "soil material/ ground material"@en .
 <https://w3id.org/bedro#SoilMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Bodenmaterial"@de .
 <https://w3id.org/bedro#SoilMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "soil material"@en .
+# 
+# https://w3id.org/bedro#SteelBoxGirder
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bcore/comp#BoxGirder> .
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/2000/01/rdf-schema#comment> "Stahllängsträger mit hohlem Querschnitt"@de .
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/2000/01/rdf-schema#comment> "hollow beam made of steel"@en .
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/2000/01/rdf-schema#label> "Stahlhohlkastenträger"@de .
+<https://w3id.org/bedro#SteelBoxGirder> <http://www.w3.org/2000/01/rdf-schema#label> "steel box girder"@en .
+# 
+# https://w3id.org/bedro#SteelIBeam
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bcore/comp#IBeam> .
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/2000/01/rdf-schema#comment> "I-shaped girder made of steel"@en .
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Stahllängsträger mit I-förmigem Querschnitt"@de .
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/2000/01/rdf-schema#label> "Stahl-I-Träger"@de .
+<https://w3id.org/bedro#SteelIBeam> <http://www.w3.org/2000/01/rdf-schema#label> "steel I-beam"@en .
 # 
 # https://w3id.org/bedro#StoneMasticAsphalt
 <https://w3id.org/bedro#StoneMasticAsphalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

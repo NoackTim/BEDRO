@@ -14191,7 +14191,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-10-29"
+    "@value" : "2026-11-05"
   } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@language" : "en",
@@ -14826,7 +14826,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "de",
-    "@value" : "Betonlängsträger in mit T-förmigem Querschnitt"
+    "@value" : "Betonlängsträger mit T-förmigem Querschnitt"
   }, {
     "@language" : "en",
     "@value" : "T-shaped girder made of concrete"
@@ -16690,6 +16690,46 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bmat#BuildingMaterial"
+  } ]
+}, {
+  "@id" : "https://w3id.org/bedro#SteelBoxGirder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Stahllängsträger mit hohlem Querschnitt"
+  }, {
+    "@language" : "en",
+    "@value" : "hollow beam made of steel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Stahlhohlkastenträger"
+  }, {
+    "@language" : "en",
+    "@value" : "steel box girder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bcore/comp#BoxGirder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/bedro#SteelIBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "I-shaped girder made of steel"
+  }, {
+    "@language" : "de",
+    "@value" : "Stahllängsträger mit I-förmigem Querschnitt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Stahl-I-Träger"
+  }, {
+    "@language" : "en",
+    "@value" : "steel I-beam"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bcore/comp#IBeam"
   } ]
 }, {
   "@id" : "https://w3id.org/bedro#StoneMasticAsphalt",
