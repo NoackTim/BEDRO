@@ -2,7 +2,8 @@
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+<ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
@@ -19,6 +20,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/brcomp#Cap" title="https://w3id.org/brcomp#Cap">cap</a>
+   </li>
+   <li>
+      <a href="#ConcreteTBeam" title="https://w3id.org/bedro#ConcreteTBeam">concrete T-beam</a>
    </li>
    <li>
       <a href="#https://w3id.org/bcore/lifecycle#ConstructionProject"
@@ -79,7 +83,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/brcomp#TrafficBarrier" title="https://w3id.org/brcomp#TrafficBarrier">traffic barrier</a>
    </li>
-</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+</ul>
+<h4>Object Properties</h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
@@ -104,9 +110,29 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#runsToTheRightOf" title="https://w3id.org/bedro#runsToTheRightOf">runs to the right of</a>
    </li>
-</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+</ul>
+<h4>Data Properties</h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#BridgeCarriesLeftFootOrCycleWay"
+         title="https://w3id.org/bedro#BridgeCarriesLeftFootOrCycleWay">bridge carries left foot or cycle way</a>
+   </li>
+   <li>
+      <a href="#BridgeCarriesRightFootOrCycleWay"
+         title="https://w3id.org/bedro#BridgeCarriesRightFootOrCycleWay">bridge carries right foot or cycle way</a>
+   </li>
+   <li>
+      <a href="#BridgeHasLeftNoiseBarrier" title="https://w3id.org/bedro#BridgeHasLeftNoiseBarrier">bridge has left noise barrier</a>
+   </li>
+   <li>
+      <a href="#BridgeHasRightNoiseBarrier"
+         title="https://w3id.org/bedro#BridgeHasRightNoiseBarrier">bridge has right noise barrier</a>
+   </li>
+   <li>
+      <a href="#BridgeHasTrafficBarriers" title="https://w3id.org/bedro#BridgeHasTrafficBarriers">bridge has traffic barriers</a>
+   </li>
    <li>
       <a href="#BridgeOntologyParameter" title="https://w3id.org/bedro#BridgeOntologyParameter">bridge ontology parameter</a>
    </li>
@@ -178,6 +204,9 @@ This ontology has the following classes and properties.</span>
       <a href="#CAPxxCUe00" title="https://w3id.org/bedro#CAPxxCUe00">curb existence</a>
    </li>
    <li>
+      <a href="#NOBxxPOb00" title="https://w3id.org/bedro#NOBxxPOb00">noise barrier post global width</a>
+   </li>
+   <li>
       <a href="#PAV00CLh00" title="https://w3id.org/bedro#PAV00CLh00">pavement cover height</a>
    </li>
    <li>
@@ -203,6 +232,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/bcore/lifecycle#ProjectName" title="https://w3id.org/bcore/lifecycle#ProjectName">project name</a>
+   </li>
+   <li>
+      <a href="#RoadRouteStandardCrossSection"
+         title="https://w3id.org/bedro#RoadRouteStandardCrossSection">road route standard cross-section</a>
    </li>
    <li>
       <a href="#SUP00SLh01" title="https://w3id.org/bedro#SUP00SLh01">slab height 1</a>
@@ -357,7 +390,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/bcore#WayPointStation" title="https://w3id.org/bcore#WayPointStation">waypoint station</a>
    </li>
-</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+</ul>
+<h4>Annotation Properties</h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
@@ -402,109 +437,241 @@ This ontology has the following classes and properties.</span>
          <span>title</span>
       </a>
    </li>
-</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+</ul>
+<h4> SWRL Rules </h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#d4e7167">BC_RouteCrossing</a>
+      <a href="#d5e13244">BC_RouteCrossing</a>
    </li>
    <li>
-      <a href="#d4e6586">BC_RouteCrossingSupportNotPossible</a>
+      <a href="#d5e12304">BC_RouteCrossingSupportNotPossible</a>
    </li>
    <li>
-      <a href="#d4e8802">BC_SupportInWaterBody</a>
+      <a href="#d5e14865">BC_SupportInWaterBody</a>
    </li>
    <li>
-      <a href="#d4e5586">BC_WidthOfRail_VGreater160</a>
+      <a href="#d5e11709">BC_WidthOfRail_VGreater160</a>
    </li>
    <li>
-      <a href="#d4e6286">BC_WidthOfRail_VSmaller160</a>
+      <a href="#d5e12006">BC_WidthOfRail_VSmaller160</a>
    </li>
    <li>
-      <a href="#d4e10658">Bridge_SUB_Component</a>
+      <a href="#d5e25639">Bridge_SUB_Component</a>
    </li>
    <li>
-      <a href="#d4e10994">Bridge_SUP_Component</a>
+      <a href="#d5e25782">Bridge_SUP_Component</a>
    </li>
    <li>
-      <a href="#d4e5885">Bridge_Width</a>
+      <a href="#d5e18235">Bridge_Width</a>
    </li>
    <li>
-      <a href="#d4e9702">CAP01meetNOB01</a>
+      <a href="#d5e16037">CAP01meetNOB01</a>
    </li>
    <li>
-      <a href="#d4e9075">CAP01meetPAV</a>
+      <a href="#d5e15132">CAP01meetPAV</a>
    </li>
    <li>
-      <a href="#d4e10084">CAP01meetRAI01</a>
+      <a href="#d5e16777">CAP01meetRAI01</a>
    </li>
    <li>
-      <a href="#d4e10467">CAP01meetTRB01</a>
+      <a href="#d5e17155">CAP01meetTRB01</a>
    </li>
    <li>
-      <a href="#d4e3952">CAP01XXq00</a>
+      <a href="#d5e24577">CAP01XXg00_KAP1B1</a>
    </li>
    <li>
-      <a href="#d4e9893">CAP99meetNOB99</a>
+      <a href="#d5e24194">CAP01XXg00_KAP1B1+NOB</a>
    </li>
    <li>
-      <a href="#d4e9243">CAP99meetPAV</a>
+      <a href="#d5e22540">CAP01XXg00_KAP1B3FCW</a>
    </li>
    <li>
-      <a href="#d4e10275">CAP99meetRAI99</a>
+      <a href="#d5e22095">CAP01XXg00_KAP1B3FCW+NOB</a>
    </li>
    <li>
-      <a href="#d4e10803">CAP99meetTRB99</a>
+      <a href="#d5e20843">CAP01XXg00_KAP1B3FW</a>
    </li>
    <li>
-      <a href="#d4e4150">CAP99XXq00</a>
+      <a href="#d5e20398">CAP01XXg00_KAP1B3FW+NOB</a>
    </li>
    <li>
-      <a href="#d4e5085">CAPxxXXb03</a>
+      <a href="#d5e17534">CAP01XXg00_KAP7</a>
    </li>
    <li>
-      <a href="#d4e4903">CAPxxXXb04</a>
+      <a href="#d5e9304">CAP01XXg00_KAP7+NOB</a>
    </li>
    <li>
-      <a href="#d4e8906">CAPxxXXg00_Kap6</a>
+      <a href="#d5e16416">CAP01XXg00_KAP7FCW</a>
    </li>
    <li>
-      <a href="#d4e4373">CAPxxXXh02</a>
+      <a href="#d5e4790">CAP01XXg00_KAP7FCW+NOB</a>
    </li>
    <li>
-      <a href="#d4e5219">CAPxxXXh03</a>
+      <a href="#d5e12883">CAP01XXg00_KAP7FW</a>
    </li>
    <li>
-      <a href="#d4e3785">CAPxxXXh04</a>
+      <a href="#d5e23388">CAP01XXg00_KAP7FW+NOB</a>
    </li>
    <li>
-      <a href="#d4e11139">CAPxxXXn01</a>
+      <a href="#d5e5276">CAP01XXh01_SUPxxTB</a>
    </li>
    <li>
-      <a href="#d4e5304">PAV00XXh00</a>
+      <a href="#d5e26151">CAP01XXq00</a>
    </li>
    <li>
-      <a href="#d4e7719">SUP00SL_CAP01</a>
+      <a href="#d5e16227">CAP99meetNOB99</a>
    </li>
    <li>
-      <a href="#d4e7911">SUP00SL_CAP99</a>
+      <a href="#d5e15299">CAP99meetPAV</a>
    </li>
    <li>
-      <a href="#d4e8104">SUP00SL_PAV</a>
+      <a href="#d5e16966">CAP99meetRAI99</a>
    </li>
    <li>
-      <a href="#d4e8427">SUP00SLb04_b06</a>
+      <a href="#d5e17344">CAP99meetTRB99</a>
    </li>
    <li>
-      <a href="#d4e7595">SUP00SLh01</a>
+      <a href="#d5e25299">CAP99XXg00_KAP1B1</a>
    </li>
    <li>
-      <a href="#d4e7657">SUP00SLh06</a>
+      <a href="#d5e24917">CAP99XXg00_KAP1B1+NOB</a>
    </li>
    <li>
-      <a href="#d4e9412">SUP00SLmeetCAPXX</a>
+      <a href="#d5e23791">CAP99XXg00_KAP1B3FCW</a>
    </li>
    <li>
-      <a href="#d4e9557">SUP00SLmeetPAV</a>
+      <a href="#d5e22943">CAP99XXg00_KAP1B3FCW+NOB</a>
    </li>
-</ul><iframe src="webvowl/index.html"></iframe> 
+   <li>
+      <a href="#d5e21691">CAP99XXg00_KAP1B3FW</a>
+   </li>
+   <li>
+      <a href="#d5e21246">CAP99XXg00_KAP1B3FW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e20100">CAP99XXg00_KAP7</a>
+   </li>
+   <li>
+      <a href="#d5e19037">CAP99XXg00_KAP7+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e19739">CAP99XXg00_KAP7FCW</a>
+   </li>
+   <li>
+      <a href="#d5e18634">CAP99XXg00_KAP7FCW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e19377">CAP99XXg00_KAP7FW</a>
+   </li>
+   <li>
+      <a href="#d5e17832">CAP99XXg00_KAP7FW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e5515">CAP99XXh01_SUPxxTB</a>
+   </li>
+   <li>
+      <a href="#d5e26347">CAP99XXq00</a>
+   </li>
+   <li>
+      <a href="#d5e4658">CAPxxXXb03</a>
+   </li>
+   <li>
+      <a href="#d5e4478">CAPxxXXb04</a>
+   </li>
+   <li>
+      <a href="#d5e5754">CAPxxXXdim_KAP1B1</a>
+   </li>
+   <li>
+      <a href="#d5e6089">CAPxxXXdim_KAP1B1+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e6465">CAPxxXXdim_KAP1B3FCW</a>
+   </li>
+   <li>
+      <a href="#d5e6877">CAPxxXXdim_KAP1B3FCW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e7425">CAPxxXXdim_KAP1B3FW</a>
+   </li>
+   <li>
+      <a href="#d5e7837">CAPxxXXdim_KAP1B3FW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e8385">CAPxxXXdim_KAP6</a>
+   </li>
+   <li>
+      <a href="#d5e8678">CAPxxXXdim_KAP7</a>
+   </li>
+   <li>
+      <a href="#d5e8970">CAPxxXXdim_KAP7+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e9644">CAPxxXXdim_KAP7FCW</a>
+   </li>
+   <li>
+      <a href="#d5e9971">CAPxxXXdim_KAP7FCW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e10434">CAPxxXXdim_KAP7FW</a>
+   </li>
+   <li>
+      <a href="#d5e10762">CAPxxXXdim_KAP7FW+NOB</a>
+   </li>
+   <li>
+      <a href="#d5e14967">CAPxxXXg00_KAP6</a>
+   </li>
+   <li>
+      <a href="#d5e3950">CAPxxXXh02</a>
+   </li>
+   <li>
+      <a href="#d5e5193">CAPxxXXh03</a>
+   </li>
+   <li>
+      <a href="#d5e25986">CAPxxXXh04</a>
+   </li>
+   <li>
+      <a href="#d5e25925">CAPxxXXn01</a>
+   </li>
+   <li>
+      <a href="#d5e11429">PAV00XXh00</a>
+   </li>
+   <li>
+      <a href="#d5e13790">SUP00SL_CAP01</a>
+   </li>
+   <li>
+      <a href="#d5e13981">SUP00SL_CAP99</a>
+   </li>
+   <li>
+      <a href="#d5e14171">SUP00SL_PAV</a>
+   </li>
+   <li>
+      <a href="#d5e14492">SUP00SLb04_b06</a>
+   </li>
+   <li>
+      <a href="#d5e13670">SUP00SLh01</a>
+   </li>
+   <li>
+      <a href="#d5e13730">SUP00SLh06</a>
+   </li>
+   <li>
+      <a href="#d5e15751">SUP00SLmeetCAPXX</a>
+   </li>
+   <li>
+      <a href="#d5e15894">SUP00SLmeetPAV</a>
+   </li>
+   <li>
+      <a href="#d5e11225">SUP00TBh01</a>
+   </li>
+   <li>
+      <a href="#d5e11327">SUP00TBh04</a>
+   </li>
+   <li>
+      <a href="#d5e15465">SUP00TBmeetCAPXX</a>
+   </li>
+   <li>
+      <a href="#d5e15608">SUP00TBmeetPAV</a>
+   </li>
+</ul>
+<iframe src="webvowl/index.html"></iframe> 
